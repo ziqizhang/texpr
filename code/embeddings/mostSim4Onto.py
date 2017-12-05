@@ -51,12 +51,11 @@ with open(corpusWordsFile) as inp:
 print("Calculating similarities...",file=sys.stderr)
 
 with tqdm(total=len(corpuswords)) as pbar:
-    for word in corpuswords.items():
+    for word,idf in corpuswords.items():
         bestkeyword = None
         bestsim = -1.0
         bestkeyword2 = None
         bestsim2 = -1.0
-        idf = corpuswords[word]
         for keyword in keywords:
             (sim,used1,used2) = eu.sim4texts(keyword,word)
             if sim > bestsim:
