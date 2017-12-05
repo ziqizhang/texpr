@@ -40,23 +40,32 @@ with open(keywordsFile) as inp:
         ## cname = cname[4:]
         keywords.add(keyword)
 
-corpuswords = set()
-print("Reading keywords ...",file=sys.stderr)
+corpuswords = {}
+print("Reading keywords and their idf ...",file=sys.stderr)
 with open(corpusWordsFile) as inp:
     for line in inp:
+        line = line.strip()
         (word,idf) = line.split("\t")
-        corpuswords.add(word)
+        corpuswords[word] = idf
 
 print("Calculating similarities...",file=sys.stderr)
 
 with tqdm(total=len(corpuswords)) as pbar:
-    for word in corpuswords:
+    for word in corpuswords.items():
         bestkeyword = None
         bestsim = -1.0
+        bestkeyword2 = None
+        bestsim2 = -1.0
+        idf = corpuswords[word]
         for keyword in keywords:
             (sim,used1,used2) = eu.sim4texts(keyword,word)
             if sim > bestsim:
                 bestkeyword = keyword
                 bestsim = sim
-        print(word,bestsim,sep="\t")
+            sim2 = sim * idf
+            if sim2 > bestsim2:
+                bestkeyword2 = keyword
+                bestsim2 = sim2
+        print("sim",word,bestkeyword,bestsim,sep="\t")
+        print("sim*idf",word,bestkeyword2,bestsim2,sep="\t")
         pbar.update(1)
