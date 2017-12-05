@@ -46,7 +46,7 @@ with open(corpusWordsFile) as inp:
     for line in inp:
         line = line.strip()
         (word,idf) = line.split("\t")
-        corpuswords[word] = idf
+        corpuswords[word] = float(idf)
 
 print("Calculating similarities...",file=sys.stderr)
 
