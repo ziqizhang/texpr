@@ -3,7 +3,7 @@ import sys
 import os
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
-from embeddingsutils import EmbeddingsUtils
+from embeddings.embeddingsutils import EmbeddingsUtils
 
 ## simple script to read in files in a directory, tokenise and filter and
 ## output a list of words and word frequencies for those words which also
