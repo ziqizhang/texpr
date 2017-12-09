@@ -10,6 +10,8 @@
 ##   if all words of a text are not known, the similarity is 0.0
 ## NOTE: this probably only works with python 3.5 or later
 
+## Author: Johann Petrak <johann.petrak@gmail.com>
+
 from __future__ import print_function
 import sys
 import argparse

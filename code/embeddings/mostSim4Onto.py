@@ -10,6 +10,9 @@
 ## This means the program will output as many lines as there are words in the second
 ## file: for each corpus word, the keyword which matches best and its similarity
 
+## Author: Johann Petrak <johann.petrak@gmail.com>
+
+
 from __future__ import print_function
 import sys
 import os
