@@ -24,17 +24,18 @@ def calc_sim(gs_list: list, candidate_list: list, thread_id, embu: EmbeddingsUti
             if score == 0.0 or score<min_score:
                 continue
             if res[1] in output.keys():
-                output[res[1]].append({res[2]: str(score)})
+                output[res[1]].append((res[2], str(score)))
             else:
                 sim_scores = []
-                sim_scores.append({res[2]: str(score)})
+                sim_scores.append((res[2], str(score)))
                 output[res[1]] = sim_scores
             if count_ct % 5000 == 0:
                 print("\t\t{} thread {}, gs {}/{}, ct {}/{}".format(
                     datetime.datetime.now(), thread_id,
                     str(count_gt), str(len(gs_list)),
                     str(count_ct), str(len(cand_list))))
-
+        if count_gt==1:
+            break
     return output
 
 

@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import re
@@ -159,10 +160,24 @@ def init_personalized_vector(graph_nodes, sorted_jate_terms, topN, max_percentag
     return [init_vector, len(initialized)]
 
 
-
+def select_words_as_nodes(sim_file:str, topn_percent):
+    selected=set()
+    all=set()
+    with open(sim_file, encoding='utf8') as json_data:
+        data = json.load(json_data)
+        for key, value in data.items():
+            value.sort(key=lambda x: x[1], reverse=True)
+            cutoff_index=int(len(value)*topn_percent)
+            for i in range(0,cutoff_index):
+                selected.add(value[i][0])
+                all.add(value[i][0])
+            for i in range(cutoff_index,len(value)):
+                all.add(value[i][0])
+    return selected
 
 
 personalized = [50, 100, 200]
+topn_for_graph_nodes=[0.1,0.2,0.5]
 
 ATE_LIBRARY="atr4s"
 in_folder = "/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt"
@@ -172,7 +187,7 @@ if ATE_LIBRARY=="atr4s":
 else:
     personalization_seed_term_file = "/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json"
 gs_terms_file = None#"/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/acl-rd-ver2-gs-terms.txt"
-
+gs_term_sim_file="/home/zqz/Work/data/texpr/sim_genia.json"
 
 # ATE_LIBRARY= "atr4s"
 # in_folder="/home/zqz/Work/data/jate_data/genia_gs/text/files_standard"
@@ -215,7 +230,9 @@ print(len(INCLUDING_FILTER))
 jate_term_ttf = {c[0]: c[1] for c in utils.jate_terms_iterator(personalization_seed_term_file)}
 sorted_seed_terms = sorted(jate_term_ttf, key=jate_term_ttf.get, reverse=True)
 for num_personalized_nodes in personalized:
-    print('Personalized textrank, {} nodes to be personalized'.format(num_personalized_nodes))
-    keywords_to_ate_percorpus(in_folder, out_file,
-                           num_of_personalized=num_personalized_nodes, sorted_seed_terms=sorted_seed_terms,
-                           gs_term_file=gs_terms_file)
+    for topn in topn_for_graph_nodes:
+        selected_words = select_words_as_nodes(gs_term_sim_file, topn)
+        print('Personalized textrank, {} nodes to be personalized'.format(num_personalized_nodes))
+        keywords_to_ate_percorpus(in_folder, out_file,
+                               num_of_personalized=num_personalized_nodes, sorted_seed_terms=sorted_seed_terms,
+                               gs_term_file=gs_terms_file, filter_tokens=selected_words)
