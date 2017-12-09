@@ -1,6 +1,6 @@
 import sys
 import gensim
-from gensim.models.word2vec import Vocab
+from gensim.models.word2vec import Vocab, Word2Vec
 import numpy as np
 import nltk
 import re
@@ -34,6 +34,7 @@ class EmbeddingsUtils:
             if self.verbose: print("Loading embeddings file from GenSim format", embFile, file=sys.stderr)
             self.model = gensim.models.KeyedVectors.load(embFile,mmap='r')
         else:
+            #self.model=Word2Vec.load(embFile)
             if self.verbose: print("Loading embeddings file from word2vec format file", embFile, "binary: ", inBinary, file=sys.stderr)
             self.model = gensim.models.KeyedVectors.load_word2vec_format(embFile, binary=inBinary, unicode_errors='ignore', encoding='utf8')
             print("Embeddings loaded, words: ",len(self.model.index2word),file=sys.stderr)
@@ -91,7 +92,7 @@ class EmbeddingsUtils:
             tmpwords = [word for word in tmpwords if word.lower() not in self.stopWords]
         words = []
         for word in tmpwords:
-            if word in self.model.vocab:
+            if word in self.model.wv.vocab: #originally this was 'model.vocab'
                 words.append(word)
             else:
                 if self.isCaseSensitive and self.fallBackToLower:
