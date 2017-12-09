@@ -1,3 +1,12 @@
-code/embeddings/embeddingsutils.py
+/code/embeddings/embeddingsutils.py
+/code/embeddings/*.zip
+/code/embeddings/*.tsv
+/code/embeddings/*.json
+/embeddings
+!/embeddings/.keepme
+/data
+!/data/.keepme
+/corpora
+!/corpora/.keepme
 *.pyc
 __pycache__
