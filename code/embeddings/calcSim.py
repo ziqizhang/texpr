@@ -15,7 +15,7 @@
 from __future__ import print_function
 import sys
 import argparse
-from embeddings.embeddingsutils import EmbeddingsUtils
+from embeddingsutils import EmbeddingsUtils
 
 parser = argparse.ArgumentParser(description="Find similarity between texts")
 parser.add_argument("-v", action='store_true', help="Show more messages about what the program is doing.")
