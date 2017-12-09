@@ -25,7 +25,6 @@ class EmbeddingsUtils:
         self.missingWords = {}
         self.nEmpty = 0
         self.embFile = ""
-        # self.ignorepattern=re.compile("[!,-;?£%:]+|[0-9]+")
         self.ignorepattern=re.compile("[—!\"#$%&\\\\'()*+,-/:;<=>?@[\]^_`{|}~£¦]+|[0-9]+")
 
     # load embeddings
@@ -37,7 +36,6 @@ class EmbeddingsUtils:
             if self.verbose: print("Loading embeddings file from GenSim format", embFile, file=sys.stderr)
             self.model = gensim.models.KeyedVectors.load(embFile,mmap='r')
         else:
-            #self.model=Word2Vec.load(embFile)
             if self.verbose: print("Loading embeddings file from word2vec format file", embFile, "binary: ", inBinary, file=sys.stderr)
             self.model = gensim.models.KeyedVectors.load_word2vec_format(embFile, binary=inBinary, unicode_errors='ignore', encoding='utf8')
             print("Embeddings loaded, words: ",len(self.model.index2word),file=sys.stderr)
@@ -72,13 +70,36 @@ class EmbeddingsUtils:
         self.missingWords = {}
         self.nEmpty = 0
 
+    def isInVocab(self,word):
+        """Checks if a word is in the embeddings vocabulary, respecting case sensitivity and 
+           fallback to lower case settings."""
+        if not self.isCaseSensitive:
+           word = word.lower()
+        havewv = hasattr(self.model,"wv")
+        known = self.isInVocabStrict(word)
+        if not known and self.isCaseSensitive and self.fallBackToLower:
+            known = self.isInVocabStrict(word.lower())
+        return known
+
+    def isInVocabStrict(self,word):
+        """Checks if the word is in the embeddings vocab as it is (no lowercasing or fallback to 
+           lowercase done)"""
+        havewv = hasattr(self.model,"wv")
+        if havewv:
+           return word in self.model.wv.vocab
+        else:
+           return word in self.model.vocab
+
     # returns a tuple where the first element is the list of words found in
     # the embeddings model, and the second is a list of words not found.
     def knownWords(self,words):
+        """Checks wich of the words in the list 'words' are contained in the embeddings vocabulary
+        and returns a list of two lists: first list contains the known words, secon list the unknown words.
+        Settings for case sensitivity and fall back to lower case are respected."""
         found = []
         notfound = []
         for word in words:
-            if word in self.model.vocab:
+            if self.isInVocab(word):
                 found.append(word)
             else:
                 notfound.append(word)
@@ -86,6 +107,7 @@ class EmbeddingsUtils:
 
     # return a list of filtered/cleaned/transformed words ready to be used for similarity calculation
     def words4text(self,text):
+        """Tokenises the text and returns a list of words, optionally lower cased, stop words filtered"""
         tmpwords = nltk.word_tokenize(text)
         if not self.isCaseSensitive:
             tmpwords = [word.lower() for word in tmpwords]
@@ -95,11 +117,12 @@ class EmbeddingsUtils:
             tmpwords = [word for word in tmpwords if word.lower() not in self.stopWords]
         words = []
         for word in tmpwords:
-            if word in self.model.wv.vocab: #originally this was 'model.vocab'
+            havewv = hasattr(self.model,"wv")
+            if self.isInVocabStrict(word):
                 words.append(word)
             else:
                 if self.isCaseSensitive and self.fallBackToLower:
-                    if word.lower() in self.model.vocab:
+                    if self.isInVocabStrict(word.lower()):
                         words.append(word.lower())
                     else:
                         self.missingWords[word.lower()]=1
@@ -117,6 +140,9 @@ class EmbeddingsUtils:
 
     # return triple of similarity, list1 used, list2 used
     def sim4words(self,words1,words2):
+        """Calculate the similarity between the words in the two lists. This
+           expects the words in the lists to be known to be in the vocabulary and
+           also to already be in the correct case"""
         if len(words1) > 0 and len(words2) > 0:
             ## actually calculate the similarity between the two lists of words
             ## All words in words1 and words should be in the model so we simply

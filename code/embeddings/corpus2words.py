@@ -11,13 +11,17 @@ from embeddingsutils import EmbeddingsUtils
 ## simple script to read in files in a directory, tokenise and filter and
 ## output a list of words and word frequencies for those words which also
 ## occur in the embeddings file
-if(len(sys.argv)!=4):
-    print("ERROR: need three arguments, the embeddings file, the corpus directory, the file for saving OOV stats",file=sys.stderr)
+if(len(sys.argv)!=5):
+    print("ERROR: need three arguments, the embeddings file, the corpus directory, the file for saving OOV stats 1/0 (1=mixed case embeddings, 0=lower case only)",file=sys.stderr)
     sys.exit(1)
 
+isMixed = (sys.argv[4]=="1")
+if isMixed:
+    print("INFO: using mixed case algorithm for embeddings ",sys.argv[1],file=sys.stderr)
+
 eu = EmbeddingsUtils()
-eu.setIsCaseSensitive(False)
-eu.setFallBackToLower(False)
+eu.setIsCaseSensitive(isMixed)
+eu.setFallBackToLower(isMixed)
 eu.setFilterStopwords(True)
 eu.setDebug(False)
 eu.setVerbose(True)
@@ -38,7 +42,7 @@ for dirpath, dirs, files in os.walk(sys.argv[2]):
             text = instream.read()
             docs[file_name] = text
 
-tfidf = TfidfVectorizer(tokenizer=tokenizer)
+tfidf = TfidfVectorizer(analyzer="word",tokenizer=tokenizer,lowercase=False)
 print("Calculating tfidf ...",file=sys.stderr)
 tfs = tfidf.fit_transform(docs.values())
 print("DONE, words: ",len(tfidf.idf_),file=sys.stderr)
