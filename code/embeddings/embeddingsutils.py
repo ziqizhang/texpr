@@ -1,3 +1,6 @@
+## Author: Johann Petrak <johann.petrak@gmail.com>
+
+
 import sys
 import gensim
 from gensim.models.word2vec import Vocab

@@ -1,3 +1,6 @@
+## Author: Johann Petrak <johann.petrak@gmail.com>
+
+
 from __future__ import print_function
 import sys
 import os
