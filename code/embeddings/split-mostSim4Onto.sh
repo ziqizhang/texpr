@@ -8,6 +8,7 @@ then
 fi
 
 inpref=`basename $infile .tsv`
-grep -v "sim\*idf" $infile | cut -f 2- | sort -k 3nr > ${inpref}-sim.tsv
-grep  "sim\*idf" $infile | cut -f 2- | sort -k 3nr > ${inpref}-simidf.tsv
+grep "simonly" $infile | cut -f 2- | sort -t$'\t' --key=4nr,4  > ${inpref}-sim.tsv
+grep "simidfonly" $infile | cut -f 2- | sort -t$'\t' --key=4nr,4  > ${inpref}-simidf.tsv
+grep "simidfstr" $infile | cut -f 2- | sort -t$'\t' --key=4nr,4  > ${inpref}-simidfstr.tsv
 
