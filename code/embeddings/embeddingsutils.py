@@ -7,6 +7,7 @@ from gensim.models.word2vec import Vocab, Word2Vec
 import numpy as np
 import nltk
 import re
+import math
 import itertools
 from nltk.corpus import stopwords
 import logging
@@ -25,6 +26,8 @@ class EmbeddingsUtils:
         self.missingWords = {}
         self.nEmpty = 0
         self.embFile = ""
+        self.default_weight = 0.0
+        self.use_weights = False
         self.ignorepattern=re.compile("[—!\"#$%&\\\\'()*+,-/:;<=>?@[\]^_`{|}~£¦]+|[0-9]+")
 
     # load embeddings
@@ -48,6 +51,87 @@ class EmbeddingsUtils:
                 ## we already have the normalized vectors in the syn0 data structure, no need to calculate the syn0norm
                 self.model.syn0norm = LowerCase
 
+
+    def loadWeights(self,filename,wordcol=0,weightcol=1,default_weight="max"):
+        """Load mappings from words to weights from a tsv file. This must be
+        done after loading the embeddings, and only weights for words found in
+        the embeddings are kept. This will respect the case sensitivity setting in
+        that if is true, then the weight will be stored for the embedding matching
+        case, otherwise, all weights for a lower-cased version of the word will
+        be accumulated.
+        The default weight can be some value or 'min' or 'max'"""
+        if not self.model:
+            print("ERROR: cannot load weights before the embeddings have been loaded",file=sys.stderr)
+            sys.exit(1)
+        self.default_weight = default_weight
+        ## we use the model word->idx mapping and store all weights
+        ## in a numpy index of the size of the vocabulary
+        nan = float('nan')
+        self.weights = np.full(len(self.model.vocab),nan)
+        minweight = sys.float_info.max
+        maxweight = sys.float_info.min
+        with open(filename,"rt",encoding="utf-8") as inp:
+            for line in inp:
+                line = line.rstrip()
+                fields = line.split("\t")
+                word = fields[wordcol]
+                weight = float(fields[weightcol])
+                v = self.isInVocabStrict(word)
+                if not v and self.fallBackToLower:
+                    v = self.isInVocabStrict(word.lower())
+                if v:
+                    if math.isnan(self.weights[v.index]):
+                        self.weights[v.index] = weight
+                    else:
+                        self.weights[v.index] += weight
+                    if weight > maxweight:
+                        maxweight = weight
+                    if weight < minweight:
+                        minweight = weight
+        if type(default_weight) == str:
+            if default_weight == "min":
+                defw = minweight
+            elif default_weight == "max":
+                defw = maxweight
+            else:
+                print("ERROR odd default weight: ",default_weight,file=sys.stder)
+                sys.exit(1)
+        else:
+            defw = default_weight
+        for i in range(len(self.weights)):
+            if math.isnan(self.weights[i]):
+                self.weights[i] = defw
+        self.default_weight = defw
+        self.use_weights = True
+
+    def setWeightsFromEmbeddings(self):
+        """set the weights from the word counts stored in the embeddings model
+        the weight is set to logs(2)/log(count+1), so it is 1.0 for count 1
+        and decreases exponentionally towards zero for increasing counts.
+        NOTE: the counts in the model may not be useful and this may not work well!!"""
+        if not self.model:
+            print("ERROR: cannot load weights before the embeddings have been loaded",file=sys.stderr)
+            sys.exit(1)
+        self.weights = np.full(len(self.model.vocab),default_weight)
+        vocab = self.getVocab()
+        l2=np.log(2.0)
+        for v in vocab:
+            self.weights[v.index] = l2/np.log(v.count+1.0)
+        self.use_weights = True
+
+    def getWeight(self,word):
+        """return the weight for this word or the default weight"""
+        v = self.isInVocabStrict(word)
+        if not v and self.fallBackToLower:
+            v = self.isInVocabStrict(word.lower())
+        if v:
+            return self.weights[v.index]
+        else:
+            return self.default_weight
+
+    def setUseWeights(self,flag):
+        self.use_weights = flag
+
     def setIsCaseSensitive(self,flag):
         self.isCaseSensitive = flag
 
@@ -70,12 +154,20 @@ class EmbeddingsUtils:
         self.missingWords = {}
         self.nEmpty = 0
 
+    def getVocab(self):
+        """Get the model vocabulary, a dictionary from word string to
+        vocabulary entry, where each entry contains an index and a count """
+        havewv = hasattr(self.model,"wv")
+        if havewv:
+           return self.model.wv.vocab
+        else:
+           return self.model.vocab
+
     def isInVocab(self,word):
         """Checks if a word is in the embeddings vocabulary, respecting case sensitivity and
            fallback to lower case settings."""
         if not self.isCaseSensitive:
            word = word.lower()
-        havewv = hasattr(self.model,"wv")
         known = self.isInVocabStrict(word)
         if not known and self.isCaseSensitive and self.fallBackToLower:
             known = self.isInVocabStrict(word.lower())
@@ -83,12 +175,8 @@ class EmbeddingsUtils:
 
     def isInVocabStrict(self,word):
         """Checks if the word is in the embeddings vocab as it is (no lowercasing or fallback to
-           lowercase done)"""
-        havewv = hasattr(self.model,"wv")
-        if havewv:
-           return word in self.model.wv.vocab
-        else:
-           return word in self.model.vocab
+           lowercase done). Returns the vocab entry for true or None for false"""
+        return self.getVocab().get(word)
 
     # returns a tuple where the first element is the list of words found in
     # the embeddings model, and the second is a list of words not found.
@@ -139,8 +227,12 @@ class EmbeddingsUtils:
                 else:
                     self.missingWords[word]=1
         return words
+
     # return triple of similarity, text1 used, text2 used
     def sim4texts(self,text1,text2):
+        """compare the two texts and return a triple containing the
+        similarity, the words used from the first string and the words used
+        from the second string"""
         words1 = self.words4text(text1)
         words2 = self.words4text(text2)
         if self.debug: print("Words1:",words1,"from input",text1,file=sys.stderr)
@@ -152,7 +244,9 @@ class EmbeddingsUtils:
     def sim4words(self,words1,words2):
         """Calculate the similarity between the words in the two lists. This
            expects the words in the lists to be known to be in the vocabulary and
-           also to already be in the correct case"""
+           also to already be in the correct case.
+           If word weights are enabled, the embedding vectors are weighted
+           by the corresponding weights for averaging"""
         if len(words1) > 0 and len(words2) > 0:
             ## actually calculate the similarity between the two lists of words
             ## All words in words1 and words should be in the model so we simply
@@ -160,8 +254,14 @@ class EmbeddingsUtils:
             embs1 = np.array([self.model[w] for w in words1])
             embs2 = np.array([self.model[w] for w in words2])
             ## calculate the average vector for embs1 and embs2
-            mean1 = np.average(embs1,axis=0)
-            mean2 = np.average(embs2,axis=0)
+            if self.use_weights:
+                weights1 = np.array([self.weights[w] for w in words1])
+                weights2 = np.array([self.weights[w] for w in words2])
+                mean1 = np.average(embs1,weights=weights1,axis=0)
+                mean2 = np.average(embs2,weights=weights2,axis=0)
+            else:
+                mean1 = np.average(embs1,axis=0)
+                mean2 = np.average(embs2,axis=0)
             d = np.dot(mean1,mean2)
             n1 = np.linalg.norm(mean1)
             n2 = np.linalg.norm(mean2)
