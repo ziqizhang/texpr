@@ -101,17 +101,17 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
         h_sim = []
         h_simidf = []
         h_simidfstr = []
-        (known,unknown) = eu.knownWords(keyword)
+        known = eu.words4text(keyword)
+        ## if known is empty, no word is known to the embeddings and we can
+        ## skip this keyword
+        if len(known) == 0:
+            continue
         ## calculate the keyword idf scores
         keywordidf = 0.0
         for w in known:
             keywordidf += eu.getWeight(w)
-        keywordidf += eu.default_weight * len(unknown)
-        l = len(known) + len(unknown)
-        if(l > 0):
-            keywordidf = keywordidf / l
-        else:
-            keywordidf = eu.default_weight
+        keywordidf = keywordidf / len(known)
+        ## print("DEBUG: k-idf for ",keyword,"with known=",known,"is",keywordidf,file=sys.stderr)
         for corpusword,idf in corpuswords.items():
             pbar.update(1)
             totalpairs = totalpairs + 1
