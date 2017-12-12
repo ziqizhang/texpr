@@ -71,7 +71,7 @@ class EmbeddingsUtils:
         self.nEmpty = 0
 
     def isInVocab(self,word):
-        """Checks if a word is in the embeddings vocabulary, respecting case sensitivity and 
+        """Checks if a word is in the embeddings vocabulary, respecting case sensitivity and
            fallback to lower case settings."""
         if not self.isCaseSensitive:
            word = word.lower()
@@ -82,7 +82,7 @@ class EmbeddingsUtils:
         return known
 
     def isInVocabStrict(self,word):
-        """Checks if the word is in the embeddings vocab as it is (no lowercasing or fallback to 
+        """Checks if the word is in the embeddings vocab as it is (no lowercasing or fallback to
            lowercase done)"""
         havewv = hasattr(self.model,"wv")
         if havewv:
@@ -105,10 +105,20 @@ class EmbeddingsUtils:
                 notfound.append(word)
         return (found,notfound)
 
+    # returns a list of tokens (words) as created by the tokeniser, but
+    # not filtered by the embeddings nor lowercased.
+    # However, known unwanted tokens are filtered (1 letter tokens) and
+    # tokens are cleaned to remove any additional punctuation attached to them.
+    def tokens4text(self,text):
+        tmpwords = nltk.word_tokenize(text)
+        tmpwords = [word for word in tmpwords if len(word) > 1]
+        tmpwords = [re.sub("[.,;:!?]+","",word) for word in tmpwords]
+        return tmpwords
+
     # return a list of filtered/cleaned/transformed words ready to be used for similarity calculation
     def words4text(self,text):
         """Tokenises the text and returns a list of words, optionally lower cased, stop words filtered"""
-        tmpwords = nltk.word_tokenize(text)
+        tmpwords = self.tokens4text(text)
         if not self.isCaseSensitive:
             tmpwords = [word.lower() for word in tmpwords]
         if self.debug: print("After optional lowercasing: ",tmpwords,"from input",input,file=sys.stderr)
@@ -136,7 +146,7 @@ class EmbeddingsUtils:
         if self.debug: print("Words1:",words1,"from input",text1,file=sys.stderr)
         if self.debug: print("Words2:",words2,"from input",text2,file=sys.stderr)
         (sim,used1,used2) = self.sim4words(words1,words2)
-        return (sim," ".join(used1)," ".join(used2))
+        return (sim,used1,used2)
 
     # return triple of similarity, list1 used, list2 used
     def sim4words(self,words1,words2):
