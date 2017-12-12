@@ -33,6 +33,9 @@ if len(sys.argv) != 5:
     print("ERROR: need the following arguments: keywords lst file, corpus words tsv file, embeddings path, 0/1 (0=lowercase/1=mixed case embeddings)",file=sys.stderr)
     sys.exit(1)
 
+debug=False
+verbose=True
+
 keywordsFile = sys.argv[1]
 corpusWordsFile = sys.argv[2]
 embFile = sys.argv[3]
@@ -43,10 +46,10 @@ eu.setIsCaseSensitive(mixedCase)
 eu.setFallBackToLower(mixedCase)
 eu.setFilterStopwords(True)
 eu.setDebug(False)
-eu.setVerbose(True)
+eu.setVerbose(verbose)
 eu.loadEmbeddings(embFile)
 
-MIN_EMB_SIM=0.5      # ignore anything where the embedding similarity is less
+MIN_EMB_SIM=0.40      # ignore anything where the embedding similarity is less
 KEEP_FRACTION=0.2    # keep that portion of highest scoring words, after filtering
 
 keywords = set()
@@ -76,7 +79,7 @@ print("Calculating similarities, this will take a while ...",file=sys.stderr)
 ##   * raw embedding sim (sim)
 ##   * embedding sim times corpus idf (simidf)
 ##   * embedding sim times corpus idf times inverse string sim (simidfstr)
-## * three ordered lists for each of the scores are maintained 
+## * three ordered lists for each of the scores are maintained
 ## * the highest k corpus words for each of the three scores are output, together
 ##   with their rank numbers
 
@@ -97,9 +100,11 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
             (embsim,usedcorpuswords,usedkeywords) = eu.sim4texts(corpusword,keyword)
             # print("DEBUG embsim for",corpusword,"/",keyword,"=",embsim,file=sys.stderr)
             if np.isclose(embsim, 1.0, rtol=1e-07, atol=1e-09, equal_nan=False):
+                if debug: print("DEBUG: skipping equal pair",corpusword,keyword,file=sys.stderr)
                 continue
             # 2) the minimum embedding similarity threshold is not reached
             if embsim < MIN_EMB_SIM:
+                #if debug: print("DEBUG: skipping low sim: ",corpusword,"/",keyword,"=",embsim,file=sys.stderr)
                 continue
             # 3) one of the (used) corpuswords is in the keyword words
             isContained = False
@@ -108,41 +113,44 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
                    isContained = True
                    break
             if isContained:
-                # print("DEBUG: skipping, isContained",file=sys.stderr)
+                if debug: print("DEBUG: skipping, isContained",corpusword,"/",keyword,"usedcorp=","|".join(usedcorpuswords),"usedkey=","|".join(usedkeywords),file=sys.stderr)
+                continue
+            # 4) if the original keyphrase was significantly shortened ignore this
+            tokens = eu.tokens4text(keyword)
+            if len(tokens) > 1 and usedkeywords == 1:
+                if debug: print("DEBUG: skipping shrunk keyword: ",tokens,usedkeywords,file=sys.stderr)
                 continue
             # ok, we want to keep this pair, store the corpusword in the heaps, for their scores
             # print("DEBUG: pushing ",(embsim,corpusword),file=sys.stderr)
-            heapq.heappush(h_sim,(embsim,corpusword))
+            heapq.heappush(h_sim,(embsim,corpusword,usedcorpuswords,usedkeywords))
             simidf = embsim * idf
-            heapq.heappush(h_simidf,(simidf,corpusword))
+            heapq.heappush(h_simidf,(simidf,corpusword,usedcorpuswords,usedkeywords))
             stringsim = SequenceMatcher(None,corpusword,keyword).ratio()
             simidfstr = embsim * idf * (1.0/(stringsim+1))
-            heapq.heappush(h_simidfstr,(simidfstr,corpusword))
-        # after going through all the corpuswords, output the best k 
+            heapq.heappush(h_simidfstr,(simidfstr,corpusword,usedcorpuswords,usedkeywords))
+        # after going through all the corpuswords, output the best k
         if len(h_sim) == 0:
-            # print("DEBUG: h_sim is empty",file=sys.stderr)
+            if debug: print("DEBUG: nothing for",keyword,file=sys.stderr)
             pass
         else:
             # print("DEBUG: heap is ",h_sim,file=sys.stderr)
             l1 = heapq.nlargest(k,h_sim)
             rank = 0
-            for s,w in l1:
-               print("simonly",w,keyword,rank,s,sep="\t")
+            for s,w,cws,kws in l1:
+               print("simonly",w,keyword,rank,s,cws,kws,sep="\t")
                written = written + 1
                rank = rank + 1
             l1 = heapq.nlargest(k,h_simidf)
             rank = 0
-            for s,w in l1:
-               print("simidfonly",w,keyword,rank,s,sep="\t")
+            for s,w,cws,kws in l1:
+               print("simidfonly",w,keyword,rank,s,cws,kws,sep="\t")
                written = written + 1
                rank = rank + 1
             l1 = heapq.nlargest(k,h_simidfstr)
             rank = 0
-            for s,w in l1:
-               print("simidfstr",w,keyword,rank,s,sep="\t")
+            for s,w,cws,kws in l1:
+               print("simidfstr",w,keyword,rank,s,cws,kws,sep="\t")
                written = written + 1
                rank = rank + 1
-    
+
 print("Finished, total comparisons:",totalpairs,"written:",written,file=sys.stderr)
-
-
