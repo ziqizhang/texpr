@@ -4,7 +4,7 @@ import os
 import re
 
 from nltk.corpus import stopwords
-from textrank.texpr import  utils
+from texpr import utils
 
 from texpr import semrerank_scorer as scorer
 
@@ -166,31 +166,31 @@ def compute(textpr_scores, ate_ref_candidate_terms_for_corpus, stopwords,
 # #out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/aclrd_ver2"
 # out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup/"
 
-ATE_ALG_SET="_atr4s" #use empty string for jate ate algorithms' output; _atr4s for atr4s' algorithms
-embedding_model = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
-ate_ref_candidate_list= "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1/Basic.txt"
-stop = stopwords.words('english')
-ate_ranked_terms_per_algorithm_folder = "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1"
-#word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2/words_genia.txt"
-word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/genia/atr4s"
-#out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/genia"
-out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup"
-
-
-if word_weight_file.endswith(".txt"):
-    run_textpr(ate_ref_candidate_list, stop,
-               ate_ranked_terms_per_algorithm_folder,
-               word_weight_file,
-               out_folder)
-else:
-    for file in os.listdir(word_weight_file):
-        if "words_" not in file:
-            continue
-        print(">> Word weight file: {}, time: {}".format(file,str(datetime.datetime.now())))
-        label_index=file.rfind('.')
-        append_label=file[label_index:]
-        run_textpr(ate_ref_candidate_list, stop,
-                   ate_ranked_terms_per_algorithm_folder,
-                   word_weight_file +"/" + file,
-                   out_folder, append_label)
-        #print("\n")
+# ATE_ALG_SET="_atr4s" #use empty string for jate ate algorithms' output; _atr4s for atr4s' algorithms
+# embedding_model = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
+# ate_ref_candidate_list= "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1/Basic.txt"
+# stop = stopwords.words('english')
+# ate_ranked_terms_per_algorithm_folder = "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1"
+# #word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2/words_genia.txt"
+# word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/genia/atr4s"
+# #out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/genia"
+# out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup"
+#
+#
+# if word_weight_file.endswith(".txt"):
+#     run_textpr(ate_ref_candidate_list, stop,
+#                ate_ranked_terms_per_algorithm_folder,
+#                word_weight_file,
+#                out_folder)
+# else:
+#     for file in os.listdir(word_weight_file):
+#         if "words_" not in file:
+#             continue
+#         print(">> Word weight file: {}, time: {}".format(file,str(datetime.datetime.now())))
+#         label_index=file.rfind('.')
+#         append_label=file[label_index:]
+#         run_textpr(ate_ref_candidate_list, stop,
+#                    ate_ranked_terms_per_algorithm_folder,
+#                    word_weight_file +"/" + file,
+#                    out_folder, append_label)
+#         #print("\n")

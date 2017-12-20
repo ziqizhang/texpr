@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import re
+import sys
 
 import networkx as nx
 import datetime
@@ -14,6 +15,7 @@ from textrank.summa.preprocessing.textcleaner import clean_text_by_word as _clea
 from textrank.summa.preprocessing.textcleaner import tokenize_by_word as _tokenize_by_word
 from textrank.summa.commons import add_graph_nodes
 from textrank.summa import keywords as ky
+from texpr import texpr_term_scorer as ts
 
 LEMMATIZE_OR_STEM = 1  # 0-lemmatize all vertices; 1-stem all vertices
 MAX_PERCENTAGE_OF_VERTICES_FOR_PERSONALIZATION_INIT = 0.5
@@ -31,14 +33,14 @@ stop = stopwords.words('english')
 min_char = 3
 
 
-#the method will output textpr weights for every word, UNNORMALIZED form.
-def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sorted_seed_terms=None,
-                           gs_term_file=None, filter_tokens=None):
+# the method will output textpr weights for every word, UNNORMALIZED form.
+def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personalized=None, sorted_seed_terms=None,
+                              gs_term_file=None, filter_tokens=None):
     count = 0
     total_non_zero_elements_pnl_init = 0
-    graph=nx.Graph()
-    edge_weights={}
-    all_tokens={}
+    graph = nx.Graph()
+    edge_weights = {}
+    all_tokens = {}
     for file in os.listdir(in_folder):
         count += 1
         print(str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
@@ -47,12 +49,12 @@ def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sor
 
             # Gets a dict of word -> lemma
             tokens = _clean_text_by_word(text, "english")
-            #todo: filter tokens
+            # todo: filter tokens
             split_text = list(_tokenize_by_word(text))
 
             # Creates the graph and adds the edges
-            graph = add_graph_nodes(ky._get_words_for_graph(tokens),graph)
-            ky._update_graph_edges(graph, tokens, split_text,edge_weights)
+            graph = add_graph_nodes(ky._get_words_for_graph(tokens), graph)
+            ky._update_graph_edges(graph, tokens, split_text, edge_weights,window_size)
             del split_text  # It's no longer used
             all_tokens.update(tokens)
 
@@ -61,11 +63,11 @@ def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sor
 
 
     ###############
-    #after all edge weights updated, now create edges on graph
+    # after all edge weights updated, now create edges on graph
     ###############
-    ky._set_graph_edges_weighted(graph,edge_weights)
+    ky._set_graph_edges_weighted(graph, edge_weights)
     print("\t{}: graph stats before personalization: nodes={}, edges={}".format(
-            time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges())))
+        time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges())))
     personalized_init = None
     non_zero_elements_pnl_init = 0
     if num_of_personalized is not None:
@@ -79,12 +81,12 @@ def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sor
 
     # Ranks the tokens using the PageRank algorithm. Returns dict of lemma -> score
     pagerank_scores = nx.pagerank(graph,
-                                    alpha=0.85, personalization=personalized_init,
-                                     max_iter=5000, tol=1e-06)
+                                  alpha=0.85, personalization=personalized_init,
+                                  max_iter=5000, tol=1e-06)
 
     extracted_lemmas = ky._extract_tokens(graph.nodes(), pagerank_scores, 1.0, words=None)
     lemmas_to_word = ky._lemmas_to_words(all_tokens)
-    #todo: may apply lemmatizer here to use lemma for key, to be consistent with jate output
+    # todo: may apply lemmatizer here to use lemma for key, to be consistent with jate output
     keywords_textpr_weights = ky._get_keywords_with_score(extracted_lemmas, lemmas_to_word)
 
     # if combined:
@@ -100,14 +102,13 @@ def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sor
     # else:
 
     logger.info("\t{}: graph stats: nodes={}, edges={}, per init={}".format(
-            time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges()),
-            non_zero_elements_pnl_init))
-
+        time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges()),
+        non_zero_elements_pnl_init))
 
     out_file += str(num_of_personalized)
     logger.info("\n COMPLETE {}, OVERALL STATS: {} graph stats: nodes={}, edges={}, per init={}".format(
-            time.strftime("%H:%M:%S"), out_file, len(graph.nodes), len(graph.edges),
-            total_non_zero_elements_pnl_init))
+        time.strftime("%H:%M:%S"), out_file, len(graph.nodes), len(graph.edges),
+        total_non_zero_elements_pnl_init))
     f = open(out_file, 'w')
     for key, value in keywords_textpr_weights.iteritems():
         trimmed = key[0:len(key)]
@@ -116,8 +117,8 @@ def keywords_to_ate_percorpus(in_folder, out_file, num_of_personalized=None, sor
         except ValueError:
             pass
     f.close()
-    print ("end")
-    #sys.exit(0)
+    print("end")
+    # sys.exit(0)
 
 
 def init_personalized_vector(graph_nodes, sorted_jate_terms, topN, max_percentage, gs_term_file=None):
@@ -160,34 +161,44 @@ def init_personalized_vector(graph_nodes, sorted_jate_terms, topN, max_percentag
     return [init_vector, len(initialized)]
 
 
-def select_words_as_nodes(sim_file:str, topn_percent):
-    selected=set()
-    all=set()
-    with open(sim_file, encoding='utf8') as json_data:
-        data = json.load(json_data)
-        for key, value in data.items():
-            value.sort(key=lambda x: x[1], reverse=True)
-            cutoff_index=int(len(value)*topn_percent)
-            for i in range(0,cutoff_index):
-                selected.add(value[i][0])
-                all.add(value[i][0])
-            for i in range(cutoff_index,len(value)):
-                all.add(value[i][0])
+def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0.0):
+    selected = set()
+    all = set()
+    for file in os.listdir(sim_scores_folder):
+        with open(sim_scores_folder+"/"+file, encoding='utf8') as json_data:
+            data = json.load(json_data)
+            print("\t processing... {}, items={}".format(file,len(data)))
+            count=0
+            for key, value in data.items():
+                count+=1
+                #value.sort(key=lambda x: x[1], reverse=True)
+                if topn<1.0:
+                    cutoff_index = int(len(value) * topn)
+                else:
+                    cutoff_index=int(topn)
+                for i in range(0, cutoff_index):
+                    if value[i][1]>min_sim:
+                        selected.add(value[i][0])
+                    all.add(value[i][0])
+                for i in range(cutoff_index, len(value)):
+                    all.add(value[i][0])
+                if count%50==0:
+                    print("\t\t "+str(count))
     return selected
 
 
-personalized = [50, 100, 200]
-topn_for_graph_nodes=[0.1,0.2,0.5]
-
-ATE_LIBRARY="atr4s"
-in_folder = "/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt"
-out_file = "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/aclv2/"+ATE_LIBRARY+"/words_aclv2.txt"
-if ATE_LIBRARY=="atr4s":
-    personalization_seed_term_file = "/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json"
-else:
-    personalization_seed_term_file = "/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json"
-gs_terms_file = None#"/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/acl-rd-ver2-gs-terms.txt"
-gs_term_sim_file="/home/zqz/Work/data/texpr/sim_genia.json"
+# personalized = [50, 100, 200]
+# topn_for_graph_nodes = [0.1, 0.2, 0.5]
+#
+# ATE_LIBRARY = "atr4s"
+# in_folder = "/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt"
+# out_file = "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/aclv2/" + ATE_LIBRARY + "/words_aclv2.txt"
+# if ATE_LIBRARY == "atr4s":
+#     personalization_seed_term_file = "/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json"
+# else:
+#     personalization_seed_term_file = "/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json"
+# gs_terms_file = None  # "/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/acl-rd-ver2-gs-terms.txt"
+# gs_term_sim_file = "/home/zqz/Work/data/texpr/sim_genia.json"
 
 # ATE_LIBRARY= "atr4s"
 # in_folder="/home/zqz/Work/data/jate_data/genia_gs/text/files_standard"
@@ -218,21 +229,57 @@ gs_term_sim_file="/home/zqz/Work/data/texpr/sim_genia.json"
 # else:
 #     personalization_seed_term_file="/home/zqz/Work/data/semrerank/jate_lrec2016/ttc_wind/ttf.json"
 
-print(len(INCLUDING_FILTER))
+#print(len(INCLUDING_FILTER))
+sys_argv=sys.argv
+if len(sys.argv)==2:
+    sys_argv= sys.argv[1].split(" ")
+
+params={}
+for arg in sys_argv:
+    pv=arg.split("=",1)
+    if(len(pv)==1):
+        continue
+    params[pv[0]]=pv[1]
 
 
 # textrank
-# keywords_to_ate(in_folder,out_file, False,
-#                 num_of_personalized=None, sorted_seed_terms=None,
-#                     gs_term_file=None)
+print("Selecting top {} similar words as graph nodes. {}".format(params["topn"],datetime.datetime.now()))
 
-# personalized textrank
-jate_term_ttf = {c[0]: c[1] for c in utils.jate_terms_iterator(personalization_seed_term_file)}
-sorted_seed_terms = sorted(jate_term_ttf, key=jate_term_ttf.get, reverse=True)
-for num_personalized_nodes in personalized:
-    for topn in topn_for_graph_nodes:
-        selected_words = select_words_as_nodes(gs_term_sim_file, topn)
-        print('Personalized textrank, {} nodes to be personalized'.format(num_personalized_nodes))
-        keywords_to_ate_percorpus(in_folder, out_file,
-                               num_of_personalized=num_personalized_nodes, sorted_seed_terms=sorted_seed_terms,
-                               gs_term_file=gs_terms_file, filter_tokens=selected_words)
+if params["filter_by_sim"]=="True": #params["sim_score_files"].endswith(".json"):
+    selected_domain_similar_words = select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]))
+else:
+    selected_domain_similar_words=None
+
+word_rankscore_folder=params["sys_folder"]+"/"+params["topn"]
+if not os.path.exists(word_rankscore_folder):
+    os.makedirs(word_rankscore_folder)
+
+sorted_seed_terms = None
+if "pr_seed" in params.keys() and params["pr_seed"] is not None:
+    print("Using personalized pagerank, pr_seed= {}".format(params["pr_seed"],datetime.datetime.now()))
+    pr_jate_term_ttf= {c[0]: c[1] for c in utils.jate_terms_iterator(params["pr_seed"])}
+    sorted_seed_terms = sorted(pr_jate_term_ttf, key=pr_jate_term_ttf.get, reverse=True)
+
+print("Computing corpus-level textrank scores. {}".format(datetime.datetime.now()))
+keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
+                          int(params["window"]),
+                          num_of_personalized=params["pr_seed_num"], sorted_seed_terms=sorted_seed_terms,
+                          gs_term_file=params["gs_file"], filter_tokens=selected_domain_similar_words)  # personalized textrank
+
+print("Computing final term scores. {}".format(datetime.datetime.now()))
+use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
+#use average similarity score for a word as base score
+if use_ate_pre_computed=="1":
+    print("\t generate candidate terms and their scores using average sem-sim...")
+    #todo
+
+#ate_ref_candidate_list= "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1/Basic.txt"
+#ate_ranked_terms_per_algorithm_folder = "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1"
+#word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/genia/atr4s"
+#out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/genia"
+#out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup"
+
+ts.run_textpr(params["ate_terms_outfile"], stopwords.words('english'),
+               params["ate_terms_outfolder"],
+               word_rankscore_folder,
+               params["out_folder"])

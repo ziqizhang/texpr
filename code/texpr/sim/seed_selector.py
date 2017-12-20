@@ -13,4 +13,7 @@ def select_random_from_list(infile_term_list, size: int):
             processed = re.sub(' +', ' ', processed)
             if len(processed) > 3:
                 output.append(processed)
+
+        if size> len(output):
+            return output
         return numpy.random.choice(output, size)
