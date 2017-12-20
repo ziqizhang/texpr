@@ -34,8 +34,18 @@ min_char = 3
 
 
 # the method will output textpr weights for every word, UNNORMALIZED form.
+def filter_tokens(tokens, filters):
+    toks={}
+    if filters is not None and len(filters)>0:
+        for key, val in tokens.items():
+            if key in filters:
+                toks[key]=val
+        return toks
+    return tokens
+
+
 def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personalized=None, sorted_seed_terms=None,
-                              gs_term_file=None, filter_tokens=None):
+                              gs_term_file=None, filters=None):
     count = 0
     total_non_zero_elements_pnl_init = 0
     graph = nx.Graph()
@@ -43,13 +53,13 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
     all_tokens = {}
     for file in os.listdir(in_folder):
         count += 1
-        print(str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
+        print("\t"+str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
         with open(in_folder + '/' + file, 'r') as myfile:
             text = myfile.read()
 
             # Gets a dict of word -> lemma
             tokens = _clean_text_by_word(text, "english")
-            # todo: filter tokens
+            tokens=filter_tokens(tokens, filters)
             split_text = list(_tokenize_by_word(text))
 
             # Creates the graph and adds the edges
@@ -80,6 +90,7 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
         total_non_zero_elements_pnl_init = non_zero_elements_pnl_init
 
     # Ranks the tokens using the PageRank algorithm. Returns dict of lemma -> score
+    print("\trunning pagerank...{}".format(datetime.datetime.now()))
     pagerank_scores = nx.pagerank(graph,
                                   alpha=0.85, personalization=personalized_init,
                                   max_iter=5000, tol=1e-06)
@@ -101,16 +112,16 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
     #                textrank_scores[item[0]] = item[1]
     # else:
 
-    logger.info("\t{}: graph stats: nodes={}, edges={}, per init={}".format(
+    print("\t{}: graph stats: nodes={}, edges={}, per init={}".format(
         time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges()),
         non_zero_elements_pnl_init))
-
-    out_file += str(num_of_personalized)
-    logger.info("\n COMPLETE {}, OVERALL STATS: {} graph stats: nodes={}, edges={}, per init={}".format(
+    if num_of_personalized is not None:
+        out_file += "_"+str(num_of_personalized)
+    print("\tCOMPLETE {}, OVERALL STATS: {} graph stats: nodes={}, edges={}, per init={}".format(
         time.strftime("%H:%M:%S"), out_file, len(graph.nodes), len(graph.edges),
         total_non_zero_elements_pnl_init))
     f = open(out_file, 'w')
-    for key, value in keywords_textpr_weights.iteritems():
+    for key, value in keywords_textpr_weights.items():
         trimmed = key[0:len(key)]
         try:
             f.write(trimmed + "," + str(value) + "\n")  # python will convert \n to os.linesep
@@ -230,6 +241,13 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0
 #     personalization_seed_term_file="/home/zqz/Work/data/semrerank/jate_lrec2016/ttc_wind/ttf.json"
 
 #print(len(INCLUDING_FILTER))
+def create_setting_label(params):
+    label="filter_by_sim="+params["filter_by_sim"]\
+          +"-window="+params["window"]+"-ate_alg="+params["ate_alg"]
+    if params["filter_by_sim"]=="True":
+        label+="-topnsim="+params["topn"]
+    return label
+
 sys_argv=sys.argv
 if len(sys.argv)==2:
     sys_argv= sys.argv[1].split(" ")
@@ -240,31 +258,44 @@ for arg in sys_argv:
     if(len(pv)==1):
         continue
     params[pv[0]]=pv[1]
+setting_label=create_setting_label(params)
 
 
 # textrank
-print("Selecting top {} similar words as graph nodes. {}".format(params["topn"],datetime.datetime.now()))
-
 if params["filter_by_sim"]=="True": #params["sim_score_files"].endswith(".json"):
+    print("Selecting top {} similar words as graph nodes. {}".format(params["topn"],datetime.datetime.now()))
     selected_domain_similar_words = select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]))
 else:
+    print("No filtering over words to be selected as graph nodes")
     selected_domain_similar_words=None
 
-word_rankscore_folder=params["sys_folder"]+"/"+params["topn"]
+word_rankscore_folder=params["sys_folder"]
 if not os.path.exists(word_rankscore_folder):
     os.makedirs(word_rankscore_folder)
+if params["filter_by_sim"]=="True":
+    word_rankscore_folder+="/"+params["topn"]+".txt"
+else:
+    word_rankscore_folder+="/all.txt"
+
 
 sorted_seed_terms = None
+pr_seed_num=None
+gs_file=None
 if "pr_seed" in params.keys() and params["pr_seed"] is not None:
     print("Using personalized pagerank, pr_seed= {}".format(params["pr_seed"],datetime.datetime.now()))
     pr_jate_term_ttf= {c[0]: c[1] for c in utils.jate_terms_iterator(params["pr_seed"])}
     sorted_seed_terms = sorted(pr_jate_term_ttf, key=pr_jate_term_ttf.get, reverse=True)
+if "pr_seed_num" in params.keys():
+    pr_seed_num=int(params["pr_seed_num"])
+if "gs_file" in params.keys():
+    gs_file=int(params["gs_file"])
 
+print("\n>>> SETTING={}".format(setting_label))
 print("Computing corpus-level textrank scores. {}".format(datetime.datetime.now()))
 keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
                           int(params["window"]),
-                          num_of_personalized=params["pr_seed_num"], sorted_seed_terms=sorted_seed_terms,
-                          gs_term_file=params["gs_file"], filter_tokens=selected_domain_similar_words)  # personalized textrank
+                          num_of_personalized=pr_seed_num, sorted_seed_terms=sorted_seed_terms,
+                          gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
 
 print("Computing final term scores. {}".format(datetime.datetime.now()))
 use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
@@ -279,7 +310,10 @@ if use_ate_pre_computed=="1":
 #out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/genia"
 #out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup"
 
+out_folder=params["outfolder"]+"/"+setting_label
+if not os.path.exists(out_folder):
+    os.makedirs(out_folder)
 ts.run_textpr(params["ate_terms_outfile"], stopwords.words('english'),
                params["ate_terms_outfolder"],
                word_rankscore_folder,
-               params["out_folder"])
+               out_folder)

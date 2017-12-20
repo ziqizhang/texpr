@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d99453-b782-4d47-8cd1-09e301f9ceff" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/texpr/textpr_main.py" afterPath="$PROJECT_DIR$/code/texpr/texpr_main.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/texpr/textpr_term_scorer.py" afterPath="$PROJECT_DIR$/code/texpr/texpr_term_scorer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/data/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/data/acl_crawler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/data/bionlp_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/textrank" afterPath="$PROJECT_DIR$/code/textrank" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/embeddings/calcSim.py" afterPath="$PROJECT_DIR$/code/embeddings/calcSim.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/texpr/sim/calc_sim_multi_thread.py" afterPath="$PROJECT_DIR$/code/texpr/sim/calc_sim_multi_thread.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/texpr/sim/seed_selector.py" afterPath="$PROJECT_DIR$/code/texpr/sim/seed_selector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/texpr/texpr_main.py" afterPath="$PROJECT_DIR$/code/texpr/texpr_main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/texpr/utils.py" afterPath="$PROJECT_DIR$/code/texpr/utils.py" />
     </list>
     <ignored path="texpr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="texpr_main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="texpr_main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/texpr/texpr_main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -57,8 +55,8 @@
       <file leaf-file-name="keywords.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/textrank/summa/keywords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
+            <state relative-caret-position="97">
+              <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -69,11 +67,55 @@
       <file leaf-file-name="texpr_term_scorer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/texpr/texpr_term_scorer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+            <state relative-caret-position="437">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acl_crawler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/data/acl_crawler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="44" column="31" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bionlp_parser.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/data/bionlp_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="e#147#156#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/texpr/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/textrank/summa/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,6 +168,9 @@
         <option value="$PROJECT_DIR$/code/texpr/sim/calc_sim_multi_thread.py" />
         <option value="$PROJECT_DIR$/code/textrank/summa/keywords.py" />
         <option value="$PROJECT_DIR$/code/texpr/texpr_main.py" />
+        <option value="$PROJECT_DIR$/code/texpr/utils.py" />
+        <option value="$PROJECT_DIR$/code/data/acl_crawler.py" />
+        <option value="$PROJECT_DIR$/code/data/bionlp_parser.py" />
       </list>
     </option>
   </component>
@@ -269,6 +314,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="texpr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -284,24 +343,7 @@
       <recent name="$PROJECT_DIR$/code/" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.textpr_main">
-    <configuration default="false" name="calcSim" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/embeddings" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="texpr" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/embeddings/calcSim.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.bionlp_parser">
     <configuration default="false" name="textpr_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -315,7 +357,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="texpr" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/texpr/texpr_main.py" />
-      <option name="PARAMETERS" value="filter_by_sim=False window=10 topn=100 sim_score_files=$PROJECT_DIR$/../data/texpr/acl_sim sys_folder=$PROJECT_DIR$/../data/texpr/word_weights/acl ate_alg=0 ate_terms_outfile=$PROJECT_DIR$/../data/semrerank/jate_lrec2016/acl_ver2/ttf.json ate_terms_outfolder=$PROJECT_DIR$/../data/semrerank/jate_lrec2016/acl_ver2/min1 outfolder=$PROJECT_DIR$/../data/texpr/texpr_output/acl in_corpus=$PROJECT_DIR$/../data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt" />
+      <option name="PARAMETERS" value="filter_by_sim=False window=100 topn=100 sim_score_files=$PROJECT_DIR$/../data/texpr/acl_sim sys_folder=$PROJECT_DIR$/../data/texpr/word_weights/acl ate_alg=0 ate_terms_outfile=$PROJECT_DIR$/../data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=$PROJECT_DIR$/../data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=$PROJECT_DIR$/../data/texpr/texpr_output/acl in_corpus=$PROJECT_DIR$/../data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -349,6 +391,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="texpr" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/textrank/summa/preprocessing/textcleaner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="acl_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="texpr" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/data/acl_crawler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="bionlp_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="texpr" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/data/bionlp_parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -528,19 +604,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.calc_sim_multi_thread" />
-      <item index="1" class="java.lang.String" itemvalue="Python.calcSim" />
-      <item index="2" class="java.lang.String" itemvalue="Python.textpr_main" />
-      <item index="3" class="java.lang.String" itemvalue="Python.convert2bin" />
-      <item index="4" class="java.lang.String" itemvalue="Python.textcleaner" />
+      <item index="1" class="java.lang.String" itemvalue="Python.textpr_main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.convert2bin" />
+      <item index="3" class="java.lang.String" itemvalue="Python.textcleaner" />
+      <item index="4" class="java.lang.String" itemvalue="Python.acl_crawler" />
+      <item index="5" class="java.lang.String" itemvalue="Python.bionlp_parser" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.textpr_main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.textcleaner" />
-        <item index="2" class="java.lang.String" itemvalue="Python.convert2bin" />
-        <item index="3" class="java.lang.String" itemvalue="Python.calcSim" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.bionlp_parser" />
+        <item index="1" class="java.lang.String" itemvalue="Python.acl_crawler" />
+        <item index="2" class="java.lang.String" itemvalue="Python.textpr_main" />
+        <item index="3" class="java.lang.String" itemvalue="Python.textcleaner" />
+        <item index="4" class="java.lang.String" itemvalue="Python.convert2bin" />
       </list>
     </recent_temporary>
   </component>
@@ -555,8 +633,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35067114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4614094" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35067114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4899329" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -592,39 +670,29 @@
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="120" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>253</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>263</line>
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/textrank/summa/preprocessing/textcleaner.py</url>
           <line>222</line>
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/texpr/texpr_main.py</url>
-          <line>180</line>
+          <line>191</line>
           <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/data/acl_crawler.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/data/acl_crawler.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/data/bionlp_parser.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="207" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -634,7 +702,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="156" />
+      <option name="time" value="208" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -771,20 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/textrank/summa/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/texpr/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/embeddings/convert2bin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -851,34 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/textrank/summa/preprocessing/textcleaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/texpr/texpr_term_scorer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="194" column="36" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/textrank/summa/commons.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -897,13 +923,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/textrank/summa/preprocessing/textcleaner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/textrank/summa/keywords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
+        <state relative-caret-position="97">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/textrank/summa/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/texpr/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -913,6 +973,44 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/texpr/texpr_term_scorer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="198" column="8" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/data/acl_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="44" column="31" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/data/bionlp_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#147#156#0" expanded="true" />
           </folding>
         </state>
       </provider>

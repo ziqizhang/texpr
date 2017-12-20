@@ -5,7 +5,6 @@ import re
 import numpy as np
 
 import pickle as pk
-from textrank.summa import utils
 
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -164,8 +163,8 @@ def jate_terms_iterator(jate_json_outfile):
 def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_tokens):
     ate_terms_components = {}
     for term in ate_term_base_scores.keys():
-        norm_parts = utils.normalize_string(term)
-        term_ngrams = utils.find_ngrams(norm_parts, max_n_in_term)
+        norm_parts = normalize_string(term)
+        term_ngrams = find_ngrams(norm_parts, max_n_in_term)
         selected_parts = list()
         for term_ngram in term_ngrams:
             # check if this part maps to a phrase that is present in the model
