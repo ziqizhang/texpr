@@ -85,7 +85,7 @@ def read_list(inFile: str):
 
 EMBEDDING_FILE = "/home/zqz/Work/data/glove.840B.300d.bin.gensim"
 # EMBEDDING_FILE = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
-INPUT_GS_LIST = "/home/zqz/Work/data/jate_data/genia_gs/concept/genia_gs_terms_v2.txt"
+INPUT_GS_LIST = "/home/zqz/Work/data/texpr/dict/bio_2011REL.txt"
 INPUT_CANDIDATE_LIST = "/home/zqz/Work/data/texpr/corpus_words/words_genia.txt"
 SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr"
 DATA_LABEL = "genia"
@@ -94,7 +94,7 @@ SELECT_GS = 50000
 
 # EMBEDDING_FILE = "/home/zqz/Work/data/glove.840B.300d.bin.gensim"
 # # EMBEDDING_FILE = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
-# INPUT_GS_LIST = "/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/acl-rd-ver2-gs-terms.txt"
+# INPUT_GS_LIST = "/home/zqz/Work/data/texpr/dict/acl_anthology.txt"
 # INPUT_CANDIDATE_LIST = "/home/zqz/Work/data/texpr/corpus_words/words_acl.txt"
 # SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr"
 # DATA_LABEL = "acl"

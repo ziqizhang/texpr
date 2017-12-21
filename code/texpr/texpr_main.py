@@ -316,4 +316,4 @@ if not os.path.exists(out_folder):
 ts.run_textpr(params["ate_terms_outfile"], stopwords.words('english'),
                params["ate_terms_outfolder"],
                word_rankscore_folder,
-               out_folder)
+               out_folder,setting_label)

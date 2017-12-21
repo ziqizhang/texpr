@@ -152,9 +152,14 @@ def jate_terms_iterator(jate_json_outfile):
     json_data = open(jate_json_outfile).read()
     data = json.loads(json_data)
     count = 0
-    for term in data:
-        count = count + 1
-        yield term['string'], term['score']
+
+    if type(data) is list:
+        for term in data:
+            count = count + 1
+            yield term['string'], term['score']
+    else:
+        for k,v in data.items():
+            yield k, v
         # if (count % 2000 == 0):
         #     logger.info("\t loaded {}".format(count))
         #
@@ -176,9 +181,8 @@ def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_token
     return ate_terms_components
 
 
-IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
+#IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
 #genia_corpus_to_unigrams(IN_CORPUS, "/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min2_per_file_unigram")
-
-
-
-
+# ate_term_base_scores = {c[0]: c[1] for c in jate_terms_iterator("/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1/texpr_base.json")}
+#
+#
