@@ -53,7 +53,7 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
     all_tokens = {}
     for file in os.listdir(in_folder):
         count += 1
-        print("\t"+str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
+        #print("\t"+str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
         with open(in_folder + '/' + file, 'r') as myfile:
             text = myfile.read()
 
@@ -188,13 +188,14 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0
                 else:
                     cutoff_index=int(topn)
                 for i in range(0, cutoff_index):
-                    if value[i][1]>min_sim:
+                    if float(value[i][1])>min_sim:
                         selected.add(value[i][0])
                     all.add(value[i][0])
                 for i in range(cutoff_index, len(value)):
                     all.add(value[i][0])
                 if count%50==0:
                     print("\t\t "+str(count))
+    print("\t{} selected out of {}".format(str(len(selected)),str(len(all))))
     return selected
 
 
@@ -243,9 +244,11 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0
 #print(len(INCLUDING_FILTER))
 def create_setting_label(params):
     label="filter_by_sim="+params["filter_by_sim"]\
-          +"-window="+params["window"]+"-ate_alg="+params["ate_alg"]
+          +"-window="+params["window"]+"-ate_alg=0"
     if params["filter_by_sim"]=="True":
         label+="-topnsim="+params["topn"]
+        if "min_sim" in params:
+            label+="-min_sim="+params["min_sim"]
     return label
 
 sys_argv=sys.argv
@@ -260,11 +263,16 @@ for arg in sys_argv:
     params[pv[0]]=pv[1]
 setting_label=create_setting_label(params)
 
-
+print(setting_label)
 # textrank
 if params["filter_by_sim"]=="True": #params["sim_score_files"].endswith(".json"):
+    if "min_sim" in params:
+        mins=float(params["min_sim"])
+    else:
+        mins=0.0
     print("Selecting top {} similar words as graph nodes. {}".format(params["topn"],datetime.datetime.now()))
-    selected_domain_similar_words = select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]))
+    selected_domain_similar_words = \
+        select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]), mins)
 else:
     print("No filtering over words to be selected as graph nodes")
     selected_domain_similar_words=None
@@ -298,17 +306,11 @@ keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
                           gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
 
 print("Computing final term scores. {}".format(datetime.datetime.now()))
-use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
+#use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
 #use average similarity score for a word as base score
-if use_ate_pre_computed=="1":
-    print("\t generate candidate terms and their scores using average sem-sim...")
-    #todo
-
-#ate_ref_candidate_list= "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1/Basic.txt"
-#ate_ranked_terms_per_algorithm_folder = "/home/zqz/Work/data/semrerank/jate_lrec2016/genia" + ATE_ALG_SET + "/min1"
-#word_weight_file= "/home/zqz/Work/data/semrerank/word_weights/textrank/v2_per_unsup/genia/atr4s"
-#out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank/genia"
-#out_folder="/home/zqz/Work/data/semrerank/ate_output/textrank_per_unsup"
+#if use_ate_pre_computed=="1":
+#    print("\t generate candidate terms and their scores using average sem-sim...")
+#    #todo
 
 out_folder=params["outfolder"]+"/"+setting_label
 if not os.path.exists(out_folder):
@@ -317,3 +319,28 @@ ts.run_textpr(params["ate_terms_outfile"], stopwords.words('english'),
                params["ate_terms_outfolder"],
                word_rankscore_folder,
                out_folder,setting_label)
+
+
+#
+# filter_by_sim=False
+# window=5
+# topn=100
+# sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict
+# sys_folder=/home/zqz/Work/data/texpr/word_weights/acl
+# ate_alg=0
+# ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json
+# ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1
+# outfolder=/home/zqz/Work/data/texpr/texpr_output/acl
+# in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+
+#
+# filter_by_sim=False
+# window=100
+# topn=100
+# sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict
+# sys_folder=/home/zqz/Work/data/texpr/word_weights/genia
+# ate_alg=0
+# ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json
+# ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1
+# outfolder=/home/zqz/Work/data/texpr/texpr_output/genia
+# in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard

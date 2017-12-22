@@ -1,0 +1,70 @@
+30
+
+>>> Start the following setting at Fri 22 Dec 20:53:17 GMT 2017: 
+1
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 20:53:19.210027
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 20:53:20.482909
+	20:53:22: graph stats before personalization: nodes=1492, edges=21249
+	running pagerank...2017-12-22 20:53:22.226111
+	20:53:23: graph stats: nodes=1492, edges=21249, per init=0
+	COMPLETE 20:53:23, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=21249, per init=0
+end
+Computing final term scores. 2017-12-22 20:53:23.112442
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 20:53:31 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 20:53:31 GMT 2017: 
+2
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt

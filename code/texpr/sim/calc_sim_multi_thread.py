@@ -12,7 +12,7 @@ MAX_DICT_SIZE_BEFORE_DUMPING = 500
 
 # Define a function for the thread
 def calc_sim(gs_list: list, candidate_list: list, thread_id, embu: EmbeddingsUtils,
-             output: dict, out_folder, data_label, min_score=0.0, topnperc=1.0):
+             output: dict, out_folder, data_label, min_score=-1.0, topnperc=1.0):
     count_gt = 0
     count_batch = 0
     print("\tTHREAD {}, gs has {}, candidate has {}".format(thread_id, str(len(gs_list))
@@ -33,12 +33,12 @@ def calc_sim(gs_list: list, candidate_list: list, thread_id, embu: EmbeddingsUti
             score = res[0]
             if score == 0.0 or score < min_score:
                 continue
-            if res[1][0] in output.keys():
-                output[res[1][0]].append((res[2][0], str(score)))
+            if gt in output.keys():
+                output[gt].append((res[2][0], str(score)))
             else:
                 sim_scores = []
                 sim_scores.append((res[2][0], str(score)))
-                output[res[1][0]] = sim_scores
+                output[gt] = sim_scores
 
         # if count_gt==1:
         #     break
@@ -52,6 +52,7 @@ def calc_sim(gs_list: list, candidate_list: list, thread_id, embu: EmbeddingsUti
                 json.dump(resized, ofile)
             output.clear()
 
+    output=resize(output,topn)
     return output
 
 
@@ -87,18 +88,18 @@ EMBEDDING_FILE = "/home/zqz/Work/data/glove.840B.300d.bin.gensim"
 # EMBEDDING_FILE = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
 INPUT_GS_LIST = "/home/zqz/Work/data/texpr/dict/bio_2011REL.txt"
 INPUT_CANDIDATE_LIST = "/home/zqz/Work/data/texpr/corpus_words/words_genia.txt"
-SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr"
+SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr/genia_sim"
 DATA_LABEL = "genia"
-THREADS = 4
+THREADS = 1
 SELECT_GS = 50000
 
 # EMBEDDING_FILE = "/home/zqz/Work/data/glove.840B.300d.bin.gensim"
 # # EMBEDDING_FILE = "/home/zqz/Work/data/semrerank/embeddings/em_g-uni-sg-100-w3-m1.model"
 # INPUT_GS_LIST = "/home/zqz/Work/data/texpr/dict/acl_anthology.txt"
 # INPUT_CANDIDATE_LIST = "/home/zqz/Work/data/texpr/corpus_words/words_acl.txt"
-# SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr"
+# SIM_OUT_FOLDER = "/home/zqz/Work/data/texpr/acl_sim"
 # DATA_LABEL = "acl"
-# THREADS = 4
+# THREADS = 1
 # SELECT_GS = 50000
 
 #######################
@@ -125,10 +126,11 @@ id = 0
 threads = []
 outputs = []
 for chunk in gs_list_chunks:
+    #print(chunk)
     o = dict()
     outputs.append(o)
     t = Thread(target=calc_sim, args=(chunk, cand_list, id, eu, o,
-                                      SIM_OUT_FOLDER, DATA_LABEL, 0.0, 0.2))
+                                      SIM_OUT_FOLDER, DATA_LABEL, -1.0, 0.2))
     threads.append(t)
     id += 1
 
@@ -140,8 +142,16 @@ for t in threads:
 print("all done")
 
 final_dict = outputs[0]
-for i in range(1, 4):
+print("dict #0 size={}".format(len(final_dict)))
+#print(final_dict.keys())
+for i in range(1, THREADS):
+    print("dict #{} size={}".format(i,len(final_dict)))
+ #   print(outputs[i].keys())
+ #   print("\n")
     final_dict.update(outputs[i])
+ #   print(">>>"+str(final_dict.keys()))
+
+print("merged dict size="+str(len(final_dict)))
 
 with open(SIM_OUT_FOLDER+"/"+DATA_LABEL+".json", 'w', encoding='utf8') as ofile:
     json.dump(final_dict, ofile)
