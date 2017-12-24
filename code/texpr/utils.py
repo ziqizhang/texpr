@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import tarfile
@@ -180,6 +181,50 @@ def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_token
         ate_terms_components[term] = selected_parts
     return ate_terms_components
 
+
+def gather_graph_stats(log_file, out_file):
+    lines_words_selected=[]
+    lines_candidate_hits=[]
+    lines_graph_stats=[]
+    with open(log_file) as inf:
+        for line in inf:
+            if "selected out of" in line:
+                lines_words_selected.append(line)
+            elif "candidate terms contain at least one" in line:
+                lines_candidate_hits.append(line)
+            elif "OVERALL STATS" in line:
+                lines_graph_stats.append(line)
+
+    with open(out_file, 'w', newline='\n') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for i in range(0,len(lines_graph_stats)):
+            values=[]
+            #2587 selected out of 3544, percentage=0.7299661399548533
+            line_words_selected=lines_words_selected[i]
+            tokens=line_words_selected.split(",")[0].split(" ")
+            values.append(tokens[0].strip()) #selected
+            values.append(tokens[4].strip()) #total
+
+            #4785 out of 5659 candidate terms contain at least one selected word
+            line_candidate_hits=lines_candidate_hits[i]
+            tokens=line_candidate_hits.split(" ")
+            values.append(tokens[0].strip()) #hits
+            values.append(tokens[3].strip()) #total candidates
+
+            #COMPLETE 21:30:41, OVERALL STATS: stats: nodes=1492, edges=21249, per init=0, num_of_connected_components=5
+            line_graph_stats=lines_graph_stats[i]
+            trim=line_graph_stats.index("stats:")+6
+            line_graph_stats=line_graph_stats[trim:].strip()
+            parts=line_graph_stats.split(",")
+            for p in parts:
+                v=p.split("=")[1]
+                values.append(v)
+
+            csvwriter.writerow(values)
+
+
+gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
 
 #IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
 #genia_corpus_to_unigrams(IN_CORPUS, "/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min2_per_file_unigram")

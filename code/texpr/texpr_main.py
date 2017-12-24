@@ -35,16 +35,16 @@ min_char = 3
 
 # the method will output textpr weights for every word, UNNORMALIZED form.
 def filter_tokens(tokens, filters):
-    toks={}
-    if filters is not None and len(filters)>0:
+    toks = {}
+    if filters is not None and len(filters) > 0:
         for key, val in tokens.items():
             if key in filters:
-                toks[key]=val
+                toks[key] = val
         return toks
     return tokens
 
 
-def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personalized=None, sorted_seed_terms=None,
+def keywords_to_ate_percorpus(in_folder, out_file, window_size, num_of_personalized=None, sorted_seed_terms=None,
                               gs_term_file=None, filters=None):
     count = 0
     total_non_zero_elements_pnl_init = 0
@@ -53,18 +53,18 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
     all_tokens = {}
     for file in os.listdir(in_folder):
         count += 1
-        #print("\t"+str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
+        # print("\t"+str(count) + "," + "," + str(datetime.datetime.now()) + "," + file)
         with open(in_folder + '/' + file, 'r') as myfile:
             text = myfile.read()
 
             # Gets a dict of word -> lemma
             tokens = _clean_text_by_word(text, "english")
-            tokens=filter_tokens(tokens, filters)
+            tokens = filter_tokens(tokens, filters)
             split_text = list(_tokenize_by_word(text))
 
             # Creates the graph and adds the edges
             graph = add_graph_nodes(ky._get_words_for_graph(tokens), graph)
-            ky._update_graph_edges(graph, tokens, split_text, edge_weights,window_size)
+            ky._update_graph_edges(graph, tokens, split_text, edge_weights, window_size)
             del split_text  # It's no longer used
             all_tokens.update(tokens)
 
@@ -116,10 +116,12 @@ def keywords_to_ate_percorpus(in_folder, out_file, window_size,num_of_personaliz
         time.strftime("%H:%M:%S"), len(graph.nodes()), len(graph.edges()),
         non_zero_elements_pnl_init))
     if num_of_personalized is not None:
-        out_file += "_"+str(num_of_personalized)
-    print("\tCOMPLETE {}, OVERALL STATS: {} graph stats: nodes={}, edges={}, per init={}".format(
-        time.strftime("%H:%M:%S"), out_file, len(graph.nodes), len(graph.edges),
-        total_non_zero_elements_pnl_init))
+        out_file += "_" + str(num_of_personalized)
+    print(
+        "\tCOMPLETE {}, OVERALL STATS: {} graph stats: nodes={}, edges={}, per init={}, num_of_connected_components={}".
+            format(
+            time.strftime("%H:%M:%S"), out_file, len(graph.nodes), len(graph.edges),
+            total_non_zero_elements_pnl_init, nx.number_connected_components(graph)))
     f = open(out_file, 'w')
     for key, value in keywords_textpr_weights.items():
         trimmed = key[0:len(key)]
@@ -172,32 +174,43 @@ def init_personalized_vector(graph_nodes, sorted_jate_terms, topN, max_percentag
     return [init_vector, len(initialized)]
 
 
-def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0.0):
+def select_words_as_nodes_fromjson(sim_scores_folder: str, topn: float, min_sim=0.0):
     selected = set()
     all = set()
     for file in os.listdir(sim_scores_folder):
-        with open(sim_scores_folder+"/"+file, encoding='utf8') as json_data:
+        with open(sim_scores_folder + "/" + file, encoding='utf8') as json_data:
             data = json.load(json_data)
-            print("\t processing... {}, items={}".format(file,len(data)))
-            count=0
+            print("\t processing... {}, items={}".format(file, len(data)))
+            count = 0
             for key, value in data.items():
-                count+=1
-                #value.sort(key=lambda x: x[1], reverse=True)
-                if topn<1.0:
+                count += 1
+                # value.sort(key=lambda x: x[1], reverse=True)
+                if topn < 1.0:
                     cutoff_index = int(len(value) * topn)
                 else:
-                    cutoff_index=int(topn)
+                    cutoff_index = int(topn)
                 for i in range(0, cutoff_index):
-                    if float(value[i][1])>min_sim:
+                    if float(value[i][1]) > min_sim:
                         selected.add(value[i][0])
                     all.add(value[i][0])
                 for i in range(cutoff_index, len(value)):
                     all.add(value[i][0])
-                if count%50==0:
-                    print("\t\t "+str(count))
-    print("\t{} selected out of {}".format(str(len(selected)),str(len(all))))
+                if count % 50 == 0:
+                    print("\t\t " + str(count))
+    print("\t{} selected out of {}, percentage={}".format(str(len(selected)), str(len(all)),
+                                                          float(len(selected) / len(all))))
     return selected
 
+def calc_candidates_containing_selected_words(ate_ref_candidate_terms_for_corpus,
+                                              selected_words):
+    count=0
+    ate_term_base_scores = {c[0]: c[1] for c in utils.jate_terms_iterator(ate_ref_candidate_terms_for_corpus)}
+    for term in ate_term_base_scores.keys():
+        for part in term.split(" "):
+            if part in selected_words:
+                count+=1
+                break
+    return [count, len(ate_term_base_scores), float(count/len(ate_term_base_scores))]
 
 # personalized = [50, 100, 200]
 # topn_for_graph_nodes = [0.1, 0.2, 0.5]
@@ -241,62 +254,66 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn:float, min_sim=0
 # else:
 #     personalization_seed_term_file="/home/zqz/Work/data/semrerank/jate_lrec2016/ttc_wind/ttf.json"
 
-#print(len(INCLUDING_FILTER))
+# print(len(INCLUDING_FILTER))
 def create_setting_label(params):
-    label="filter_by_sim="+params["filter_by_sim"]\
-          +"-window="+params["window"]+"-ate_alg=0"
-    if params["filter_by_sim"]=="True":
-        label+="-topnsim="+params["topn"]
+    label = "filter_by_sim=" + params["filter_by_sim"] \
+            + "-window=" + params["window"] + "-ate_alg=0"
+    if params["filter_by_sim"] == "True":
+        label += "-topnsim=" + params["topn"]
         if "min_sim" in params:
-            label+="-min_sim="+params["min_sim"]
+            label += "-min_sim=" + params["min_sim"]
     return label
 
-sys_argv=sys.argv
-if len(sys.argv)==2:
-    sys_argv= sys.argv[1].split(" ")
 
-params={}
+sys_argv = sys.argv
+if len(sys.argv) == 2:
+    sys_argv = sys.argv[1].split(" ")
+
+params = {}
 for arg in sys_argv:
-    pv=arg.split("=",1)
-    if(len(pv)==1):
+    pv = arg.split("=", 1)
+    if (len(pv) == 1):
         continue
-    params[pv[0]]=pv[1]
-setting_label=create_setting_label(params)
+    params[pv[0]] = pv[1]
+setting_label = create_setting_label(params)
 
 print(setting_label)
 # textrank
-if params["filter_by_sim"]=="True": #params["sim_score_files"].endswith(".json"):
+if params["filter_by_sim"] == "True":  # params["sim_score_files"].endswith(".json"):
     if "min_sim" in params:
-        mins=float(params["min_sim"])
+        mins = float(params["min_sim"])
     else:
-        mins=0.0
-    print("Selecting top {} similar words as graph nodes. {}".format(params["topn"],datetime.datetime.now()))
+        mins = 0.0
+    print("Selecting top {} similar words as graph nodes. {}".format(params["topn"], datetime.datetime.now()))
     selected_domain_similar_words = \
         select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]), mins)
+    cand_stats=calc_candidates_containing_selected_words(params["ate_terms_outfile"], selected_domain_similar_words)
+    print("{} out of {} candidate terms contain at least one selected word, {}".format(
+        cand_stats[0], cand_stats[1],cand_stats[2]
+    ))
 else:
     print("No filtering over words to be selected as graph nodes")
-    selected_domain_similar_words=None
+    selected_domain_similar_words = None
 
-word_rankscore_folder=params["sys_folder"]
+word_rankscore_folder = params["sys_folder"]
 if not os.path.exists(word_rankscore_folder):
     os.makedirs(word_rankscore_folder)
-if params["filter_by_sim"]=="True":
-    word_rankscore_folder+="/"+params["topn"]+".txt"
+if params["filter_by_sim"] == "True":
+    word_rankscore_folder += "/" + params["topn"] + ".txt"
 else:
-    word_rankscore_folder+="/all.txt"
-
+    word_rankscore_folder += "/all.txt"
 
 sorted_seed_terms = None
-pr_seed_num=None
-gs_file=None
+pr_seed_num = None
+gs_file = None
 if "pr_seed" in params.keys() and params["pr_seed"] is not None:
-    print("Using personalized pagerank, pr_seed= {}".format(params["pr_seed"],datetime.datetime.now()))
-    pr_jate_term_ttf= {c[0]: c[1] for c in utils.jate_terms_iterator(params["pr_seed"])}
+    print("Using personalized pagerank, pr_seed= {}".format(params["pr_seed"], datetime.datetime.now()))
+    pr_jate_term_ttf = {c[0]: c[1] for c in utils.jate_terms_iterator(params["pr_seed"])}
     sorted_seed_terms = sorted(pr_jate_term_ttf, key=pr_jate_term_ttf.get, reverse=True)
 if "pr_seed_num" in params.keys():
-    pr_seed_num=int(params["pr_seed_num"])
+    pr_seed_num = int(params["pr_seed_num"])
 if "gs_file" in params.keys():
-    gs_file=int(params["gs_file"])
+    gs_file = int(params["gs_file"])
 
 print("\n>>> SETTING={}".format(setting_label))
 print("Computing corpus-level textrank scores. {}".format(datetime.datetime.now()))
@@ -306,19 +323,19 @@ keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
                           gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
 
 print("Computing final term scores. {}".format(datetime.datetime.now()))
-#use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
-#use average similarity score for a word as base score
-#if use_ate_pre_computed=="1":
+# use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
+# use average similarity score for a word as base score
+# if use_ate_pre_computed=="1":
 #    print("\t generate candidate terms and their scores using average sem-sim...")
 #    #todo
 
-out_folder=params["outfolder"]+"/"+setting_label
+out_folder = params["outfolder"] + "/" + setting_label
 if not os.path.exists(out_folder):
     os.makedirs(out_folder)
 ts.run_textpr(params["ate_terms_outfile"], stopwords.words('english'),
-               params["ate_terms_outfolder"],
-               word_rankscore_folder,
-               out_folder,setting_label)
+              params["ate_terms_outfolder"],
+              word_rankscore_folder,
+              out_folder, setting_label)
 
 
 #

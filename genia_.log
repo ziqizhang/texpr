@@ -1,0 +1,7051 @@
+60
+
+>>> Start the following setting at Sat 23 Dec 21:49:35 GMT 2017: 
+1
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 21:49:37.259225
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+37964 out of 38850 candidate terms contain at least one selected word, 0.9771943371943372
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-23 21:50:00.041856
+	21:50:42: graph stats before personalization: nodes=5354, edges=172235
+	running pagerank...2017-12-23 21:50:42.863611
+	21:50:50: graph stats: nodes=5354, edges=172235, per init=0
+	COMPLETE 21:50:50, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=172235, per init=0, num_of_connected_components=12
+end
+Computing final term scores. 2017-12-23 21:50:50.972172
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 21:53:13 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 21:53:13 GMT 2017: 
+2
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 21:53:18.203041
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+53370 out of 56704 candidate terms contain at least one selected word, 0.9412034424379232
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-23 21:53:46.323926
+	21:54:31: graph stats before personalization: nodes=5354, edges=172235
+	running pagerank...2017-12-23 21:54:31.687581
+	21:54:45: graph stats: nodes=5354, edges=172235, per init=0
+	COMPLETE 21:54:45, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=172235, per init=0, num_of_connected_components=12
+end
+Computing final term scores. 2017-12-23 21:54:45.686949
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 21:58:00 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 21:58:00 GMT 2017: 
+3
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 21:58:03.890093
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+37771 out of 38850 candidate terms contain at least one selected word, 0.9722265122265122
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-23 21:58:25.912057
+	21:59:00: graph stats before personalization: nodes=4468, edges=153888
+	running pagerank...2017-12-23 21:59:00.430922
+	21:59:09: graph stats: nodes=4468, edges=153888, per init=0
+	COMPLETE 21:59:09, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=153888, per init=0, num_of_connected_components=8
+end
+Computing final term scores. 2017-12-23 21:59:09.845529
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:01:14 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:01:14 GMT 2017: 
+4
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:01:17.097213
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+52645 out of 56704 candidate terms contain at least one selected word, 0.9284177483069977
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-23 22:01:39.142149
+	22:02:13: graph stats before personalization: nodes=4468, edges=153888
+	running pagerank...2017-12-23 22:02:13.467479
+	22:02:22: graph stats: nodes=4468, edges=153888, per init=0
+	COMPLETE 22:02:22, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=153888, per init=0, num_of_connected_components=8
+end
+Computing final term scores. 2017-12-23 22:02:22.167271
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:05:02 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:05:02 GMT 2017: 
+5
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:05:05.527834
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+37090 out of 38850 candidate terms contain at least one selected word, 0.9546975546975547
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-23 22:05:27.460780
+	22:05:55: graph stats before personalization: nodes=3522, edges=126122
+	running pagerank...2017-12-23 22:05:55.811310
+	22:06:02: graph stats: nodes=3522, edges=126122, per init=0
+	COMPLETE 22:06:02, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=126122, per init=0, num_of_connected_components=7
+end
+Computing final term scores. 2017-12-23 22:06:02.903478
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:08:03 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:08:03 GMT 2017: 
+6
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:08:06.377989
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+51256 out of 56704 candidate terms contain at least one selected word, 0.9039221218961625
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-23 22:08:28.307269
+	22:09:01: graph stats before personalization: nodes=3522, edges=126122
+	running pagerank...2017-12-23 22:09:01.850637
+	22:09:09: graph stats: nodes=3522, edges=126122, per init=0
+	COMPLETE 22:09:09, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=126122, per init=0, num_of_connected_components=7
+end
+Computing final term scores. 2017-12-23 22:09:09.321295
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:11:34 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:11:34 GMT 2017: 
+7
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:11:37.947665
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+35859 out of 38850 candidate terms contain at least one selected word, 0.923011583011583
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-23 22:11:59.744855
+	22:12:33: graph stats before personalization: nodes=2563, edges=95468
+	running pagerank...2017-12-23 22:12:33.183212
+	22:12:38: graph stats: nodes=2563, edges=95468, per init=0
+	COMPLETE 22:12:38, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=95468, per init=0, num_of_connected_components=10
+end
+Computing final term scores. 2017-12-23 22:12:38.672493
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:14:28 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:14:28 GMT 2017: 
+8
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:14:31.017790
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+49065 out of 56704 candidate terms contain at least one selected word, 0.8652828724604966
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-23 22:14:51.001191
+	22:15:24: graph stats before personalization: nodes=2563, edges=95468
+	running pagerank...2017-12-23 22:15:24.799088
+	22:15:30: graph stats: nodes=2563, edges=95468, per init=0
+	COMPLETE 22:15:30, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=95468, per init=0, num_of_connected_components=10
+end
+Computing final term scores. 2017-12-23 22:15:30.278752
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:17:53 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:17:53 GMT 2017: 
+9
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:17:56.830377
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+33779 out of 38850 candidate terms contain at least one selected word, 0.8694723294723294
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-23 22:18:19.284880
+	22:18:53: graph stats before personalization: nodes=1833, edges=64265
+	running pagerank...2017-12-23 22:18:53.442363
+	22:18:57: graph stats: nodes=1833, edges=64265, per init=0
+	COMPLETE 22:18:57, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=64265, per init=0, num_of_connected_components=11
+end
+Computing final term scores. 2017-12-23 22:18:57.298941
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:20:37 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:20:37 GMT 2017: 
+10
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:20:41.077694
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+45944 out of 56704 candidate terms contain at least one selected word, 0.8102426636568849
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-23 22:21:02.902374
+	22:21:35: graph stats before personalization: nodes=1833, edges=64265
+	running pagerank...2017-12-23 22:21:35.993814
+	22:21:39: graph stats: nodes=1833, edges=64265, per init=0
+	COMPLETE 22:21:39, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=64265, per init=0, num_of_connected_components=11
+end
+Computing final term scores. 2017-12-23 22:21:39.638348
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:23:50 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:23:50 GMT 2017: 
+11
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:23:52.878280
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+31705 out of 38850 candidate terms contain at least one selected word, 0.8160875160875161
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-23 22:24:13.367166
+	22:24:45: graph stats before personalization: nodes=1346, edges=43722
+	running pagerank...2017-12-23 22:24:45.948883
+	22:24:48: graph stats: nodes=1346, edges=43722, per init=0
+	COMPLETE 22:24:48, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=43722, per init=0, num_of_connected_components=9
+end
+Computing final term scores. 2017-12-23 22:24:48.793299
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:26:24 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:26:24 GMT 2017: 
+12
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:26:28.194477
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+43046 out of 56704 candidate terms contain at least one selected word, 0.759135158013544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-23 22:26:50.570145
+	22:27:24: graph stats before personalization: nodes=1346, edges=43722
+	running pagerank...2017-12-23 22:27:24.305084
+	22:27:26: graph stats: nodes=1346, edges=43722, per init=0
+	COMPLETE 22:27:26, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=43722, per init=0, num_of_connected_components=9
+end
+Computing final term scores. 2017-12-23 22:27:26.901571
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:29:23 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:29:23 GMT 2017: 
+13
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:29:26.612439
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+29871 out of 38850 candidate terms contain at least one selected word, 0.7688803088803089
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-23 22:29:49.132972
+	22:30:21: graph stats before personalization: nodes=1068, edges=32673
+	running pagerank...2017-12-23 22:30:21.048000
+	22:30:23: graph stats: nodes=1068, edges=32673, per init=0
+	COMPLETE 22:30:23, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=32673, per init=0, num_of_connected_components=8
+end
+Computing final term scores. 2017-12-23 22:30:23.189212
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:31:53 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:31:53 GMT 2017: 
+14
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:31:57.030027
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+40784 out of 56704 candidate terms contain at least one selected word, 0.7192437923250564
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-23 22:32:18.740318
+	22:32:50: graph stats before personalization: nodes=1068, edges=32673
+	running pagerank...2017-12-23 22:32:50.904216
+	22:32:52: graph stats: nodes=1068, edges=32673, per init=0
+	COMPLETE 22:32:52, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=32673, per init=0, num_of_connected_components=8
+end
+Computing final term scores. 2017-12-23 22:32:52.283638
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:34:43 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:34:43 GMT 2017: 
+15
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:34:46.346056
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+28202 out of 38850 candidate terms contain at least one selected word, 0.7259202059202059
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-23 22:35:08.100452
+	22:35:40: graph stats before personalization: nodes=862, edges=24913
+	running pagerank...2017-12-23 22:35:40.691308
+	22:35:42: graph stats: nodes=862, edges=24913, per init=0
+	COMPLETE 22:35:42, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=24913, per init=0, num_of_connected_components=7
+end
+Computing final term scores. 2017-12-23 22:35:42.475961
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:37:06 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:37:06 GMT 2017: 
+16
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:37:09.417676
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+38406 out of 56704 candidate terms contain at least one selected word, 0.6773067155756207
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-23 22:37:28.556556
+	22:38:00: graph stats before personalization: nodes=862, edges=24913
+	running pagerank...2017-12-23 22:38:00.727619
+	22:38:02: graph stats: nodes=862, edges=24913, per init=0
+	COMPLETE 22:38:02, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=24913, per init=0, num_of_connected_components=7
+end
+Computing final term scores. 2017-12-23 22:38:02.394263
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:39:48 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:39:48 GMT 2017: 
+17
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:39:52.195926
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+26452 out of 38850 candidate terms contain at least one selected word, 0.6808751608751609
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-23 22:40:14.172012
+	22:40:46: graph stats before personalization: nodes=662, edges=17437
+	running pagerank...2017-12-23 22:40:46.009498
+	22:40:47: graph stats: nodes=662, edges=17437, per init=0
+	COMPLETE 22:40:47, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=17437, per init=0, num_of_connected_components=6
+end
+Computing final term scores. 2017-12-23 22:40:47.201139
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:41:53 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:41:53 GMT 2017: 
+18
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:41:55.248750
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+35781 out of 56704 candidate terms contain at least one selected word, 0.6310136851015802
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-23 22:42:10.959104
+	22:42:45: graph stats before personalization: nodes=662, edges=17437
+	running pagerank...2017-12-23 22:42:45.539571
+	22:42:46: graph stats: nodes=662, edges=17437, per init=0
+	COMPLETE 22:42:46, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=17437, per init=0, num_of_connected_components=6
+end
+Computing final term scores. 2017-12-23 22:42:46.864488
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:44:32 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:44:32 GMT 2017: 
+19
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:44:35.537651
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+20037 out of 38850 candidate terms contain at least one selected word, 0.5157528957528957
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-23 22:44:59.241066
+	22:45:34: graph stats before personalization: nodes=516, edges=9118
+	running pagerank...2017-12-23 22:45:34.330755
+	22:45:34: graph stats: nodes=516, edges=9118, per init=0
+	COMPLETE 22:45:34, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=9118, per init=0, num_of_connected_components=9
+end
+Computing final term scores. 2017-12-23 22:45:34.974907
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:46:34 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:46:34 GMT 2017: 
+20
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:46:38.210450
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+27718 out of 56704 candidate terms contain at least one selected word, 0.4888191309255079
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-23 22:47:02.290876
+	22:47:37: graph stats before personalization: nodes=516, edges=9118
+	running pagerank...2017-12-23 22:47:37.564089
+	22:47:38: graph stats: nodes=516, edges=9118, per init=0
+	COMPLETE 22:47:38, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=9118, per init=0, num_of_connected_components=9
+end
+Computing final term scores. 2017-12-23 22:47:38.293732
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:49:01 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:49:01 GMT 2017: 
+21
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:49:04.802895
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+37964 out of 38850 candidate terms contain at least one selected word, 0.9771943371943372
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-23 22:49:29.012579
+	22:50:26: graph stats before personalization: nodes=5354, edges=321225
+	running pagerank...2017-12-23 22:50:26.344634
+	22:50:44: graph stats: nodes=5354, edges=321225, per init=0
+	COMPLETE 22:50:44, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=321225, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 22:50:44.533392
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 22:53:01 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:53:01 GMT 2017: 
+22
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:53:05.594875
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+53370 out of 56704 candidate terms contain at least one selected word, 0.9412034424379232
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-23 22:53:29.696557
+	22:54:26: graph stats before personalization: nodes=5354, edges=321225
+	running pagerank...2017-12-23 22:54:26.776024
+	22:54:47: graph stats: nodes=5354, edges=321225, per init=0
+	COMPLETE 22:54:47, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=321225, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 22:54:47.738003
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 22:57:41 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 22:57:41 GMT 2017: 
+23
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 22:57:45.391845
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+37771 out of 38850 candidate terms contain at least one selected word, 0.9722265122265122
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-23 22:58:09.126110
+	22:59:06: graph stats before personalization: nodes=4468, edges=284237
+	running pagerank...2017-12-23 22:59:06.621532
+	22:59:21: graph stats: nodes=4468, edges=284237, per init=0
+	COMPLETE 22:59:21, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=284237, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 22:59:21.845683
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:01:40 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:01:40 GMT 2017: 
+24
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:01:44.181668
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+52645 out of 56704 candidate terms contain at least one selected word, 0.9284177483069977
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-23 23:02:07.693571
+	23:03:04: graph stats before personalization: nodes=4468, edges=284237
+	running pagerank...2017-12-23 23:03:04.764776
+	23:03:22: graph stats: nodes=4468, edges=284237, per init=0
+	COMPLETE 23:03:22, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=284237, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 23:03:22.995906
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:06:15 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:06:15 GMT 2017: 
+25
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:06:19.297303
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+37090 out of 38850 candidate terms contain at least one selected word, 0.9546975546975547
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-23 23:06:42.852256
+	23:07:39: graph stats before personalization: nodes=3522, edges=229584
+	running pagerank...2017-12-23 23:07:39.477748
+	23:07:53: graph stats: nodes=3522, edges=229584, per init=0
+	COMPLETE 23:07:53, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=229584, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:07:54.027445
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:10:03 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:10:03 GMT 2017: 
+26
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:10:07.128470
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+51256 out of 56704 candidate terms contain at least one selected word, 0.9039221218961625
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-23 23:10:30.821754
+	23:11:26: graph stats before personalization: nodes=3522, edges=229584
+	running pagerank...2017-12-23 23:11:26.942026
+	23:11:41: graph stats: nodes=3522, edges=229584, per init=0
+	COMPLETE 23:11:41, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=229584, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:11:41.407180
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:14:23 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:14:23 GMT 2017: 
+27
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:14:26.858514
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+35859 out of 38850 candidate terms contain at least one selected word, 0.923011583011583
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-23 23:14:50.280821
+	23:15:45: graph stats before personalization: nodes=2563, edges=169643
+	running pagerank...2017-12-23 23:15:45.597198
+	23:15:56: graph stats: nodes=2563, edges=169643, per init=0
+	COMPLETE 23:15:56, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=169643, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:15:56.212336
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:17:55 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:17:55 GMT 2017: 
+28
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:17:58.631705
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+49065 out of 56704 candidate terms contain at least one selected word, 0.8652828724604966
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-23 23:18:22.148735
+	23:19:17: graph stats before personalization: nodes=2563, edges=169643
+	running pagerank...2017-12-23 23:19:17.406790
+	23:19:28: graph stats: nodes=2563, edges=169643, per init=0
+	COMPLETE 23:19:28, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=169643, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:19:28.110021
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:21:57 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:21:57 GMT 2017: 
+29
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:22:00.743828
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+33779 out of 38850 candidate terms contain at least one selected word, 0.8694723294723294
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-23 23:22:24.406027
+	23:23:19: graph stats before personalization: nodes=1833, edges=111585
+	running pagerank...2017-12-23 23:23:19.392618
+	23:23:27: graph stats: nodes=1833, edges=111585, per init=0
+	COMPLETE 23:23:27, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=111585, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 23:23:27.179933
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:25:19 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:25:19 GMT 2017: 
+30
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:25:22.236458
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+45944 out of 56704 candidate terms contain at least one selected word, 0.8102426636568849
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-23 23:25:42.469416
+	23:26:37: graph stats before personalization: nodes=1833, edges=111585
+	running pagerank...2017-12-23 23:26:37.711039
+	23:26:45: graph stats: nodes=1833, edges=111585, per init=0
+	COMPLETE 23:26:45, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=111585, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-23 23:26:45.856042
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:29:07 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:29:07 GMT 2017: 
+31
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:29:11.280470
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+31705 out of 38850 candidate terms contain at least one selected word, 0.8160875160875161
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-23 23:29:34.305648
+	23:30:05: graph stats before personalization: nodes=1346, edges=74271
+	running pagerank...2017-12-23 23:30:05.864592
+	23:30:08: graph stats: nodes=1346, edges=74271, per init=0
+	COMPLETE 23:30:08, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=74271, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:30:08.795636
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:31:11 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:31:11 GMT 2017: 
+32
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:31:13.825244
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+43046 out of 56704 candidate terms contain at least one selected word, 0.759135158013544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-23 23:31:29.069846
+	23:32:13: graph stats before personalization: nodes=1346, edges=74271
+	running pagerank...2017-12-23 23:32:13.966118
+	23:32:19: graph stats: nodes=1346, edges=74271, per init=0
+	COMPLETE 23:32:19, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=74271, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:32:19.060593
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:34:29 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:34:29 GMT 2017: 
+33
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:34:33.711960
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+29871 out of 38850 candidate terms contain at least one selected word, 0.7688803088803089
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-23 23:34:53.330211
+	23:35:46: graph stats before personalization: nodes=1068, edges=54770
+	running pagerank...2017-12-23 23:35:46.166198
+	23:35:49: graph stats: nodes=1068, edges=54770, per init=0
+	COMPLETE 23:35:49, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=54770, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:35:49.844078
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:37:25 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:37:25 GMT 2017: 
+34
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:37:29.178791
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+40784 out of 56704 candidate terms contain at least one selected word, 0.7192437923250564
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-23 23:37:52.711387
+	23:38:39: graph stats before personalization: nodes=1068, edges=54770
+	running pagerank...2017-12-23 23:38:39.571310
+	23:38:43: graph stats: nodes=1068, edges=54770, per init=0
+	COMPLETE 23:38:43, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=54770, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:38:43.262046
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:40:44 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:40:44 GMT 2017: 
+35
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:40:48.472659
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+28202 out of 38850 candidate terms contain at least one selected word, 0.7259202059202059
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-23 23:41:11.764862
+	23:41:58: graph stats before personalization: nodes=862, edges=40841
+	running pagerank...2017-12-23 23:41:58.671620
+	23:42:01: graph stats: nodes=862, edges=40841, per init=0
+	COMPLETE 23:42:01, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=40841, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:42:01.366639
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:43:30 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:43:30 GMT 2017: 
+36
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:43:33.528212
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+38406 out of 56704 candidate terms contain at least one selected word, 0.6773067155756207
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-23 23:43:57.058497
+	23:44:44: graph stats before personalization: nodes=862, edges=40841
+	running pagerank...2017-12-23 23:44:44.782568
+	23:44:47: graph stats: nodes=862, edges=40841, per init=0
+	COMPLETE 23:44:47, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=40841, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:44:47.582528
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:46:40 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:46:40 GMT 2017: 
+37
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:46:43.839221
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+26452 out of 38850 candidate terms contain at least one selected word, 0.6808751608751609
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-23 23:47:07.167677
+	23:47:56: graph stats before personalization: nodes=662, edges=27874
+	running pagerank...2017-12-23 23:47:56.243030
+	23:47:57: graph stats: nodes=662, edges=27874, per init=0
+	COMPLETE 23:47:57, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=27874, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:47:57.419996
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:49:16 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:49:16 GMT 2017: 
+38
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:49:19.976056
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+35781 out of 56704 candidate terms contain at least one selected word, 0.6310136851015802
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-23 23:49:43.686218
+	23:50:35: graph stats before personalization: nodes=662, edges=27874
+	running pagerank...2017-12-23 23:50:35.274194
+	23:50:37: graph stats: nodes=662, edges=27874, per init=0
+	COMPLETE 23:50:37, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=27874, per init=0, num_of_connected_components=2
+end
+Computing final term scores. 2017-12-23 23:50:37.371173
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:52:14 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:52:14 GMT 2017: 
+39
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:52:18.026370
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+20037 out of 38850 candidate terms contain at least one selected word, 0.5157528957528957
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-23 23:52:41.442337
+	23:53:33: graph stats before personalization: nodes=516, edges=14413
+	running pagerank...2017-12-23 23:53:33.542306
+	23:53:34: graph stats: nodes=516, edges=14413, per init=0
+	COMPLETE 23:53:34, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=14413, per init=0, num_of_connected_components=3
+end
+Computing final term scores. 2017-12-23 23:53:34.597815
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sat 23 Dec 23:54:38 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:54:38 GMT 2017: 
+40
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:54:42.342742
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+27718 out of 56704 candidate terms contain at least one selected word, 0.4888191309255079
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-23 23:55:01.272882
+	23:55:52: graph stats before personalization: nodes=516, edges=14413
+	running pagerank...2017-12-23 23:55:52.805290
+	23:55:53: graph stats: nodes=516, edges=14413, per init=0
+	COMPLETE 23:55:53, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=14413, per init=0, num_of_connected_components=3
+end
+Computing final term scores. 2017-12-23 23:55:53.883123
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sat 23 Dec 23:57:14 GMT 2017: 
+
+>>> Start the following setting at Sat 23 Dec 23:57:14 GMT 2017: 
+41
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-23 23:57:18.106450
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+37964 out of 38850 candidate terms contain at least one selected word, 0.9771943371943372
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-23 23:57:41.229653
+	00:01:42: graph stats before personalization: nodes=5354, edges=999513
+	running pagerank...2017-12-24 00:01:42.411343
+	00:02:44: graph stats: nodes=5354, edges=999513, per init=0
+	COMPLETE 00:02:44, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=999513, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:02:44.890035
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 00:05:01 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:05:01 GMT 2017: 
+42
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.4 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.4
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:05:05.946906
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	8177 selected out of 9621, percentage=0.8499116515954682
+53370 out of 56704 candidate terms contain at least one selected word, 0.9412034424379232
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.4
+Computing corpus-level textrank scores. 2017-12-24 00:05:29.147276
+	00:08:40: graph stats before personalization: nodes=5354, edges=999513
+	running pagerank...2017-12-24 00:08:40.974070
+	00:09:16: graph stats: nodes=5354, edges=999513, per init=0
+	COMPLETE 00:09:16, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=5354, edges=999513, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:09:16.982016
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 00:12:09 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:12:09 GMT 2017: 
+43
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:12:13.490233
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+37771 out of 38850 candidate terms contain at least one selected word, 0.9722265122265122
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-24 00:12:34.818571
+	00:16:34: graph stats before personalization: nodes=4468, edges=860459
+	running pagerank...2017-12-24 00:16:34.076773
+	00:17:33: graph stats: nodes=4468, edges=860459, per init=0
+	COMPLETE 00:17:33, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=860459, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:17:33.551456
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 00:19:45 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:19:45 GMT 2017: 
+44
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.45 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.45
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:19:49.050039
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	6770 selected out of 9621, percentage=0.703669057270554
+52645 out of 56704 candidate terms contain at least one selected word, 0.9284177483069977
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.45
+Computing corpus-level textrank scores. 2017-12-24 00:20:12.927340
+	00:24:16: graph stats before personalization: nodes=4468, edges=860459
+	running pagerank...2017-12-24 00:24:16.692823
+	00:25:15: graph stats: nodes=4468, edges=860459, per init=0
+	COMPLETE 00:25:15, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=4468, edges=860459, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:25:15.810857
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 00:28:03 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:28:03 GMT 2017: 
+45
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:28:07.142840
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+37090 out of 38850 candidate terms contain at least one selected word, 0.9546975546975547
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-24 00:28:30.331849
+	00:32:31: graph stats before personalization: nodes=3522, edges=661280
+	running pagerank...2017-12-24 00:32:31.197360
+	00:33:10: graph stats: nodes=3522, edges=661280, per init=0
+	COMPLETE 00:33:10, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=661280, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:33:10.241240
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 00:35:23 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:35:23 GMT 2017: 
+46
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:35:27.097551
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	5155 selected out of 9621, percentage=0.5358070886602224
+51256 out of 56704 candidate terms contain at least one selected word, 0.9039221218961625
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-24 00:35:50.455271
+	00:39:42: graph stats before personalization: nodes=3522, edges=661280
+	running pagerank...2017-12-24 00:39:42.335766
+	00:40:26: graph stats: nodes=3522, edges=661280, per init=0
+	COMPLETE 00:40:26, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=3522, edges=661280, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:40:27.182631
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 00:43:07 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:43:07 GMT 2017: 
+47
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:43:11.404923
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+35859 out of 38850 candidate terms contain at least one selected word, 0.923011583011583
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-24 00:43:34.472149
+	00:47:18: graph stats before personalization: nodes=2563, edges=453036
+	running pagerank...2017-12-24 00:47:18.416057
+	00:47:47: graph stats: nodes=2563, edges=453036, per init=0
+	COMPLETE 00:47:47, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=453036, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:47:47.315081
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 00:49:43 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:49:43 GMT 2017: 
+48
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.55 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.55
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:49:46.180217
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	3610 selected out of 9621, percentage=0.3752208710113294
+49065 out of 56704 candidate terms contain at least one selected word, 0.8652828724604966
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.55
+Computing corpus-level textrank scores. 2017-12-24 00:50:07.885463
+	00:53:54: graph stats before personalization: nodes=2563, edges=453036
+	running pagerank...2017-12-24 00:53:54.480343
+	00:54:23: graph stats: nodes=2563, edges=453036, per init=0
+	COMPLETE 00:54:23, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=2563, edges=453036, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 00:54:23.763458
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 00:56:54 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 00:56:54 GMT 2017: 
+49
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 00:56:57.697554
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+33779 out of 38850 candidate terms contain at least one selected word, 0.8694723294723294
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-24 00:57:19.568679
+	01:01:02: graph stats before personalization: nodes=1833, edges=278672
+	running pagerank...2017-12-24 01:01:02.131151
+	01:01:18: graph stats: nodes=1833, edges=278672, per init=0
+	COMPLETE 01:01:18, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=278672, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:01:18.710665
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:03:05 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:03:05 GMT 2017: 
+50
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:03:08.393306
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	2455 selected out of 9621, percentage=0.2551709801475938
+45944 out of 56704 candidate terms contain at least one selected word, 0.8102426636568849
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-24 01:03:30.841193
+	01:07:13: graph stats before personalization: nodes=1833, edges=278672
+	running pagerank...2017-12-24 01:07:13.713825
+	01:07:32: graph stats: nodes=1833, edges=278672, per init=0
+	COMPLETE 01:07:32, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1833, edges=278672, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:07:32.133623
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 01:09:49 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:09:49 GMT 2017: 
+51
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:09:53.053754
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+31705 out of 38850 candidate terms contain at least one selected word, 0.8160875160875161
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-24 01:10:15.772464
+	01:13:56: graph stats before personalization: nodes=1346, edges=174787
+	running pagerank...2017-12-24 01:13:56.292226
+	01:14:07: graph stats: nodes=1346, edges=174787, per init=0
+	COMPLETE 01:14:07, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=174787, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:14:07.323025
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:15:47 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:15:47 GMT 2017: 
+52
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.65 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.65
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:15:50.882733
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1720 selected out of 9621, percentage=0.17877559505248936
+43046 out of 56704 candidate terms contain at least one selected word, 0.759135158013544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.65
+Computing corpus-level textrank scores. 2017-12-24 01:16:13.012976
+	01:19:52: graph stats before personalization: nodes=1346, edges=174787
+	running pagerank...2017-12-24 01:19:52.662329
+	01:20:03: graph stats: nodes=1346, edges=174787, per init=0
+	COMPLETE 01:20:03, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1346, edges=174787, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:20:03.839974
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 01:22:09 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:22:09 GMT 2017: 
+53
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:22:12.976961
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+29871 out of 38850 candidate terms contain at least one selected word, 0.7688803088803089
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-24 01:22:35.282550
+	01:26:13: graph stats before personalization: nodes=1068, edges=122676
+	running pagerank...2017-12-24 01:26:13.385058
+	01:26:21: graph stats: nodes=1068, edges=122676, per init=0
+	COMPLETE 01:26:21, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=122676, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:26:21.402769
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:27:56 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:27:56 GMT 2017: 
+54
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:27:59.855748
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1316 selected out of 9621, percentage=0.13678411807504418
+40784 out of 56704 candidate terms contain at least one selected word, 0.7192437923250564
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-24 01:28:17.991410
+	01:30:40: graph stats before personalization: nodes=1068, edges=122676
+	running pagerank...2017-12-24 01:30:40.622175
+	01:30:47: graph stats: nodes=1068, edges=122676, per init=0
+	COMPLETE 01:30:47, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=1068, edges=122676, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:30:48.015577
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 01:32:42 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:32:42 GMT 2017: 
+55
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:32:46.040274
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+28202 out of 38850 candidate terms contain at least one selected word, 0.7259202059202059
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-24 01:33:07.403969
+	01:36:36: graph stats before personalization: nodes=862, edges=87379
+	running pagerank...2017-12-24 01:36:36.021011
+	01:36:40: graph stats: nodes=862, edges=87379, per init=0
+	COMPLETE 01:36:40, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=87379, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:36:41.020580
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:38:04 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:38:04 GMT 2017: 
+56
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.75 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.75
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:38:07.453406
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	1044 selected out of 9621, percentage=0.10851262862488306
+38406 out of 56704 candidate terms contain at least one selected word, 0.6773067155756207
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.75
+Computing corpus-level textrank scores. 2017-12-24 01:38:28.343874
+	01:41:56: graph stats before personalization: nodes=862, edges=87379
+	running pagerank...2017-12-24 01:41:56.678632
+	01:42:01: graph stats: nodes=862, edges=87379, per init=0
+	COMPLETE 01:42:01, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=862, edges=87379, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:42:01.807682
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 01:43:49 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:43:49 GMT 2017: 
+57
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:43:53.159334
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+26452 out of 38850 candidate terms contain at least one selected word, 0.6808751608751609
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-24 01:44:15.133696
+	01:47:42: graph stats before personalization: nodes=662, edges=56488
+	running pagerank...2017-12-24 01:47:42.892895
+	01:47:46: graph stats: nodes=662, edges=56488, per init=0
+	COMPLETE 01:47:46, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=56488, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:47:46.490858
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:49:03 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:49:03 GMT 2017: 
+58
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:49:07.234313
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	783 selected out of 9621, percentage=0.0813844714686623
+35781 out of 56704 candidate terms contain at least one selected word, 0.6310136851015802
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-24 01:49:28.929481
+	01:52:56: graph stats before personalization: nodes=662, edges=56488
+	running pagerank...2017-12-24 01:52:56.720385
+	01:53:00: graph stats: nodes=662, edges=56488, per init=0
+	COMPLETE 01:53:00, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=662, edges=56488, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:53:00.465830
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 01:54:33 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:54:33 GMT 2017: 
+59
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/jate in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:54:36.221137
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+20037 out of 38850 candidate terms contain at least one selected word, 0.5157528957528957
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-24 01:54:58.385871
+	01:58:19: graph stats before personalization: nodes=516, edges=28971
+	running pagerank...2017-12-24 01:58:19.198331
+	01:58:21: graph stats: nodes=516, edges=28971, per init=0
+	COMPLETE 01:58:21, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=28971, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 01:58:21.172896
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Sun 24 Dec 01:59:19 GMT 2017: 
+
+>>> Start the following setting at Sun 24 Dec 01:59:19 GMT 2017: 
+60
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.85 sim_score_files=/home/zqz/Work/data/texpr/genia_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/genia ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/genia_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/genia/atr4s in_corpus=/home/zqz/Work/data/jate_data/genia_gs/text/files_standard
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.85
+Selecting top 0.999 similar words as graph nodes. 2017-12-24 01:59:22.348887
+	 processing... genia.json, items=274
+		 50
+		 100
+		 150
+		 200
+		 250
+	 processing... genia0-3.json, items=325
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-8.json, items=428
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-9.json, items=450
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-5.json, items=332
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-6.json, items=424
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+	 processing... genia0-4.json, items=333
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+	 processing... genia0-2.json, items=365
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	 processing... genia0-10.json, items=455
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-7.json, items=468
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+		 400
+		 450
+	 processing... genia0-1.json, items=363
+		 50
+		 100
+		 150
+		 200
+		 250
+		 300
+		 350
+	596 selected out of 9621, percentage=0.06194782247167654
+27718 out of 56704 candidate terms contain at least one selected word, 0.4888191309255079
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.85
+Computing corpus-level textrank scores. 2017-12-24 01:59:43.782485
+	02:02:28: graph stats before personalization: nodes=516, edges=28971
+	running pagerank...2017-12-24 02:02:28.556597
+	02:02:29: graph stats: nodes=516, edges=28971, per init=0
+	COMPLETE 02:02:29, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/genia/0.999.txt graph stats: nodes=516, edges=28971, per init=0, num_of_connected_components=1
+end
+Computing final term scores. 2017-12-24 02:02:29.719407
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Sun 24 Dec 02:03:18 GMT 2017: 
