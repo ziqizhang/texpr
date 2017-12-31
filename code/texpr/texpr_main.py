@@ -201,6 +201,13 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn: float, min_sim=
                                                           float(len(selected) / len(all))))
     return selected
 
+
+def select_words_as_nodes_fromtsv(sim_scores_file: str, topn: float, min_sim=0.0):
+    selected = set()
+    all = set()
+
+    return selected
+
 def calc_candidates_containing_selected_words(ate_ref_candidate_terms_for_corpus,
                                               selected_words):
     count=0
@@ -285,8 +292,11 @@ if params["filter_by_sim"] == "True":  # params["sim_score_files"].endswith(".js
     else:
         mins = 0.0
     print("Selecting top {} similar words as graph nodes. {}".format(params["topn"], datetime.datetime.now()))
-    selected_domain_similar_words = \
-        select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]), mins)
+    if params["sim_score_files"].endswith(".tsv"):
+        selected_domain_similar_words=select_words_as_nodes_fromtsv()
+    else:
+        selected_domain_similar_words = \
+            select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]), mins)
     cand_stats=calc_candidates_containing_selected_words(params["ate_terms_outfile"], selected_domain_similar_words)
     print("{} out of {} candidate terms contain at least one selected word, {}".format(
         cand_stats[0], cand_stats[1],cand_stats[2]

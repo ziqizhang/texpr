@@ -224,7 +224,7 @@ def gather_graph_stats(log_file, out_file):
             csvwriter.writerow(values)
 
 
-gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
+#gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
 
 #IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
 #genia_corpus_to_unigrams(IN_CORPUS, "/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min2_per_file_unigram")
