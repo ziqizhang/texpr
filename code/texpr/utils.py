@@ -169,6 +169,8 @@ def jate_terms_iterator(jate_json_outfile):
 def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_tokens):
     ate_terms_components = {}
     for term in ate_term_base_scores.keys():
+        # if "foetus" in term or "pst" in term:
+        #     print("")
         norm_parts = normalize_string(term)
         term_ngrams = find_ngrams(norm_parts, max_n_in_term)
         selected_parts = list()
@@ -224,6 +226,44 @@ def gather_graph_stats(log_file, out_file):
             csvwriter.writerow(values)
 
 
+def rank_knowmak_terms(texpr_json_output, knowmak_tsv_file, out_file):
+    #select seed terms from knowmak_tsv
+    seeds = set()
+    with open(knowmak_tsv_file, encoding="utf8") as f:
+        lines = f.readlines()
+        for l in lines:
+            content=l.split("\t")
+            seeds.add(content[1])
+
+    #read and rank json
+    terms_as_list=list()
+    json_data = open(texpr_json_output).read()
+    data = json.loads(json_data)
+
+    if type(data) is list:
+        for term in data:
+            term_str=term['string']
+            if term_str in seeds:
+                continue
+            terms_as_list.append((term['string'], term['score-mult']))
+    else:
+        for k,v in data.items():
+            if k in seeds:
+                continue
+            terms_as_list.append((k, v))
+    terms_as_list.sort(key=lambda x: x[1], reverse=True)
+
+    #saving
+    with open(out_file, 'w', newline='\n') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for item in terms_as_list:
+            csvwriter.writerow([item[0],item[1]])
+
+
+# rank_knowmak_terms("/home/zqz/Work/data/texpr/texpr_output/knowmak/atr4s/filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3/PU.txt_filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3",
+#                    "/home/zqz/GDrive/project/texpr/data/mostSim4Onto/try3/mostSim4Onto-glove.840B-sim-99.tsv",
+#                    "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv")
 #gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
 
 #IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"

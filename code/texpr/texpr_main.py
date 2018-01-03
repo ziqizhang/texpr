@@ -202,9 +202,40 @@ def select_words_as_nodes_fromjson(sim_scores_folder: str, topn: float, min_sim=
     return selected
 
 
-def select_words_as_nodes_fromtsv(sim_scores_file: str, topn: float, min_sim=0.0):
+def select_words_as_nodes_from_knowmak_tsv(sim_scores_file: str, topn: float, min_sim=0.0):
     selected = set()
     all = set()
+    with open(sim_scores_file, encoding="utf8") as f:
+        lines = f.readlines()
+
+        current_keyword=None
+        count=0
+        skip=False
+        for l in lines:
+            content=l.split("\t")
+            all.add(content[0])
+            if skip:
+                if content[1]==current_keyword:
+                    continue
+                else:
+                    current_keyword=content[1]
+                    skip=False
+
+            if current_keyword is None:
+                current_keyword=content[1]
+            if content[1] == current_keyword:
+                count+=1
+
+            sim=float(content[3])
+            if sim<min_sim:
+                continue
+
+            selected.add(content[0])
+
+            if count>=topn:
+                skip=True
+                count=0
+
 
     return selected
 
@@ -293,7 +324,7 @@ if params["filter_by_sim"] == "True":  # params["sim_score_files"].endswith(".js
         mins = 0.0
     print("Selecting top {} similar words as graph nodes. {}".format(params["topn"], datetime.datetime.now()))
     if params["sim_score_files"].endswith(".tsv"):
-        selected_domain_similar_words=select_words_as_nodes_fromtsv()
+        selected_domain_similar_words=select_words_as_nodes_from_knowmak_tsv(params["sim_score_files"], float(params["topn"]), mins)
     else:
         selected_domain_similar_words = \
             select_words_as_nodes_fromjson(params["sim_score_files"], float(params["topn"]), mins)
@@ -327,10 +358,10 @@ if "gs_file" in params.keys():
 
 print("\n>>> SETTING={}".format(setting_label))
 print("Computing corpus-level textrank scores. {}".format(datetime.datetime.now()))
-keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
-                          int(params["window"]),
-                          num_of_personalized=pr_seed_num, sorted_seed_terms=sorted_seed_terms,
-                          gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
+# keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
+#                           int(params["window"]),
+#                           num_of_personalized=pr_seed_num, sorted_seed_terms=sorted_seed_terms,
+#                           gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
 
 print("Computing final term scores. {}".format(datetime.datetime.now()))
 # use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
