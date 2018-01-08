@@ -1,0 +1,38 @@
+		acl	genia
+TODO: re-run sim scorer for both corpora
+		x	x
+
+JATE		acl	genia
+baseline	x	x		#saved at: /home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2|genia/min1
+w=5,all		x	x		#all words, text rank: /home/zqz/Work/data/texpr/texpr_output/acl|genia
+w=10,all	x	x		#all words, text rank
+w=100,all	x	x		#all words, text rank
+ATR4S
+w=5,all		x	x		#all words, text rank: /home/zqz/Work/data/texpr/texpr_output/acl|genia
+w=10,all	x	x		#all words, text rank
+w=100,all	x	x		#all words, text rank
+
+
+evaluate, choose two
+		acl	genia
+jate		x
+atr4s		x
+
+w=5,sim>0.5
+w=10,sim>0.5	
+w=100,sim>0.5
+w=5,top100
+w=10,top100
+w=100,top100
+w=5,top10%
+w=10,top10%
+w=100,top10%
+w=5,top5%
+w=10,top5%
+w=100,top5%
+
+
+
+
+TODO: scorer for entire folder
+

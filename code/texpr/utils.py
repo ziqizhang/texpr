@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import tarfile
@@ -5,7 +6,6 @@ import re
 import numpy as np
 
 import pickle as pk
-from textrank.summa import utils
 
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -153,9 +153,14 @@ def jate_terms_iterator(jate_json_outfile):
     json_data = open(jate_json_outfile).read()
     data = json.loads(json_data)
     count = 0
-    for term in data:
-        count = count + 1
-        yield term['string'], term['score']
+
+    if type(data) is list:
+        for term in data:
+            count = count + 1
+            yield term['string'], term['score']
+    else:
+        for k,v in data.items():
+            yield k, v
         # if (count % 2000 == 0):
         #     logger.info("\t loaded {}".format(count))
         #
@@ -164,8 +169,10 @@ def jate_terms_iterator(jate_json_outfile):
 def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_tokens):
     ate_terms_components = {}
     for term in ate_term_base_scores.keys():
-        norm_parts = utils.normalize_string(term)
-        term_ngrams = utils.find_ngrams(norm_parts, max_n_in_term)
+        # if "foetus" in term or "pst" in term:
+        #     print("")
+        norm_parts = normalize_string(term)
+        term_ngrams = find_ngrams(norm_parts, max_n_in_term)
         selected_parts = list()
         for term_ngram in term_ngrams:
             # check if this part maps to a phrase that is present in the model
@@ -177,9 +184,106 @@ def generate_term_component_map(ate_term_base_scores, max_n_in_term, valid_token
     return ate_terms_components
 
 
-IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
+def gather_graph_stats(log_file, out_file):
+    lines_words_selected=[]
+    lines_candidate_hits=[]
+    lines_graph_stats=[]
+    with open(log_file) as inf:
+        for line in inf:
+            if "selected out of" in line:
+                lines_words_selected.append(line)
+            elif "candidate terms contain at least one" in line:
+                lines_candidate_hits.append(line)
+            elif "OVERALL STATS" in line:
+                lines_graph_stats.append(line)
+
+    with open(out_file, 'w', newline='\n') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for i in range(0,len(lines_graph_stats)):
+            values=[]
+            #2587 selected out of 3544, percentage=0.7299661399548533
+            line_words_selected=lines_words_selected[i]
+            tokens=line_words_selected.split(",")[0].split(" ")
+            values.append(tokens[0].strip()) #selected
+            values.append(tokens[4].strip()) #total
+
+            #4785 out of 5659 candidate terms contain at least one selected word
+            line_candidate_hits=lines_candidate_hits[i]
+            tokens=line_candidate_hits.split(" ")
+            values.append(tokens[0].strip()) #hits
+            values.append(tokens[3].strip()) #total candidates
+
+            #COMPLETE 21:30:41, OVERALL STATS: stats: nodes=1492, edges=21249, per init=0, num_of_connected_components=5
+            line_graph_stats=lines_graph_stats[i]
+            trim=line_graph_stats.index("stats:")+6
+            line_graph_stats=line_graph_stats[trim:].strip()
+            parts=line_graph_stats.split(",")
+            for p in parts:
+                v=p.split("=")[1]
+                values.append(v)
+
+            csvwriter.writerow(values)
+
+
+def rank_knowmak_terms(texpr_json_output, knowmak_tsv_file, out_file):
+    #select seed terms from knowmak_tsv
+    seeds = set()
+    with open(knowmak_tsv_file, encoding="utf8") as f:
+        lines = f.readlines()
+        for l in lines:
+            content=l.split("\t")
+            seeds.add(content[1])
+
+    #read and rank json
+    terms_as_list=list()
+    json_data = open(texpr_json_output).read()
+    data = json.loads(json_data)
+
+    if type(data) is list:
+        for term in data:
+            term_str=term['string']
+            if term_str in seeds:
+                continue
+            terms_as_list.append((term['string'], term['score-mult']))
+    else:
+        for k,v in data.items():
+            if k in seeds:
+                continue
+            terms_as_list.append((k, v))
+    terms_as_list.sort(key=lambda x: x[1], reverse=True)
+
+    #saving
+    with open(out_file, 'w', newline='\n') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for item in terms_as_list:
+            csvwriter.writerow([item[0],item[1]])
+
+
+def csv_to_tsv(in_file, out_file):
+    with open(in_file, newline='') as csvfile:
+         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+         with open(out_file, 'w', newline='\n') as csvfile:
+            csvwriter = csv.writer(csvfile, delimiter='\t',
+                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            for row in reader:
+                csvwriter.writerow(row)
+
+
+# csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv",
+#            "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.tsv")
+# csv_to_tsv("/home/zqz/Work/data/texpr/word_weights/knowmak/100.txt",
+#            "/home/zqz/Work/data/texpr/word_weights/knowmak/100.tsv")
+
+
+# rank_knowmak_terms("/home/zqz/Work/data/texpr/texpr_output/knowmak/atr4s/filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3/PU.txt_filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3",
+#                    "/home/zqz/GDrive/project/texpr/data/mostSim4Onto/try3/mostSim4Onto-glove.840B-sim-99.tsv",
+#                    "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv")
+#gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
+
+#IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
 #genia_corpus_to_unigrams(IN_CORPUS, "/home/zqz/Work/data/semrerank/jate_lrec2016/genia/min2_per_file_unigram")
-
-
-
-
+# ate_term_base_scores = {c[0]: c[1] for c in jate_terms_iterator("/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1/texpr_base.json")}
+#
+#

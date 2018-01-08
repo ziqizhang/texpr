@@ -10,3 +10,4 @@
 !/corpora/.keepme
 *.pyc
 __pycache__
+*.xml

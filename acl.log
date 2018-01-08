@@ -1,0 +1,1936 @@
+30
+
+>>> Start the following setting at Fri 22 Dec 21:26:59 GMT 2017: 
+1
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:27:01.814643
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:27:03.203613
+	21:27:04: graph stats before personalization: nodes=1492, edges=21249
+	running pagerank...2017-12-22 21:27:04.814583
+	21:27:05: graph stats: nodes=1492, edges=21249, per init=0
+	COMPLETE 21:27:05, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=21249, per init=0
+end
+Computing final term scores. 2017-12-22 21:27:05.734800
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:27:14 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:27:14 GMT 2017: 
+2
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:27:16.640648
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:27:17.923029
+	21:27:19: graph stats before personalization: nodes=1492, edges=21249
+	running pagerank...2017-12-22 21:27:19.405745
+	21:27:20: graph stats: nodes=1492, edges=21249, per init=0
+	COMPLETE 21:27:20, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=21249, per init=0
+end
+Computing final term scores. 2017-12-22 21:27:20.144419
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:27:30 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:27:30 GMT 2017: 
+3
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:27:32.515980
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:27:33.776626
+	21:27:35: graph stats before personalization: nodes=930, edges=12784
+	running pagerank...2017-12-22 21:27:35.187198
+	21:27:35: graph stats: nodes=930, edges=12784, per init=0
+	COMPLETE 21:27:35, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=12784, per init=0
+end
+Computing final term scores. 2017-12-22 21:27:35.663264
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:27:43 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:27:43 GMT 2017: 
+4
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:27:45.420541
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:27:46.776937
+	21:27:48: graph stats before personalization: nodes=930, edges=12784
+	running pagerank...2017-12-22 21:27:48.197885
+	21:27:48: graph stats: nodes=930, edges=12784, per init=0
+	COMPLETE 21:27:48, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=12784, per init=0
+end
+Computing final term scores. 2017-12-22 21:27:48.665629
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:27:57 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:27:57 GMT 2017: 
+5
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:27:59.869654
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:28:01.128299
+	21:28:02: graph stats before personalization: nodes=538, edges=6233
+	running pagerank...2017-12-22 21:28:02.491390
+	21:28:02: graph stats: nodes=538, edges=6233, per init=0
+	COMPLETE 21:28:02, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=6233, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:02.719449
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:28:08 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:28:08 GMT 2017: 
+6
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:28:11.052391
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:28:12.421032
+	21:28:13: graph stats before personalization: nodes=538, edges=6233
+	running pagerank...2017-12-22 21:28:13.865557
+	21:28:14: graph stats: nodes=538, edges=6233, per init=0
+	COMPLETE 21:28:14, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=6233, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:14.099039
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:28:22 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:28:22 GMT 2017: 
+7
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:28:25.077246
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:28:26.406075
+	21:28:27: graph stats before personalization: nodes=292, edges=2926
+	running pagerank...2017-12-22 21:28:27.766031
+	21:28:27: graph stats: nodes=292, edges=2926, per init=0
+	COMPLETE 21:28:27, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=2926, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:27.883306
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:28:33 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:28:33 GMT 2017: 
+8
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:28:35.166741
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:28:36.445986
+	21:28:37: graph stats before personalization: nodes=292, edges=2926
+	running pagerank...2017-12-22 21:28:37.859247
+	21:28:37: graph stats: nodes=292, edges=2926, per init=0
+	COMPLETE 21:28:37, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=2926, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:37.977589
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:28:45 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:28:45 GMT 2017: 
+9
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:28:47.929710
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:28:49.556110
+	21:28:50: graph stats before personalization: nodes=26, edges=21
+	running pagerank...2017-12-22 21:28:50.932190
+	21:28:50: graph stats: nodes=26, edges=21, per init=0
+	COMPLETE 21:28:50, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=21, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:50.935567
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:28:53 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:28:53 GMT 2017: 
+10
+	filter_by_sim=True window=5 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:28:55.302442
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=5-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:28:56.573406
+	21:28:57: graph stats before personalization: nodes=26, edges=21
+	running pagerank...2017-12-22 21:28:57.945598
+	21:28:57: graph stats: nodes=26, edges=21, per init=0
+	COMPLETE 21:28:57, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=21, per init=0
+end
+Computing final term scores. 2017-12-22 21:28:57.949206
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:29:00 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:29:00 GMT 2017: 
+11
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:29:02.785534
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:29:04.085350
+	21:29:06: graph stats before personalization: nodes=1492, edges=41029
+	running pagerank...2017-12-22 21:29:06.344558
+	21:29:07: graph stats: nodes=1492, edges=41029, per init=0
+	COMPLETE 21:29:07, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=41029, per init=0
+end
+Computing final term scores. 2017-12-22 21:29:07.757777
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:29:16 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:29:16 GMT 2017: 
+12
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:29:18.356413
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:29:19.817253
+	21:29:22: graph stats before personalization: nodes=1492, edges=41029
+	running pagerank...2017-12-22 21:29:22.011448
+	21:29:23: graph stats: nodes=1492, edges=41029, per init=0
+	COMPLETE 21:29:23, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=41029, per init=0
+end
+Computing final term scores. 2017-12-22 21:29:23.457838
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:29:34 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:29:34 GMT 2017: 
+13
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:29:37.795138
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:29:39.285497
+	21:29:41: graph stats before personalization: nodes=930, edges=23850
+	running pagerank...2017-12-22 21:29:41.786394
+	21:29:42: graph stats: nodes=930, edges=23850, per init=0
+	COMPLETE 21:29:42, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=23850, per init=0
+end
+Computing final term scores. 2017-12-22 21:29:42.726626
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:29:50 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:29:50 GMT 2017: 
+14
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:29:52.978590
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:29:54.340771
+	21:29:56: graph stats before personalization: nodes=930, edges=23850
+	running pagerank...2017-12-22 21:29:56.530299
+	21:29:57: graph stats: nodes=930, edges=23850, per init=0
+	COMPLETE 21:29:57, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=23850, per init=0
+end
+Computing final term scores. 2017-12-22 21:29:57.372773
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:30:06 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:30:06 GMT 2017: 
+15
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:30:08.757729
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:30:10.032343
+	21:30:12: graph stats before personalization: nodes=538, edges=11119
+	running pagerank...2017-12-22 21:30:12.220267
+	21:30:12: graph stats: nodes=538, edges=11119, per init=0
+	COMPLETE 21:30:12, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=11119, per init=0
+end
+Computing final term scores. 2017-12-22 21:30:12.610042
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:30:18 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:30:18 GMT 2017: 
+16
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:30:21.041627
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:30:22.316519
+	21:30:24: graph stats before personalization: nodes=538, edges=11119
+	running pagerank...2017-12-22 21:30:24.427418
+	21:30:24: graph stats: nodes=538, edges=11119, per init=0
+	COMPLETE 21:30:24, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=11119, per init=0
+end
+Computing final term scores. 2017-12-22 21:30:24.818846
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:30:35 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:30:35 GMT 2017: 
+17
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:30:38.508991
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:30:40.304560
+	21:30:42: graph stats before personalization: nodes=292, edges=5038
+	running pagerank...2017-12-22 21:30:42.981301
+	21:30:43: graph stats: nodes=292, edges=5038, per init=0
+	COMPLETE 21:30:43, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=5038, per init=0
+end
+Computing final term scores. 2017-12-22 21:30:43.236796
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:30:49 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:30:49 GMT 2017: 
+18
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:30:52.303973
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:30:53.641773
+	21:30:55: graph stats before personalization: nodes=292, edges=5038
+	running pagerank...2017-12-22 21:30:55.610629
+	21:30:55: graph stats: nodes=292, edges=5038, per init=0
+	COMPLETE 21:30:55, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=5038, per init=0
+end
+Computing final term scores. 2017-12-22 21:30:55.794167
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:31:01 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:31:01 GMT 2017: 
+19
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:31:04.016043
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:31:05.319876
+	21:31:07: graph stats before personalization: nodes=26, edges=34
+	running pagerank...2017-12-22 21:31:07.256961
+	21:31:07: graph stats: nodes=26, edges=34, per init=0
+	COMPLETE 21:31:07, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=34, per init=0
+end
+Computing final term scores. 2017-12-22 21:31:07.260478
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:31:09 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:31:09 GMT 2017: 
+20
+	filter_by_sim=True window=10 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:31:11.750312
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=10-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:31:13.021705
+	21:31:14: graph stats before personalization: nodes=26, edges=34
+	running pagerank...2017-12-22 21:31:14.924102
+	21:31:14: graph stats: nodes=26, edges=34, per init=0
+	COMPLETE 21:31:14, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=34, per init=0
+end
+Computing final term scores. 2017-12-22 21:31:14.927607
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:31:17 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:31:17 GMT 2017: 
+21
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:31:19.660980
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:31:20.939476
+	21:31:25: graph stats before personalization: nodes=1492, edges=126430
+	running pagerank...2017-12-22 21:31:25.453688
+	21:31:29: graph stats: nodes=1492, edges=126430, per init=0
+	COMPLETE 21:31:29, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=126430, per init=0
+end
+Computing final term scores. 2017-12-22 21:31:29.305621
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:31:38 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:31:38 GMT 2017: 
+22
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.5 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:31:40.088572
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	2587 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.5
+Computing corpus-level textrank scores. 2017-12-22 21:31:41.505626
+	21:31:46: graph stats before personalization: nodes=1492, edges=126430
+	running pagerank...2017-12-22 21:31:46.021038
+	21:31:49: graph stats: nodes=1492, edges=126430, per init=0
+	COMPLETE 21:31:49, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=1492, edges=126430, per init=0
+end
+Computing final term scores. 2017-12-22 21:31:49.868346
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:32:00 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:32:00 GMT 2017: 
+23
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:32:02.429868
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:32:03.743265
+	21:32:07: graph stats before personalization: nodes=930, edges=67275
+	running pagerank...2017-12-22 21:32:07.850409
+	21:32:10: graph stats: nodes=930, edges=67275, per init=0
+	COMPLETE 21:32:10, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=67275, per init=0
+end
+Computing final term scores. 2017-12-22 21:32:10.118108
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:32:19 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:32:19 GMT 2017: 
+24
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.6 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:32:21.678230
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	1471 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.6
+Computing corpus-level textrank scores. 2017-12-22 21:32:23.168213
+	21:32:27: graph stats before personalization: nodes=930, edges=67275
+	running pagerank...2017-12-22 21:32:27.196352
+	21:32:29: graph stats: nodes=930, edges=67275, per init=0
+	COMPLETE 21:32:29, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=930, edges=67275, per init=0
+end
+Computing final term scores. 2017-12-22 21:32:29.539577
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:32:38 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:32:38 GMT 2017: 
+25
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:32:40.990895
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:32:42.249014
+	21:32:45: graph stats before personalization: nodes=538, edges=27597
+	running pagerank...2017-12-22 21:32:45.995671
+	21:32:46: graph stats: nodes=538, edges=27597, per init=0
+	COMPLETE 21:32:46, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=27597, per init=0
+end
+Computing final term scores. 2017-12-22 21:32:46.966304
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:32:53 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:32:53 GMT 2017: 
+26
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.7 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:32:55.357262
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	734 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.7
+Computing corpus-level textrank scores. 2017-12-22 21:32:56.662536
+	21:33:00: graph stats before personalization: nodes=538, edges=27597
+	running pagerank...2017-12-22 21:33:00.427996
+	21:33:01: graph stats: nodes=538, edges=27597, per init=0
+	COMPLETE 21:33:01, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=538, edges=27597, per init=0
+end
+Computing final term scores. 2017-12-22 21:33:01.339598
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:33:09 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:33:09 GMT 2017: 
+27
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:33:11.104771
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:33:12.403424
+	21:33:16: graph stats before personalization: nodes=292, edges=11246
+	running pagerank...2017-12-22 21:33:16.186804
+	21:33:16: graph stats: nodes=292, edges=11246, per init=0
+	COMPLETE 21:33:16, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=11246, per init=0
+end
+Computing final term scores. 2017-12-22 21:33:16.584294
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:33:22 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:33:22 GMT 2017: 
+28
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.8 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:33:25.322599
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	358 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.8
+Computing corpus-level textrank scores. 2017-12-22 21:33:26.904432
+	21:33:31: graph stats before personalization: nodes=292, edges=11246
+	running pagerank...2017-12-22 21:33:31.275218
+	21:33:31: graph stats: nodes=292, edges=11246, per init=0
+	COMPLETE 21:33:31, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=292, edges=11246, per init=0
+end
+Computing final term scores. 2017-12-22 21:33:31.700856
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:33:39 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:33:39 GMT 2017: 
+29
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/jate in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:33:41.816005
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:33:43.246672
+	21:33:48: graph stats before personalization: nodes=26, edges=83
+	running pagerank...2017-12-22 21:33:48.451035
+	21:33:48: graph stats: nodes=26, edges=83, per init=0
+	COMPLETE 21:33:48, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=83, per init=0
+end
+Computing final term scores. 2017-12-22 21:33:48.458012
+	weirdness.json
+	vote.json
+	rake.json
+	relevance.json
+	texpr_base.json
+	chisquare.json
+	glossex.json
+	tfidf.json
+	cvalue.json
+<<< completed at Fri 22 Dec 21:33:51 GMT 2017: 
+
+>>> Start the following setting at Fri 22 Dec 21:33:51 GMT 2017: 
+30
+	filter_by_sim=True window=100 topn=0.999 min_sim=0.9 sim_score_files=/home/zqz/Work/data/texpr/acl_sim/with_dict sys_folder=/home/zqz/Work/data/texpr/word_weights/acl ate_terms_outfile=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/ttf.json ate_terms_outfolder=/home/zqz/Work/data/semrerank/jate_lrec2016/aclrd_ver2_atr4s/min1 outfolder=/home/zqz/Work/data/texpr/texpr_output/acl/atr4s in_corpus=/home/zqz/Work/data/jate_data/acl-rd-corpus-2.0/raw_abstract_plain_txt
+filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.9
+Selecting top 0.999 similar words as graph nodes. 2017-12-22 21:33:54.181244
+	 processing... acl0-11.json, items=100
+		 50
+		 100
+	 processing... acl0-9.json, items=100
+		 50
+		 100
+	 processing... acl0-7.json, items=100
+		 50
+		 100
+	 processing... acl0-6.json, items=100
+		 50
+		 100
+	 processing... acl0-8.json, items=100
+		 50
+		 100
+	 processing... acl0-5.json, items=100
+		 50
+		 100
+	 processing... acl0-12.json, items=100
+		 50
+		 100
+	 processing... acl0-13.json, items=100
+		 50
+		 100
+	 processing... acl0-10.json, items=100
+		 50
+		 100
+	 processing... acl0-3.json, items=100
+		 50
+		 100
+	 processing... acl0-2.json, items=100
+		 50
+		 100
+	 processing... acl0-1.json, items=100
+		 50
+		 100
+	 processing... acl0-4.json, items=100
+		 50
+		 100
+	26 selected out of 3544
+
+>>> SETTING=filter_by_sim=True-window=100-ate_alg=0-topnsim=0.999-min_sim=0.9
+Computing corpus-level textrank scores. 2017-12-22 21:33:55.524930
+	21:33:59: graph stats before personalization: nodes=26, edges=83
+	running pagerank...2017-12-22 21:33:59.217747
+	21:33:59: graph stats: nodes=26, edges=83, per init=0
+	COMPLETE 21:33:59, OVERALL STATS: /home/zqz/Work/data/texpr/word_weights/acl/0.999.txt graph stats: nodes=26, edges=83, per init=0
+end
+Computing final term scores. 2017-12-22 21:33:59.223233
+	KeyConceptRelatedness.txt
+	Basic.txt
+	PU.txt
+	vote_atr4s.json
+	ComboBasic.txt
+	PostRankDC.txt
+	LinkProbability.txt
+	NovelTopicModel.txt
+<<< completed at Fri 22 Dec 21:34:01 GMT 2017: 
