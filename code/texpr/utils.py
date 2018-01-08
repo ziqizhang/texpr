@@ -261,6 +261,22 @@ def rank_knowmak_terms(texpr_json_output, knowmak_tsv_file, out_file):
             csvwriter.writerow([item[0],item[1]])
 
 
+def csv_to_tsv(in_file, out_file):
+    with open(in_file, newline='') as csvfile:
+         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+         with open(out_file, 'w', newline='\n') as csvfile:
+            csvwriter = csv.writer(csvfile, delimiter='\t',
+                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            for row in reader:
+                csvwriter.writerow(row)
+
+
+# csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv",
+#            "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.tsv")
+# csv_to_tsv("/home/zqz/Work/data/texpr/word_weights/knowmak/100.txt",
+#            "/home/zqz/Work/data/texpr/word_weights/knowmak/100.tsv")
+
+
 # rank_knowmak_terms("/home/zqz/Work/data/texpr/texpr_output/knowmak/atr4s/filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3/PU.txt_filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3",
 #                    "/home/zqz/GDrive/project/texpr/data/mostSim4Onto/try3/mostSim4Onto-glove.840B-sim-99.tsv",
 #                    "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv")
