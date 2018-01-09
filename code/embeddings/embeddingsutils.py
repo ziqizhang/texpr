@@ -104,6 +104,7 @@ class EmbeddingsUtils:
         self.default_weight = defw
         self.use_weights = True
 
+
     def setWeightsFromEmbeddings(self):
         """set the weights from the word counts stored in the embeddings model
         the weight is set to logs(2)/log(count+1), so it is 1.0 for count 1
@@ -198,9 +199,16 @@ class EmbeddingsUtils:
     # However, known unwanted tokens are filtered (1 letter tokens) and
     # tokens are cleaned to remove any additional punctuation attached to them.
     def tokens4text(self,text):
+        # the NLTK tokeniser leaves slashes and hyphens within words intact,
+        # so we first replace those with spaces
+        text = re.sub(r"[/—-]"," ",text)
         tmpwords = nltk.word_tokenize(text)
         tmpwords = [word for word in tmpwords if len(word) > 1]
-        tmpwords = [re.sub("[.,;:!?]+","",word) for word in tmpwords]
+        ## remove any trailing dot or other common punctuation
+        ## NOTE: this may be a problem if we have an acronym like A.D.
+        ## but for now we ignore that
+        tmpwords = [re.sub(r"[.,;:!?]+$","",word) for word in tmpwords]
+        tmpwords = [word for word in tmpwords if word and not "." in word]
         return tmpwords
 
     # return a list of filtered/cleaned/transformed words ready to be used for similarity calculation
