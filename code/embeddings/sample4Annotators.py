@@ -53,6 +53,11 @@ N_c = int(sys.argv[4])
 N_k = int(sys.argv[5])
 N_w = int(sys.argv[6])
 
+MAXRANK = 100
+SEED = 1
+SIMNAMES = ["simonly","simidfonly","simidfstr","simonly-textrank","simidfonly-textrank","simidfstr-textrank"]
+S = 1.0
+
 written = 0  # number of rows written, total
 
 ## first read in the classinfo file and create the data structures we need
@@ -67,7 +72,7 @@ kw_uris = set()
 kws = set()
 
 # make the random selections repeatable
-np.random.seed(1)
+np.random.seed(SEED)
 
 print("Reading classinfo ...",file=sys.stderr)
 with open(classinfoFile) as infile:
@@ -134,13 +139,13 @@ kw_set = set()
 for kw in sampled_kw:
     kw_set.add(kw)
 
-sys.exit(0)
-
-## now go through the mostsim file and load all the corpus word ranked lists
+## now go through the final mostsim file and load all the corpus word ranked lists
 ## for all the similarity measures for each of the keywords we have sampled.
-## Once we have all these lists, pick one of those lists at random
-## Find the length of the list, then use our biased sampling method to
-## pick corpus words from that list
+## Once we have all these lists, sample from all the lists in the following way
+## until we have N_w corpuswords:
+##   for rank number r=1 too maxrank:
+##      for each similarity measure list:
+##         sample word at rank r from that list with probability 1/r^s
 
 ## The columns of the input file should be:
 ## 1 - name of similarity score: simonly, simidfonly, simidfstr
@@ -152,56 +157,55 @@ sys.exit(0)
 ## 7 - key words as used
 ## 8 - idf of corpus word
 ## 9 - average idf of key words used
+
+## First, lets get all the lists for each of the keywords
+## We store the lists in the following way:
+## each combination of keyword, listid, and rank is mapped to
+## corpusword and score in the map cw4kw
+cw4kw = {}
 n_input = 0
+found_kw_set = set()
 print("Processing ...",file=sys.stderr)
-with open(outputFile,"w") as outfile:
-    with open(mostSimFile) as infile:
+with open(mostSimFile) as infile:
         oldkey = ""   ## key is sim+keyword
         for line in infile:
             n_input += 1
             line = line.strip()
-            (simname,cword,kword,rank,score,unused1,unused2,idfc,idfk) = line.split("\t")
-            ## NOTE: we used a cleaned version of the keyword, I think for creating mostsim4Onto,
-            ## so clean the keyword here as well
+            (simname,cword,kword,rank,score) = line.split("\t")
+            if kword in kw_set:
+                found_kw_set.add(kword)
+                cw4kw[(kword,simname,rank)]=(cword,score)
 
-            key = simname+"|"+kword
-            keyword = kword
-            if key != oldkey:
-                if oldkey:   # oldkey is blank for the first time we get here, nothing yet then
-                    ## finish and output the previous list
-                    l1 = heapq.nlargest(k,h_tr)
-                    r = 0
-                    for s,cw in l1:
-                        print(scorename+"-textrank",cw,keyword,r,s,sep="\t",file=outfile)
-                        written = written + 1
-                        r = r + 1
-                # now start new heaps for the derived scores
-                h_tr = [] # original score times textrank
-                scorename = simname
-                oldkey = key
-                keyword = kword
-            # another row for the same key, just calculate the additional sim
-            # and add to the heap
-            score = float(score)
-            tr = textRank.get(cword)
-            if tr:
-                scoretr = score * tr
-                heapq.heappush(h_tr,(scoretr,cword))
-            else:
-                notr += 1
-            # also, write the current score if the rank is < k
-            rank = int(rank)
-            if rank < k:
-                print(scorename,cword,kword,rank,score,sep="\t",file=outfile)
-                written = written + 1
-    # finished the whole input file, but we still have to finish the last key
-    # TODO!!
-    l1 = heapq.nlargest(k,h_tr)
-    r = 0
-    for s,cw in l1:
-        print(scorename+"-textrank",cw,keyword,r,s,sep="\t",file=outfile)
-        written = written + 1
-        r = r + 1
+print("Total number of rows read:",n_input,file=sys.stderr)
+print("Number of kwords found:",len(found_kw_set),"expected:",len(kw_set))
+print("Number of rows stored:",notr,file=sys.stderr)
 
-print("Total number of rows written:",written,file=sys.stderr)
-print("Number of times textrank lookup failed:",notr,file=sys.stderr)
+if len(found_kw_set) < len(kw_set):
+    raise Error("Not all keywords found!")
+
+## now perform the actual sampling
+for (uri,kw) in sampled_uri_kw:
+    # collect the corpus word tuples for this kw in this list
+    cw_set = set() # to check if we already have that word
+    cw_list = []   # the list of cw tuples we sampled, with at most N_w elements
+    # we have to repeat the whole sampling until we have enough
+    while True:
+        for rank in range(MAXRANK):
+            th = 1.0/(float(rank)**S)   # the threshold: if random number is smaller, pick word
+            for simname in SIMNAMES:
+                ## sample the corpus word with probability 1/r^s
+                rnd = np.random.random()
+                if rnd <= th:
+                    (cw,score) = cw4kw[(kw,simname,rank)]
+                    if cw not in cw_set:
+                        cw_set.add(cw)
+                        cw_list.add((cw,score,rank,simname))
+                if len(cw_list) == N_w:
+                    break
+            if len(cw_list) == N_w:
+                break
+    # we now should have at most N_w sampled corpus words for the keyword
+    # we can now output the whole bunch
+    for (cw,score,rank,simname) in cw_list:
+        # TODO: also add URI!!
+        print(kw,cw,simname,rank,score,sep="\t")
