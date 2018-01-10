@@ -39,14 +39,14 @@ from difflib import SequenceMatcher
 from collections import OrderedDict
 
 if len(sys.argv) != 7:
-    print("ERROR: need the following arguments: mostSim-file, classinfo-file, section, N_c, N_k, N_w",file=sys.stderr)
+    print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w",file=sys.stderr)
     sys.exit(1)
 
-debug=False
+debug=True
 verbose=True
 mixedCase=True
 
-mostSimFile = sys.argv[1]
+finalSimFile = sys.argv[1]
 classinfoFile = sys.argv[2]
 ontoSection = sys.argv[3]
 N_c = int(sys.argv[4])
@@ -74,6 +74,19 @@ kws = set()
 # make the random selections repeatable
 np.random.seed(SEED)
 
+## for debugging, we read in the final most sim file already here one time
+## so we know which keywords occur in it. This allows to sample from just
+## the keywords of a cut-down, small size final file
+if debug:
+    print("DEBUG: reading in final file to find the known kws...",file=sys.stderr)
+    known_kw_set = set()
+    with open(finalSimFile) as infile:
+            for line in infile:
+                line = line.strip()
+                (simname,cword,kword,rank,score) = line.split("\t")
+                known_kw_set.add(kword)
+    print("DEBUG: found keywords:",len(known_kw_set),file=sys.stderr)
+
 print("Reading classinfo ...",file=sys.stderr)
 with open(classinfoFile) as infile:
     for line in infile:
@@ -81,6 +94,9 @@ with open(classinfoFile) as infile:
         line = line.strip()
         (keyword,uri,sec) = line.split("\t")
         if sec != ontoSection:
+            n_classinfo_skipped += 1
+            continue
+        if debug and keyword not in known_kw_set:
             n_classinfo_skipped += 1
             continue
         n_classinfo_taken += 1
@@ -138,7 +154,7 @@ print("DEBUG: selected uri/kwds=",sampled_uri_kw,file=sys.stderr)
 kw_set = set()
 for kw in sampled_kw:
     kw_set.add(kw)
-
+print("DEBUG: kw_set=",kw_set,file=sys.stderr)
 ## now go through the final mostsim file and load all the corpus word ranked lists
 ## for all the similarity measures for each of the keywords we have sampled.
 ## Once we have all these lists, sample from all the lists in the following way
@@ -164,21 +180,28 @@ for kw in sampled_kw:
 ## corpusword and score in the map cw4kw
 cw4kw = {}
 n_input = 0
+n_found = 0
+n_not_found = 0
 found_kw_set = set()
 print("Processing ...",file=sys.stderr)
-with open(mostSimFile) as infile:
-        oldkey = ""   ## key is sim+keyword
+with open(finalSimFile) as infile:
         for line in infile:
             n_input += 1
             line = line.strip()
             (simname,cword,kword,rank,score) = line.split("\t")
             if kword in kw_set:
                 found_kw_set.add(kword)
-                cw4kw[(kword,simname,rank)]=(cword,score)
-
+                # print("STORING ",(kword,simname,rank),file=sys.stderr)
+                cw4kw[(kword,simname,int(rank))]=(cword,float(score))
+                n_found += 1
+            else:
+                n_not_found += 1
+print("DEBUG: ('adjuvants', 'simidfstr', 88) info:",cw4kw.get(('adjuvants', 'simidfstr', 88)),file=sys.stderr)
+print("DEBUG: ('adjuvant', 'simonly', 0) info:",cw4kw.get(('adjuvants', 'simonly', 0)),file=sys.stderr)
 print("Total number of rows read:",n_input,file=sys.stderr)
-print("Number of kwords found:",len(found_kw_set),"expected:",len(kw_set))
-print("Number of rows stored:",notr,file=sys.stderr)
+print("Total number of lines where kw found:",n_found,file=sys.stderr)
+print("Total number of lines where kw NOT found:",n_not_found,file=sys.stderr)
+print("Number of kwords found:",len(found_kw_set),"expected:",len(kw_set),file=sys.stderr)
 
 if len(found_kw_set) < len(kw_set):
     raise Error("Not all keywords found!")
@@ -189,23 +212,30 @@ for (uri,kw) in sampled_uri_kw:
     cw_set = set() # to check if we already have that word
     cw_list = []   # the list of cw tuples we sampled, with at most N_w elements
     # we have to repeat the whole sampling until we have enough
-    while True:
+    for iteration in range(10000):
         for rank in range(MAXRANK):
-            th = 1.0/(float(rank)**S)   # the threshold: if random number is smaller, pick word
+            th = 1.0/(float(rank+1)**S)   # the threshold: if random number is smaller, pick word
             for simname in SIMNAMES:
                 ## sample the corpus word with probability 1/r^s
                 rnd = np.random.random()
                 if rnd <= th:
-                    (cw,score) = cw4kw[(kw,simname,rank)]
+                    # get the info we have stored for this keyword
+                    info = cw4kw.get((kw,simname,rank))
+                    if not info:
+                        print("ERROR: no kw info found for ",(kw,simname,rank),file=sys.stderr)
+                        raise Exception("ABORT")
+                    else:
+                        (cw,score) = info
                     if cw not in cw_set:
                         cw_set.add(cw)
-                        cw_list.add((cw,score,rank,simname))
+                        cw_list.append((cw,score,rank,simname))
                 if len(cw_list) == N_w:
                     break
             if len(cw_list) == N_w:
                 break
+        if len(cw_list) == N_w:
+            break
     # we now should have at most N_w sampled corpus words for the keyword
     # we can now output the whole bunch
     for (cw,score,rank,simname) in cw_list:
-        # TODO: also add URI!!
-        print(kw,cw,simname,rank,score,sep="\t")
+        print(uri,kw,cw,simname,rank,score,sep="\t")
