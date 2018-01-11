@@ -65,7 +65,8 @@ keywords = OrderedDict()
 if verbose: print("Reading ontology keywords ...",file=sys.stderr)
 with open(keywordsFile) as inp:
     for line in inp:
-        (keyword,cname,other) = line.split("\t")
+        keyword = line.strip()
+        #(keyword,cname,topicfield,flagfield,provfield,propfield) = line.split("\t")
         ## cname = cname[4:]
         keywords[keyword] = 1
 
