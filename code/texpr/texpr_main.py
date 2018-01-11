@@ -358,10 +358,10 @@ if "gs_file" in params.keys():
 
 print("\n>>> SETTING={}".format(setting_label))
 print("Computing corpus-level textrank scores. {}".format(datetime.datetime.now()))
-# keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
-#                           int(params["window"]),
-#                           num_of_personalized=pr_seed_num, sorted_seed_terms=sorted_seed_terms,
-#                           gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
+keywords_to_ate_percorpus(params["in_corpus"], word_rankscore_folder,
+                          int(params["window"]),
+                          num_of_personalized=pr_seed_num, sorted_seed_terms=sorted_seed_terms,
+                          gs_term_file=gs_file, filters=selected_domain_similar_words)  # personalized textrank
 
 print("Computing final term scores. {}".format(datetime.datetime.now()))
 # use_ate_pre_computed=params["ate_alg"] #0 means use pre-computed ate output, from a folder; 1 means
