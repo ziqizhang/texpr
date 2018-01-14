@@ -42,7 +42,7 @@ if len(sys.argv) != 7:
     print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w",file=sys.stderr)
     sys.exit(1)
 
-debug=True
+debug=False
 verbose=True
 mixedCase=True
 
@@ -222,8 +222,9 @@ for (uri,kw) in sampled_uri_kw:
                     # get the info we have stored for this keyword
                     info = cw4kw.get((kw,simname,rank))
                     if not info:
-                        print("ERROR: no kw info found for ",(kw,simname,rank),file=sys.stderr)
-                        raise Exception("ABORT")
+                        print("WARNING: no kw info found for ",(kw,simname,rank),file=sys.stderr)
+                        # break out of loop that goes over all the similarity measures
+                        break
                     else:
                         (cw,score) = info
                     if cw not in cw_set:
