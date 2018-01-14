@@ -271,15 +271,15 @@ def csv_to_tsv(in_file, out_file):
                 csvwriter.writerow(row)
 
 
-# csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv",
-#            "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.tsv")
+csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.csv",
+            "/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.tsv")
 # csv_to_tsv("/home/zqz/Work/data/texpr/word_weights/knowmak/100.txt",
 #            "/home/zqz/Work/data/texpr/word_weights/knowmak/100.tsv")
 
 
-# rank_knowmak_terms("/home/zqz/Work/data/texpr/texpr_output/knowmak/atr4s/filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3/PU.txt_filter_by_sim=True-window=100-ate_alg=0-topnsim=100-min_sim=0.3",
-#                    "/home/zqz/GDrive/project/texpr/data/mostSim4Onto/try3/mostSim4Onto-glove.840B-sim-99.tsv",
-#                    "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=10,top100,sim=0.4,ate=PU.csv")
+# rank_knowmak_terms("/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=100,top100,sim=0.4,ate=PU.csv",
+#                    "/home/zqz/GDrive/project/texpr/data/mostSim4Onto/try4/mostSim4Onto-glove.840B-sim-99.tsv",
+#                    "/home/zqz/Work/data/texpr/texpr_output/knowmak/RANKED_window=100,top100,sim=0.4,ate=PU.csv")
 #gather_graph_stats("/home/zqz/Work/texpr/genia_.log","/home/zqz/Work/texpr/genia_stats.csv")
 
 #IN_CORPUS="/home/zqz/GDrive/papers/cicling2017/data/semrerank/corpus/genia.tar.gz"
