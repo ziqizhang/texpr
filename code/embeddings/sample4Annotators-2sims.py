@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Script for creating the examples to be evaluated by the annotators.
 # NOTE: this script only chooses between the simonly and simonly-textrank
 # lists and always takes the first-ranked corpus words, where for each
@@ -52,11 +53,11 @@ import numpy as np
 from difflib import SequenceMatcher
 from collections import OrderedDict
 
-if len(sys.argv) != 7:
-    print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w",file=sys.stderr)
+if len(sys.argv) != 9:
+    print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w, randomseed simname",file=sys.stderr)
     sys.exit(1)
 
-debug=True
+debug=False
 verbose=True
 mixedCase=True
 
@@ -66,10 +67,11 @@ ontoSection = sys.argv[3]
 N_c = int(sys.argv[4])
 N_k = int(sys.argv[5])
 N_w = int(sys.argv[6])
+SEED = int(sys.argv[7])
+simname = sys.argv[8]
 
 MAXRANK = 100
-SEED = 3
-SIMNAMES = ["simonly","simonly-textrank"]
+SIMNAMES = [simname,simname+"-textrank"]
 S = 1.0
 
 written = 0  # number of rows written, total
@@ -91,9 +93,9 @@ np.random.seed(SEED)
 # for debugging, we read in the final most sim file already here one time
 # so we know which keywords occur in it. This allows to sample from just
 # the keywords of a cut-down, small size final file
+known_kw_set = set()
 if debug:
     print("DEBUG: reading in final file to find the known kws...",file=sys.stderr)
-    known_kw_set = set()
     with open(finalSimFile) as infile:
             for line in infile:
                 line = line.strip()
@@ -200,25 +202,41 @@ n_input = 0
 n_found = 0
 n_not_found = 0
 n_ignored = 0
+n_ignored_case = 0
 found_kw_set = set()
+cur_kw = ""  # we need to reset the rank2subtract value for every keyword
+rank2subtract = 0  # if we ignore an entry from the list, increase this
 print("Processing ...",file=sys.stderr)
 with open(finalSimFile) as infile:
         for line in infile:
             n_input += 1
             line = line.strip()
             (simname,cword,kword,rank,score) = line.split("\t")
+            if kword != cur_kw:
+                cur_kw = kword
+                rank2subtract = 0
             if simname != SIMNAMES[0] and simname != SIMNAMES[1]:
                 n_ignored += 1
                 continue
+            if cword.lower() == kword.lower():
+                n_ignored_case += 1
+                rank2subtract += 1
+                continue
             if kword in kw_set:
                 found_kw_set.add(kword)
+                # NOTE: we now work around a bug/oversight in the input file: if the processing was
+                # case sensitive, then a corpus word could get picked that is simply a case-variation
+                # of the keyword. We decided that we do not want this and these should get filtered.
+                # So whenever this happens, we do NOT store the row, and we add one to rank2subtract
+                # for that keyword, to adjust the ranks of subsequent entries for the keyword.
                 # print("STORING ",(kword,simname,rank),file=sys.stderr)
-                cw4kw[(kword,simname,int(rank))]=(cword,float(score))
+                cw4kw[(kword,simname,int(rank)-rank2subtract)]=(cword,float(score))
                 n_found += 1
             else:
                 n_not_found += 1
 print("Total number of rows read:",n_input,file=sys.stderr)
-print("Number of rows ignored, not one of the selected measures:",n_ignored)
+print("Number of rows ignored, not one of the selected measures:",n_ignored,file=sys.stderr)
+print("Number of rows ignored, case variation:",n_ignored_case,file=sys.stderr)
 print("Total number of lines where kw found:",n_found,file=sys.stderr)
 print("Total number of lines where kw NOT found:",n_not_found,file=sys.stderr)
 print("Number of kwords found:",len(found_kw_set),"expected:",len(kw_set),file=sys.stderr)
@@ -254,6 +272,8 @@ for (uri,kw) in sampled_uri_kw:
                 break
         if len(cw_list) == N_w:
             break
+    # before we output anything, fix the URI: remove everything up to the last slash
+    uri=re.sub(r".*/","",uri)
     # we now should have at most N_w sampled corpus words for the keyword
     # we can now output the whole bunch, but first the pair with the original
     # keyword
@@ -262,3 +282,4 @@ for (uri,kw) in sampled_uri_kw:
     for (cw,score,rank,simname) in cw_list:
         print(outrow,uri,cw,kw,simname,rank,score,"corpusword",sep="\t")
         outrow += 1
+print("Number of samples written:",outrow,file=sys.stderr)
