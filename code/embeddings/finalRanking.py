@@ -41,13 +41,20 @@ notr = 0     # number of times we did not find a textrank for the corpus word
 textRank = {}
 n_textranks = 0
 print("Reading textranks ...",file=sys.stderr)
+mintr = 100000.0
 with open(textRankFile) as infile:
     for line in infile:
         n_textranks += 1
         line = line.strip()
         (word,tr) = line.split("\t")
-        textRank[word] = float(tr)
-print("Textrank entries read: ",n_textranks,file=sys.stderr)
+        tr = float(tr)
+        textRank[word] = tr
+        if tr < mintr:
+            mintr = tr
+print("Textrank entries read:",n_textranks,file=sys.stderr)
+print("Minimum textrank found:",mintr)
+zerotr = mintr
+print("If not found, using tr:",zerotr)
 
 ## Read in the rows for one keyword-corpusword pair and similarity measure,
 ## calculate all the additional similarities and then put into a sorting
@@ -67,6 +74,7 @@ print("Textrank entries read: ",n_textranks,file=sys.stderr)
 n_input = 0
 print("processing ...",file=sys.stderr)
 with open(outputFile,"w") as outfile:
+  with open(outputFile+".log","w") as outlog:
     with open(mostSimFile) as infile:
         oldkey = ""   ## key is sim+keyword
         for line in infile:
@@ -96,11 +104,19 @@ with open(outputFile,"w") as outfile:
             # and add to the heap
             score = float(score)
             tr = textRank.get(cword)
+            # if not found, try and fall back to lower case
+            if not tr:
+                tr = textRank.get(cword.lower())
+            # now, if we still do not have anything, it is an error and gets logged
             if tr:
                 scoretr = score * tr
                 heapq.heappush(h_tr,(scoretr,cword))
             else:
+                print("No textrank for",cword,sep="\t",file=outlog)
                 notr += 1
+                # use the zerotr
+                scoretr = score * zerotr
+                heapq.heappush(h_tr,(scoretr,cword))
             # also, write the current score if the rank is < k
             rank = int(rank)
             if rank < k:
@@ -115,5 +131,6 @@ with open(outputFile,"w") as outfile:
         written = written + 1
         r = r + 1
 
+print("Total number of rows read:",n_input,file=sys.stderr)
 print("Total number of rows written:",written,file=sys.stderr)
 print("Number of times textrank lookup failed:",notr,file=sys.stderr)
