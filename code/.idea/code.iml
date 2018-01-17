@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/textrank" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/textrank/summa" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.12 (/usr/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="R Skeletons" level="application" />

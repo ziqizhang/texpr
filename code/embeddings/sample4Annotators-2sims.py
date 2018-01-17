@@ -16,8 +16,8 @@
 # - number of keywords to choose per class N_k
 # - number of corpus words to choose per keyword N_w
 
-# The output will contain N_c * N_k * N_c + N_c * N_c rows:
-# N_c * N_k * N_c for the corpus words
+# The output will contain N_c * N_k * N_w + N_c * N_k rows:
+# N_c * N_k * N_w for the corpus words
 # N_c * N_k for the original keywords
 
 # the script writes a tsv file to stdout which contains the following information:
@@ -212,6 +212,7 @@ with open(finalSimFile) as infile:
             n_input += 1
             line = line.strip()
             (simname,cword,kword,rank,score) = line.split("\t")
+            kword = re.sub(r"[—-]", " ", kword)
             if kword != cur_kw:
                 cur_kw = kword
                 rank2subtract = 0
