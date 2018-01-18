@@ -22,7 +22,7 @@
 
 from __future__ import print_function
 import sys
-from . embeddingsutils import EmbeddingsUtils
+from embeddingsutils import EmbeddingsUtils
 from tqdm import tqdm
 import heapq
 import numpy as np
