@@ -282,12 +282,12 @@ class EmbeddingsUtils:
 
     # calculate n most similar words in the embeddings and return
     # a tuple with two elements: first is the list of tuples (word,sim) and
-    # second is the text actually used for the comparison
+    # second is the list of tokens actually used for the comparison
     # This uses mostSimilar4Words internally
     def mostSimilar4Text(self,text,n):
         words = self.words4text(text)
         (matches,words_used) = self.mostSimilar4Words(words,n)
-        return (matches," ".join(words_used))
+        return (matches,words_used)
 
     # find the n most similar entries from the embeddings model for the
     # list of words given.
