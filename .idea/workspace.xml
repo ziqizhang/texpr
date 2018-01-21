@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d99453-b782-4d47-8cd1-09e301f9ceff" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/code/texpr/utils.py" afterPath="$PROJECT_DIR$/code/texpr/utils.py" />
+      <change beforePath="$PROJECT_DIR$/code/textrank/summa/keywords.py" afterPath="$PROJECT_DIR$/code/textrank/summa/keywords.py" />
     </list>
     <ignored path="texpr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/texpr/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -29,6 +29,16 @@
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keywords.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/textrank/summa/keywords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +97,6 @@
         <option value="$PROJECT_DIR$/code/texpr/sim/seed_selector.py" />
         <option value="$PROJECT_DIR$/code/texpr/textpr_main.py" />
         <option value="$PROJECT_DIR$/code/textrank/summa/preprocessing/textcleaner.py" />
-        <option value="$PROJECT_DIR$/code/textrank/summa/keywords.py" />
         <option value="$PROJECT_DIR$/code/data/acl_crawler.py" />
         <option value="$PROJECT_DIR$/code/data/bionlp_parser.py" />
         <option value="$PROJECT_DIR$/code/baseline/sim_baseline.py" />
@@ -95,6 +104,7 @@
         <option value="$PROJECT_DIR$/code/texpr/sim/calc_sim_multi_thread.py" />
         <option value="$PROJECT_DIR$/code/texpr/texpr_main.py" />
         <option value="$PROJECT_DIR$/code/texpr/utils.py" />
+        <option value="$PROJECT_DIR$/code/textrank/summa/keywords.py" />
       </list>
     </option>
   </component>
@@ -864,13 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/textrank/summa/keywords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="166" column="36" lean-forward="false" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/textrank/summa/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -993,6 +996,14 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/textrank/summa/keywords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

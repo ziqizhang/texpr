@@ -19,7 +19,7 @@ from textrank.summa.commons import remove_unreachable_nodes as _remove_unreachab
 LEMMATIZE_OR_STEM = 1  # 0-lemmatize all vertices; 1-stem all vertices
 MAX_PERCENTAGE_OF_VERTICES_FOR_PERSONALIZATION_INIT = 0.5
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='/home/zqz/Work/data/semrerank/log/textrank.log', level=logging.INFO, filemode='w')
+logging.basicConfig(filename='textrank.log', level=logging.INFO, filemode='w')
 
 """Check tags in http://www.clips.ua.ac.be/pages/mbsp-tags and use only first two letters
 Example: filter for nouns and adjectives:
