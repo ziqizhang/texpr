@@ -50,22 +50,25 @@ n_rows_ann = 0
 annData = []
 with open(annFile) as infile:
     for line in infile:
+        n_rows_ann += 1
         line = line.strip()
         fields = line.split("\t")
-        if len(fields) == 5:
-            (rownr,classname,cwordOrKw,annotation,comment) = fields
+        if len(fields) >= 4:
+            (rownr, classname, cwordOrKw, annotation) = fields[0:4]
         else:
-            (rownr, clasname, cwordOrKw, annotation) = fields
-            fields.append("")
+            print("ERROR, now this is odd, we expect 5 or 4 columns but got ", len(fields), "in row", n_rows_ann, file=sys.stderr)
+            sys.exit(1)
         rownr = int(rownr)
         if rownr != (lastRownr+1):
-            print("ERROR: in ann file, expected row nr",lastRownr+1,"but got",rownr,file=sys.stderr)
+            print("ERROR: in ann file, expected row nr", lastRownr+1, "but got", rownr, file=sys.stderr)
             sys.exit(1)
         lastRownr += 1
-        annData.append(fields)
-        n_rows_ann += 1
+        annData.append(fields[0:4])
 
-if n_rows_orig != n_rows_ann:
+if n_rows_orig < n_rows_ann:
+    n_rows_orig = n_rows_ann  # we only remove the rows after the orig gets created, so this should be ok
+    origData = origData[0:n_rows_ann]
+elif n_rows_orig < n_rows_ann:
     print("ERROR: orig file has rows", n_rows_orig, "ann file has rows", n_rows_ann, file=sys.stderr)
     sys.exit(1)
 
@@ -75,7 +78,9 @@ simData = []
 textrankData = []
 for i in range(len(annData)):
     (rownr1, classname1, cwordOrKw1, kword, measurename, rank, sim, whatitis) = origData[i]
-    (rownr2, classname2, cwordOrKw2, annotation, comment) = annData[i]
+    if len(annData[i]) != 4:
+        print("ERROR: odd, not 4 columns of annData in row", i, "but", len(annData[i]), "data is", annData[i])
+    (rownr2, classname2, cwordOrKw2, annotation) = annData[i]
     annotation = int(annotation)
     rank = int(rank)
     if rownr1 != rownr2:
@@ -101,28 +106,30 @@ print("Original keyword scores - N:", len(kwData))
 print("Original keyword scores - mean:", statistics.mean(kwData))
 print("Original keyword scores - median:", statistics.median(kwData))
 print("Original keyword scores - mode:", statistics.mode(kwData))
+print("Original keyword scores - counts 0/1/2:", kwData.count(0), "/", kwData.count(1), "/", kwData.count(2))
+print("Original keyword scores - values:", sorted(kwData))
 
 # calculate stats for the sim scores:
 print("Original corpusword scores - N:", len(simData))
 simDataRanks = [x for x, y in simData]
 simDataScores = [y for x, y in simData]
-print(sorted(simDataScores))
 print("Original corpusword scores - mean:", statistics.mean(simDataScores))
 print("Original corpusword scores - median:", statistics.median(simDataScores))
 print("Original corpusword scores - mode:", statistics.mode(simDataScores))
 print("Original corpusword scores - counts 0/1/2:", simDataScores.count(0), "/", simDataScores.count(1), "/", simDataScores.count(2))
 print("Original corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(simDataRanks, simDataScores))
 print("Original corpusword scores - Kendall tau:", scipy.stats.kendalltau(simDataRanks, simDataScores))
+print("Original corpusword scores - values:", sorted(simDataScores))
 
 
 # calculate stats for the textrank scores:
 print("Textrank corpusword scores - N:", len(textrankData))
 textrankDataRanks = [x for x, y in textrankData]
 textrankDataScores = [y for x, y in textrankData]
-print(sorted(textrankDataScores))
 print("Textrank corpusword scores - mean:", statistics.mean(textrankDataScores))
 print("Textrank corpusword scores - median:", statistics.median(textrankDataScores))
 print("Textrank corpusword scores - mode:", statistics.mode(textrankDataScores))
 print("Textrank corpusword scores - counts 0/1/2:", textrankDataScores.count(0), "/", textrankDataScores.count(1), "/", textrankDataScores.count(2))
 print("Textrank corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(textrankDataRanks, textrankDataScores))
 print("Textrank corpusword scores - Kendall tau:", scipy.stats.kendalltau(textrankDataRanks, textrankDataScores))
+print("Textrank corpusword scores - values:", sorted(textrankDataScores))
