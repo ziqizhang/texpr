@@ -1,0 +1,600 @@
+INFO:summa.keywords:08:47:01: P86-1011_abstr.xml.txt graph stats: nodes=14, edges=9
+INFO:summa.keywords:	08:47:01: P86-1011_abstr.xml.txt graph stats: nodes=14, edges=9, per init=1
+INFO:summa.keywords:08:47:01: C94-1079_abstr.xml.txt graph stats: nodes=18, edges=12
+INFO:summa.keywords:	08:47:01: C94-1079_abstr.xml.txt graph stats: nodes=18, edges=12, per init=2
+INFO:summa.keywords:08:47:02: H92-1003_abstr.xml.txt graph stats: nodes=24, edges=24
+INFO:summa.keywords:	08:47:02: H92-1003_abstr.xml.txt graph stats: nodes=24, edges=24, per init=7
+INFO:summa.keywords:08:47:02: H01-1041_abstr.xml.txt graph stats: nodes=67, edges=58
+INFO:summa.keywords:	08:47:02: H01-1041_abstr.xml.txt graph stats: nodes=67, edges=58, per init=11
+INFO:summa.keywords:08:47:02: E06-1022_abstr.xml.txt graph stats: nodes=26, edges=18
+INFO:summa.keywords:	08:47:02: E06-1022_abstr.xml.txt graph stats: nodes=26, edges=18, per init=4
+INFO:summa.keywords:08:47:02: H92-1026_abstr.xml.txt graph stats: nodes=52, edges=43
+INFO:summa.keywords:	08:47:02: H92-1026_abstr.xml.txt graph stats: nodes=52, edges=43, per init=11
+INFO:summa.keywords:08:47:02: I05-5008_abstr.xml.txt graph stats: nodes=27, edges=25
+INFO:summa.keywords:	08:47:02: I05-5008_abstr.xml.txt graph stats: nodes=27, edges=25, per init=5
+INFO:summa.keywords:08:47:02: A97-1027_abstr.xml.txt graph stats: nodes=45, edges=34
+INFO:summa.keywords:	08:47:02: A97-1027_abstr.xml.txt graph stats: nodes=45, edges=34, per init=5
+INFO:summa.keywords:08:47:02: C90-3063_abstr.xml.txt graph stats: nodes=33, edges=24
+INFO:summa.keywords:	08:47:02: C90-3063_abstr.xml.txt graph stats: nodes=33, edges=24, per init=7
+INFO:summa.keywords:08:47:02: P05-1018_abstr.xml.txt graph stats: nodes=34, edges=28
+INFO:summa.keywords:	08:47:02: P05-1018_abstr.xml.txt graph stats: nodes=34, edges=28, per init=8
+INFO:summa.keywords:08:47:02: C04-1068_abstr.xml.txt graph stats: nodes=36, edges=27
+INFO:summa.keywords:	08:47:02: C04-1068_abstr.xml.txt graph stats: nodes=36, edges=27, per init=9
+INFO:summa.keywords:08:47:02: N04-1024_abstr.xml.txt graph stats: nodes=42, edges=35
+INFO:summa.keywords:	08:47:03: N04-1024_abstr.xml.txt graph stats: nodes=42, edges=35, per init=10
+INFO:summa.keywords:08:47:03: I05-6011_abstr.xml.txt graph stats: nodes=32, edges=25
+INFO:summa.keywords:	08:47:03: I05-6011_abstr.xml.txt graph stats: nodes=32, edges=25, per init=6
+INFO:summa.keywords:08:47:03: J89-4003_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:03: J89-4003_abstr.xml.txt graph stats: nodes=23, edges=17, per init=4
+INFO:summa.keywords:08:47:03: J05-4003_abstr.xml.txt graph stats: nodes=39, edges=32
+INFO:summa.keywords:	08:47:03: J05-4003_abstr.xml.txt graph stats: nodes=39, edges=32, per init=10
+INFO:summa.keywords:08:47:03: E99-1034_abstr.xml.txt graph stats: nodes=24, edges=18
+INFO:summa.keywords:	08:47:03: E99-1034_abstr.xml.txt graph stats: nodes=24, edges=18, per init=5
+INFO:summa.keywords:08:47:03: C94-2151_abstr.xml.txt graph stats: nodes=30, edges=20
+INFO:summa.keywords:	08:47:03: C94-2151_abstr.xml.txt graph stats: nodes=30, edges=20, per init=5
+INFO:summa.keywords:08:47:03: P97-1006_abstr.xml.txt graph stats: nodes=25, edges=19
+INFO:summa.keywords:	08:47:03: P97-1006_abstr.xml.txt graph stats: nodes=25, edges=19, per init=6
+INFO:summa.keywords:08:47:03: P05-2008_abstr.xml.txt graph stats: nodes=29, edges=18
+INFO:summa.keywords:	08:47:03: P05-2008_abstr.xml.txt graph stats: nodes=29, edges=18, per init=8
+INFO:summa.keywords:08:47:03: J90-3002_abstr.xml.txt graph stats: nodes=41, edges=28
+INFO:summa.keywords:	08:47:03: J90-3002_abstr.xml.txt graph stats: nodes=41, edges=28, per init=6
+INFO:summa.keywords:08:47:03: P06-4011_abstr.xml.txt graph stats: nodes=33, edges=21
+INFO:summa.keywords:	08:47:03: P06-4011_abstr.xml.txt graph stats: nodes=33, edges=21, per init=8
+INFO:summa.keywords:08:47:03: A97-1020_abstr.xml.txt graph stats: nodes=39, edges=31
+INFO:summa.keywords:	08:47:04: A97-1020_abstr.xml.txt graph stats: nodes=39, edges=31, per init=9
+INFO:summa.keywords:08:47:04: P03-2036_abstr.xml.txt graph stats: nodes=8, edges=5
+INFO:summa.keywords:	08:47:04: P03-2036_abstr.xml.txt graph stats: nodes=8, edges=5, per init=1
+INFO:summa.keywords:08:47:04: E91-1012_abstr.xml.txt graph stats: nodes=39, edges=33
+INFO:summa.keywords:	08:47:04: E91-1012_abstr.xml.txt graph stats: nodes=39, edges=33, per init=3
+INFO:summa.keywords:08:47:04: E95-1021_abstr.xml.txt graph stats: nodes=23, edges=18
+INFO:summa.keywords:	08:47:04: E95-1021_abstr.xml.txt graph stats: nodes=23, edges=18, per init=6
+INFO:summa.keywords:08:47:04: P01-1008_abstr.xml.txt graph stats: nodes=29, edges=21
+INFO:summa.keywords:	08:47:04: P01-1008_abstr.xml.txt graph stats: nodes=29, edges=21, per init=13
+INFO:summa.keywords:08:47:04: N03-1017_abstr.xml.txt graph stats: nodes=42, edges=40
+INFO:summa.keywords:	08:47:04: N03-1017_abstr.xml.txt graph stats: nodes=42, edges=40, per init=10
+INFO:summa.keywords:08:47:04: N03-1026_abstr.xml.txt graph stats: nodes=45, edges=40
+INFO:summa.keywords:	08:47:04: N03-1026_abstr.xml.txt graph stats: nodes=45, edges=40, per init=11
+INFO:summa.keywords:08:47:04: P82-1035_abstr.xml.txt graph stats: nodes=61, edges=48
+INFO:summa.keywords:	08:47:04: P82-1035_abstr.xml.txt graph stats: nodes=61, edges=48, per init=10
+INFO:summa.keywords:08:47:04: P04-2010_abstr.xml.txt graph stats: nodes=39, edges=30
+INFO:summa.keywords:	08:47:05: P04-2010_abstr.xml.txt graph stats: nodes=39, edges=30, per init=7
+INFO:summa.keywords:08:47:05: E93-1043_abstr.xml.txt graph stats: nodes=35, edges=25
+INFO:summa.keywords:	08:47:05: E93-1043_abstr.xml.txt graph stats: nodes=35, edges=25, per init=3
+INFO:summa.keywords:08:47:05: H90-1016_abstr.xml.txt graph stats: nodes=39, edges=27
+INFO:summa.keywords:	08:47:05: H90-1016_abstr.xml.txt graph stats: nodes=39, edges=27, per init=8
+INFO:summa.keywords:08:47:05: C94-1082_abstr.xml.txt graph stats: nodes=20, edges=17
+INFO:summa.keywords:	08:47:05: C94-1082_abstr.xml.txt graph stats: nodes=20, edges=17, per init=5
+INFO:summa.keywords:08:47:05: I05-5004_abstr.xml.txt graph stats: nodes=28, edges=20
+INFO:summa.keywords:	08:47:05: I05-5004_abstr.xml.txt graph stats: nodes=28, edges=20, per init=6
+INFO:summa.keywords:08:47:05: C04-1103_abstr.xml.txt graph stats: nodes=39, edges=30
+INFO:summa.keywords:	08:47:05: C04-1103_abstr.xml.txt graph stats: nodes=39, edges=30, per init=9
+INFO:summa.keywords:08:47:05: H91-1077_abstr.xml.txt graph stats: nodes=44, edges=36
+INFO:summa.keywords:	08:47:05: H91-1077_abstr.xml.txt graph stats: nodes=44, edges=36, per init=12
+INFO:summa.keywords:08:47:05: C94-1061_abstr.xml.txt graph stats: nodes=38, edges=31
+INFO:summa.keywords:	08:47:06: C94-1061_abstr.xml.txt graph stats: nodes=38, edges=31, per init=5
+INFO:summa.keywords:08:47:06: I05-2021_abstr.xml.txt graph stats: nodes=54, edges=48
+INFO:summa.keywords:	08:47:06: I05-2021_abstr.xml.txt graph stats: nodes=54, edges=48, per init=14
+INFO:summa.keywords:08:47:06: E85-1037_abstr.xml.txt graph stats: nodes=27, edges=20
+INFO:summa.keywords:	08:47:06: E85-1037_abstr.xml.txt graph stats: nodes=27, edges=20, per init=7
+INFO:summa.keywords:08:47:06: P05-3001_abstr.xml.txt graph stats: nodes=19, edges=12
+INFO:summa.keywords:	08:47:06: P05-3001_abstr.xml.txt graph stats: nodes=19, edges=12, per init=5
+INFO:summa.keywords:08:47:06: H05-1101_abstr.xml.txt graph stats: nodes=25, edges=20
+INFO:summa.keywords:	08:47:06: H05-1101_abstr.xml.txt graph stats: nodes=25, edges=20, per init=7
+INFO:summa.keywords:08:47:06: H94-1014_abstr.xml.txt graph stats: nodes=27, edges=22
+INFO:summa.keywords:	08:47:06: H94-1014_abstr.xml.txt graph stats: nodes=27, edges=22, per init=7
+INFO:summa.keywords:08:47:06: I05-3022_abstr.xml.txt graph stats: nodes=34, edges=27
+INFO:summa.keywords:	08:47:06: I05-3022_abstr.xml.txt graph stats: nodes=34, edges=27, per init=7
+INFO:summa.keywords:08:47:06: N06-2009_abstr.xml.txt graph stats: nodes=22, edges=17
+INFO:summa.keywords:	08:47:06: N06-2009_abstr.xml.txt graph stats: nodes=22, edges=17, per init=6
+INFO:summa.keywords:08:47:06: N03-2017_abstr.xml.txt graph stats: nodes=21, edges=14
+INFO:summa.keywords:	08:47:07: N03-2017_abstr.xml.txt graph stats: nodes=21, edges=14, per init=4
+INFO:summa.keywords:08:47:07: P06-2001_abstr.xml.txt graph stats: nodes=17, edges=12
+INFO:summa.keywords:	08:47:07: P06-2001_abstr.xml.txt graph stats: nodes=17, edges=12, per init=5
+INFO:summa.keywords:08:47:07: C88-2160_abstr.xml.txt graph stats: nodes=22, edges=17
+INFO:summa.keywords:	08:47:07: C88-2160_abstr.xml.txt graph stats: nodes=22, edges=17, per init=8
+INFO:summa.keywords:08:47:07: P80-1019_abstr.xml.txt graph stats: nodes=50, edges=37
+INFO:summa.keywords:	08:47:07: P80-1019_abstr.xml.txt graph stats: nodes=50, edges=37, per init=7
+INFO:summa.keywords:08:47:07: A97-1042_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:07: A97-1042_abstr.xml.txt graph stats: nodes=23, edges=17, per init=7
+INFO:summa.keywords:08:47:07: E93-1004_abstr.xml.txt graph stats: nodes=26, edges=17
+INFO:summa.keywords:	08:47:07: E93-1004_abstr.xml.txt graph stats: nodes=26, edges=17, per init=4
+INFO:summa.keywords:08:47:07: C80-1039_abstr.xml.txt graph stats: nodes=28, edges=15
+INFO:summa.keywords:	08:47:07: C80-1039_abstr.xml.txt graph stats: nodes=28, edges=15, per init=3
+INFO:summa.keywords:08:47:07: C04-1147_abstr.xml.txt graph stats: nodes=33, edges=27
+INFO:summa.keywords:	08:47:07: C04-1147_abstr.xml.txt graph stats: nodes=33, edges=27, per init=7
+INFO:summa.keywords:08:47:07: P84-1020_abstr.xml.txt graph stats: nodes=21, edges=13
+INFO:summa.keywords:	08:47:08: P84-1020_abstr.xml.txt graph stats: nodes=21, edges=13, per init=7
+INFO:summa.keywords:08:47:08: P03-1009_abstr.xml.txt graph stats: nodes=33, edges=31
+INFO:summa.keywords:	08:47:08: P03-1009_abstr.xml.txt graph stats: nodes=33, edges=31, per init=7
+INFO:summa.keywords:08:47:08: P01-1047_abstr.xml.txt graph stats: nodes=27, edges=20
+INFO:summa.keywords:	08:47:08: P01-1047_abstr.xml.txt graph stats: nodes=27, edges=20, per init=5
+INFO:summa.keywords:08:47:08: C90-3072_abstr.xml.txt graph stats: nodes=41, edges=31
+INFO:summa.keywords:	08:47:08: C90-3072_abstr.xml.txt graph stats: nodes=41, edges=31, per init=6
+INFO:summa.keywords:08:47:08: P05-2016_abstr.xml.txt graph stats: nodes=19, edges=15
+INFO:summa.keywords:	08:47:08: P05-2016_abstr.xml.txt graph stats: nodes=19, edges=15, per init=10
+INFO:summa.keywords:08:47:08: E93-1023_abstr.xml.txt graph stats: nodes=40, edges=34
+INFO:summa.keywords:	08:47:08: E93-1023_abstr.xml.txt graph stats: nodes=40, edges=34, per init=8
+INFO:summa.keywords:08:47:08: P99-1038_abstr.xml.txt graph stats: nodes=24, edges=18
+INFO:summa.keywords:	08:47:08: P99-1038_abstr.xml.txt graph stats: nodes=24, edges=18, per init=4
+INFO:summa.keywords:08:47:08: N01-1003_abstr.xml.txt graph stats: nodes=45, edges=42
+INFO:summa.keywords:	08:47:08: N01-1003_abstr.xml.txt graph stats: nodes=45, edges=42, per init=9
+INFO:summa.keywords:08:47:08: H05-1012_abstr.xml.txt graph stats: nodes=34, edges=29
+INFO:summa.keywords:	08:47:08: H05-1012_abstr.xml.txt graph stats: nodes=34, edges=29, per init=11
+INFO:summa.keywords:08:47:08: P91-1025_abstr.xml.txt graph stats: nodes=30, edges=22
+INFO:summa.keywords:	08:47:08: P91-1025_abstr.xml.txt graph stats: nodes=30, edges=22, per init=4
+INFO:summa.keywords:08:47:09: I05-5009_abstr.xml.txt graph stats: nodes=23, edges=16
+INFO:summa.keywords:	08:47:09: I05-5009_abstr.xml.txt graph stats: nodes=23, edges=16, per init=8
+INFO:summa.keywords:08:47:09: P85-1019_abstr.xml.txt graph stats: nodes=41, edges=30
+INFO:summa.keywords:	08:47:09: P85-1019_abstr.xml.txt graph stats: nodes=41, edges=30, per init=5
+INFO:summa.keywords:08:47:09: H89-1027_abstr.xml.txt graph stats: nodes=42, edges=28
+INFO:summa.keywords:	08:47:09: H89-1027_abstr.xml.txt graph stats: nodes=42, edges=28, per init=7
+INFO:summa.keywords:08:47:09: P05-1048_abstr.xml.txt graph stats: nodes=44, edges=38
+INFO:summa.keywords:	08:47:09: P05-1048_abstr.xml.txt graph stats: nodes=44, edges=38, per init=8
+INFO:summa.keywords:08:47:09: P01-1007_abstr.xml.txt graph stats: nodes=47, edges=40
+INFO:summa.keywords:	08:47:09: P01-1007_abstr.xml.txt graph stats: nodes=47, edges=40, per init=7
+INFO:summa.keywords:08:47:09: P99-1058_abstr.xml.txt graph stats: nodes=33, edges=27
+INFO:summa.keywords:	08:47:09: P99-1058_abstr.xml.txt graph stats: nodes=33, edges=27, per init=3
+INFO:summa.keywords:08:47:09: C92-4207_abstr.xml.txt graph stats: nodes=37, edges=26
+INFO:summa.keywords:	08:47:09: C92-4207_abstr.xml.txt graph stats: nodes=37, edges=26, per init=7
+INFO:summa.keywords:08:47:09: E93-1020_abstr.xml.txt graph stats: nodes=26, edges=17
+INFO:summa.keywords:	08:47:09: E93-1020_abstr.xml.txt graph stats: nodes=26, edges=17, per init=5
+INFO:summa.keywords:08:47:10: P03-1051_abstr.xml.txt graph stats: nodes=52, edges=48
+INFO:summa.keywords:	08:47:10: P03-1051_abstr.xml.txt graph stats: nodes=52, edges=48, per init=10
+INFO:summa.keywords:08:47:10: P05-1010_abstr.xml.txt graph stats: nodes=42, edges=33
+INFO:summa.keywords:	08:47:10: P05-1010_abstr.xml.txt graph stats: nodes=42, edges=33, per init=9
+INFO:summa.keywords:08:47:10: H05-1032_abstr.xml.txt graph stats: nodes=27, edges=19
+INFO:summa.keywords:	08:47:10: H05-1032_abstr.xml.txt graph stats: nodes=27, edges=19, per init=7
+INFO:summa.keywords:08:47:10: N03-2003_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:10: N03-2003_abstr.xml.txt graph stats: nodes=23, edges=17, per init=7
+INFO:summa.keywords:08:47:10: E83-1029_abstr.xml.txt graph stats: nodes=21, edges=15
+INFO:summa.keywords:	08:47:10: E83-1029_abstr.xml.txt graph stats: nodes=21, edges=15, per init=5
+INFO:summa.keywords:08:47:10: A88-1001_abstr.xml.txt graph stats: nodes=26, edges=21
+INFO:summa.keywords:	08:47:10: A88-1001_abstr.xml.txt graph stats: nodes=26, edges=21, per init=7
+INFO:summa.keywords:08:47:10: P83-1021_abstr.xml.txt graph stats: nodes=16, edges=10
+INFO:summa.keywords:	08:47:10: P83-1021_abstr.xml.txt graph stats: nodes=16, edges=10, per init=2
+INFO:summa.keywords:08:47:10: I05-4008_abstr.xml.txt graph stats: nodes=26, edges=24
+INFO:summa.keywords:	08:47:10: I05-4008_abstr.xml.txt graph stats: nodes=26, edges=24, per init=5
+INFO:summa.keywords:08:47:10: P90-1014_abstr.xml.txt graph stats: nodes=25, edges=19
+INFO:summa.keywords:	08:47:10: P90-1014_abstr.xml.txt graph stats: nodes=25, edges=19, per init=3
+INFO:summa.keywords:08:47:11: H01-1042_abstr.xml.txt graph stats: nodes=41, edges=37
+INFO:summa.keywords:	08:47:11: H01-1042_abstr.xml.txt graph stats: nodes=41, edges=37, per init=13
+INFO:summa.keywords:08:47:11: H90-1060_abstr.xml.txt graph stats: nodes=55, edges=49
+INFO:summa.keywords:	08:47:11: H90-1060_abstr.xml.txt graph stats: nodes=55, edges=49, per init=10
+INFO:summa.keywords:08:47:11: P97-1052_abstr.xml.txt graph stats: nodes=24, edges=22
+INFO:summa.keywords:	08:47:11: P97-1052_abstr.xml.txt graph stats: nodes=24, edges=22, per init=6
+INFO:summa.keywords:08:47:11: E93-1013_abstr.xml.txt graph stats: nodes=41, edges=32
+INFO:summa.keywords:	08:47:11: E93-1013_abstr.xml.txt graph stats: nodes=41, edges=32, per init=6
+INFO:summa.keywords:08:47:11: P06-1052_abstr.xml.txt graph stats: nodes=29, edges=25
+INFO:summa.keywords:	08:47:11: P06-1052_abstr.xml.txt graph stats: nodes=29, edges=25, per init=4
+INFO:summa.keywords:08:47:11: N03-4004_abstr.xml.txt graph stats: nodes=29, edges=20
+INFO:summa.keywords:	08:47:12: N03-4004_abstr.xml.txt graph stats: nodes=29, edges=20, per init=5
+INFO:summa.keywords:08:47:12: N03-2036_abstr.xml.txt graph stats: nodes=27, edges=25
+INFO:summa.keywords:	08:47:12: N03-2036_abstr.xml.txt graph stats: nodes=27, edges=25, per init=8
+INFO:summa.keywords:08:47:12: N06-2038_abstr.xml.txt graph stats: nodes=16, edges=12
+INFO:summa.keywords:	08:47:12: N06-2038_abstr.xml.txt graph stats: nodes=16, edges=12, per init=6
+INFO:summa.keywords:08:47:12: P83-1003_abstr.xml.txt graph stats: nodes=36, edges=25
+INFO:summa.keywords:	08:47:12: P83-1003_abstr.xml.txt graph stats: nodes=36, edges=25, per init=4
+INFO:summa.keywords:08:47:12: C04-1096_abstr.xml.txt graph stats: nodes=31, edges=28
+INFO:summa.keywords:	08:47:12: C04-1096_abstr.xml.txt graph stats: nodes=31, edges=28, per init=6
+INFO:summa.keywords:08:47:12: H92-1060_abstr.xml.txt graph stats: nodes=45, edges=37
+INFO:summa.keywords:	08:47:12: H92-1060_abstr.xml.txt graph stats: nodes=45, edges=37, per init=11
+INFO:summa.keywords:08:47:12: H92-1017_abstr.xml.txt graph stats: nodes=42, edges=34
+INFO:summa.keywords:	08:47:12: H92-1017_abstr.xml.txt graph stats: nodes=42, edges=34, per init=6
+INFO:summa.keywords:08:47:12: C90-3045_abstr.xml.txt graph stats: nodes=36, edges=26
+INFO:summa.keywords:	08:47:12: C90-3045_abstr.xml.txt graph stats: nodes=36, edges=26, per init=5
+INFO:summa.keywords:08:47:13: P99-1036_abstr.xml.txt graph stats: nodes=31, edges=27
+INFO:summa.keywords:	08:47:13: P99-1036_abstr.xml.txt graph stats: nodes=31, edges=27, per init=7
+INFO:summa.keywords:08:47:13: P06-2110_abstr.xml.txt graph stats: nodes=17, edges=16
+INFO:summa.keywords:	08:47:13: P06-2110_abstr.xml.txt graph stats: nodes=17, edges=16, per init=4
+INFO:summa.keywords:08:47:13: P05-1074_abstr.xml.txt graph stats: nodes=29, edges=23
+INFO:summa.keywords:	08:47:13: P05-1074_abstr.xml.txt graph stats: nodes=29, edges=23, per init=8
+INFO:summa.keywords:08:47:13: P99-1080_abstr.xml.txt graph stats: nodes=31, edges=23
+INFO:summa.keywords:	08:47:13: P99-1080_abstr.xml.txt graph stats: nodes=31, edges=23, per init=7
+INFO:summa.keywords:08:47:13: P06-1018_abstr.xml.txt graph stats: nodes=23, edges=19
+INFO:summa.keywords:	08:47:13: P06-1018_abstr.xml.txt graph stats: nodes=23, edges=19, per init=4
+INFO:summa.keywords:08:47:13: P03-1058_abstr.xml.txt graph stats: nodes=38, edges=31
+INFO:summa.keywords:	08:47:13: P03-1058_abstr.xml.txt graph stats: nodes=38, edges=31, per init=10
+INFO:summa.keywords:08:47:13: P03-1033_abstr.xml.txt graph stats: nodes=53, edges=43
+INFO:summa.keywords:	08:47:13: P03-1033_abstr.xml.txt graph stats: nodes=53, edges=43, per init=8
+INFO:summa.keywords:08:47:13: P93-1014_abstr.xml.txt graph stats: nodes=35, edges=33
+INFO:summa.keywords:	08:47:13: P93-1014_abstr.xml.txt graph stats: nodes=35, edges=33, per init=5
+INFO:summa.keywords:08:47:13: P03-1068_abstr.xml.txt graph stats: nodes=27, edges=22
+INFO:summa.keywords:	08:47:13: P03-1068_abstr.xml.txt graph stats: nodes=27, edges=22, per init=6
+INFO:summa.keywords:08:47:13: P95-1025_abstr.xml.txt graph stats: nodes=29, edges=25
+INFO:summa.keywords:	08:47:14: P95-1025_abstr.xml.txt graph stats: nodes=29, edges=25, per init=7
+INFO:summa.keywords:08:47:14: N03-3010_abstr.xml.txt graph stats: nodes=24, edges=21
+INFO:summa.keywords:	08:47:14: N03-3010_abstr.xml.txt graph stats: nodes=24, edges=21, per init=6
+INFO:summa.keywords:08:47:14: N03-2015_abstr.xml.txt graph stats: nodes=21, edges=14
+INFO:summa.keywords:	08:47:14: N03-2015_abstr.xml.txt graph stats: nodes=21, edges=14, per init=4
+INFO:summa.keywords:08:47:14: P81-1033_abstr.xml.txt graph stats: nodes=33, edges=26
+INFO:summa.keywords:	08:47:14: P81-1033_abstr.xml.txt graph stats: nodes=33, edges=26, per init=9
+INFO:summa.keywords:08:47:14: C86-1132_abstr.xml.txt graph stats: nodes=35, edges=27
+INFO:summa.keywords:	08:47:14: C86-1132_abstr.xml.txt graph stats: nodes=35, edges=27, per init=4
+INFO:summa.keywords:08:47:14: N03-1004_abstr.xml.txt graph stats: nodes=42, edges=36
+INFO:summa.keywords:	08:47:14: N03-1004_abstr.xml.txt graph stats: nodes=42, edges=36, per init=13
+INFO:summa.keywords:08:47:14: E06-1031_abstr.xml.txt graph stats: nodes=47, edges=37
+INFO:summa.keywords:	08:47:14: E06-1031_abstr.xml.txt graph stats: nodes=47, edges=37, per init=10
+INFO:summa.keywords:08:47:14: P89-1008_abstr.xml.txt graph stats: nodes=17, edges=13
+INFO:summa.keywords:	08:47:14: P89-1008_abstr.xml.txt graph stats: nodes=17, edges=13, per init=1
+INFO:summa.keywords:08:47:14: E87-1043_abstr.xml.txt graph stats: nodes=20, edges=14
+INFO:summa.keywords:	08:47:14: E87-1043_abstr.xml.txt graph stats: nodes=20, edges=14, per init=3
+INFO:summa.keywords:08:47:14: E91-1043_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:14: E91-1043_abstr.xml.txt graph stats: nodes=23, edges=17, per init=8
+INFO:summa.keywords:08:47:14: P99-1025_abstr.xml.txt graph stats: nodes=19, edges=15
+INFO:summa.keywords:	08:47:15: P99-1025_abstr.xml.txt graph stats: nodes=19, edges=15, per init=2
+INFO:summa.keywords:08:47:15: E95-1033_abstr.xml.txt graph stats: nodes=25, edges=20
+INFO:summa.keywords:	08:47:15: E95-1033_abstr.xml.txt graph stats: nodes=25, edges=20, per init=4
+INFO:summa.keywords:08:47:15: E06-1035_abstr.xml.txt graph stats: nodes=50, edges=41
+INFO:summa.keywords:	08:47:15: E06-1035_abstr.xml.txt graph stats: nodes=50, edges=41, per init=9
+INFO:summa.keywords:08:47:15: P05-1039_abstr.xml.txt graph stats: nodes=24, edges=16
+INFO:summa.keywords:	08:47:15: P05-1039_abstr.xml.txt graph stats: nodes=24, edges=16, per init=5
+INFO:summa.keywords:08:47:15: P01-1056_abstr.xml.txt graph stats: nodes=34, edges=27
+INFO:summa.keywords:	08:47:15: P01-1056_abstr.xml.txt graph stats: nodes=34, edges=27, per init=8
+INFO:summa.keywords:08:47:15: H05-1064_abstr.xml.txt graph stats: nodes=50, edges=37
+INFO:summa.keywords:	08:47:15: H05-1064_abstr.xml.txt graph stats: nodes=50, edges=37, per init=14
+INFO:summa.keywords:08:47:15: N04-4028_abstr.xml.txt graph stats: nodes=42, edges=33
+INFO:summa.keywords:	08:47:15: N04-4028_abstr.xml.txt graph stats: nodes=42, edges=33, per init=7
+INFO:summa.keywords:08:47:15: E99-1015_abstr.xml.txt graph stats: nodes=28, edges=17
+INFO:summa.keywords:	08:47:15: E99-1015_abstr.xml.txt graph stats: nodes=28, edges=17, per init=4
+INFO:summa.keywords:08:47:15: E06-1041_abstr.xml.txt graph stats: nodes=24, edges=16
+INFO:summa.keywords:	08:47:15: E06-1041_abstr.xml.txt graph stats: nodes=24, edges=16, per init=4
+INFO:summa.keywords:08:47:15: E95-1036_abstr.xml.txt graph stats: nodes=34, edges=23
+INFO:summa.keywords:	08:47:16: E95-1036_abstr.xml.txt graph stats: nodes=34, edges=23, per init=5
+INFO:summa.keywords:08:47:16: J82-3002_abstr.xml.txt graph stats: nodes=38, edges=36
+INFO:summa.keywords:	08:47:16: J82-3002_abstr.xml.txt graph stats: nodes=38, edges=36, per init=8
+INFO:summa.keywords:08:47:16: P05-1046_abstr.xml.txt graph stats: nodes=55, edges=51
+INFO:summa.keywords:	08:47:16: P05-1046_abstr.xml.txt graph stats: nodes=55, edges=51, per init=10
+INFO:summa.keywords:08:47:16: N06-4001_abstr.xml.txt graph stats: nodes=37, edges=34
+INFO:summa.keywords:	08:47:16: N06-4001_abstr.xml.txt graph stats: nodes=37, edges=34, per init=7
+INFO:summa.keywords:08:47:16: P95-1034_abstr.xml.txt graph stats: nodes=27, edges=21
+INFO:summa.keywords:	08:47:16: P95-1034_abstr.xml.txt graph stats: nodes=27, edges=21, per init=6
+INFO:summa.keywords:08:47:16: C04-1080_abstr.xml.txt graph stats: nodes=33, edges=24
+INFO:summa.keywords:	08:47:16: C04-1080_abstr.xml.txt graph stats: nodes=33, edges=24, per init=5
+INFO:summa.keywords:08:47:16: H01-1001_abstr.xml.txt graph stats: nodes=55, edges=37
+INFO:summa.keywords:	08:47:16: H01-1001_abstr.xml.txt graph stats: nodes=55, edges=37, per init=6
+INFO:summa.keywords:08:47:17: H92-1010_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:17: H92-1010_abstr.xml.txt graph stats: nodes=23, edges=17, per init=7
+INFO:summa.keywords:08:47:17: I05-2048_abstr.xml.txt graph stats: nodes=49, edges=41
+INFO:summa.keywords:	08:47:17: I05-2048_abstr.xml.txt graph stats: nodes=49, edges=41, per init=11
+INFO:summa.keywords:08:47:17: P01-1009_abstr.xml.txt graph stats: nodes=29, edges=23
+INFO:summa.keywords:	08:47:17: P01-1009_abstr.xml.txt graph stats: nodes=29, edges=23, per init=9
+INFO:summa.keywords:08:47:17: P06-2012_abstr.xml.txt graph stats: nodes=30, edges=22
+INFO:summa.keywords:	08:47:17: P06-2012_abstr.xml.txt graph stats: nodes=30, edges=22, per init=8
+INFO:summa.keywords:08:47:17: I05-4007_abstr.xml.txt graph stats: nodes=35, edges=33
+INFO:summa.keywords:	08:47:17: I05-4007_abstr.xml.txt graph stats: nodes=35, edges=33, per init=6
+INFO:summa.keywords:08:47:17: P85-1024_abstr.xml.txt graph stats: nodes=25, edges=22
+INFO:summa.keywords:	08:47:17: P85-1024_abstr.xml.txt graph stats: nodes=25, edges=22, per init=4
+INFO:summa.keywords:08:47:17: E93-1025_abstr.xml.txt graph stats: nodes=37, edges=25
+INFO:summa.keywords:	08:47:17: E93-1025_abstr.xml.txt graph stats: nodes=37, edges=25, per init=6
+INFO:summa.keywords:08:47:17: C90-1013_abstr.xml.txt graph stats: nodes=23, edges=18
+INFO:summa.keywords:	08:47:17: C90-1013_abstr.xml.txt graph stats: nodes=23, edges=18, per init=5
+INFO:summa.keywords:08:47:17: P97-1040_abstr.xml.txt graph stats: nodes=64, edges=46
+INFO:summa.keywords:	08:47:17: P97-1040_abstr.xml.txt graph stats: nodes=64, edges=46, per init=7
+INFO:summa.keywords:08:47:17: P95-1013_abstr.xml.txt graph stats: nodes=29, edges=24
+INFO:summa.keywords:	08:47:18: P95-1013_abstr.xml.txt graph stats: nodes=29, edges=24, per init=4
+INFO:summa.keywords:08:47:18: J86-3001_abstr.xml.txt graph stats: nodes=44, edges=41
+INFO:summa.keywords:	08:47:18: J86-3001_abstr.xml.txt graph stats: nodes=44, edges=41, per init=6
+INFO:summa.keywords:08:47:18: P97-1017_abstr.xml.txt graph stats: nodes=35, edges=22
+INFO:summa.keywords:	08:47:18: P97-1017_abstr.xml.txt graph stats: nodes=35, edges=22, per init=9
+INFO:summa.keywords:08:47:18: E91-1050_abstr.xml.txt graph stats: nodes=17, edges=10
+INFO:summa.keywords:	08:47:18: E91-1050_abstr.xml.txt graph stats: nodes=17, edges=10, per init=4
+INFO:summa.keywords:08:47:18: A92-1026_abstr.xml.txt graph stats: nodes=40, edges=33
+INFO:summa.keywords:	08:47:18: A92-1026_abstr.xml.txt graph stats: nodes=40, edges=33, per init=11
+INFO:summa.keywords:08:47:18: H01-1049_abstr.xml.txt graph stats: nodes=36, edges=30
+INFO:summa.keywords:	08:47:18: H01-1049_abstr.xml.txt graph stats: nodes=36, edges=30, per init=6
+INFO:summa.keywords:08:47:18: A97-1028_abstr.xml.txt graph stats: nodes=17, edges=13
+INFO:summa.keywords:	08:47:18: A97-1028_abstr.xml.txt graph stats: nodes=17, edges=13, per init=4
+INFO:summa.keywords:08:47:18: C90-3014_abstr.xml.txt graph stats: nodes=24, edges=22
+INFO:summa.keywords:	08:47:18: C90-3014_abstr.xml.txt graph stats: nodes=24, edges=22, per init=6
+INFO:summa.keywords:08:47:18: A94-1026_abstr.xml.txt graph stats: nodes=40, edges=36
+INFO:summa.keywords:	08:47:18: A94-1026_abstr.xml.txt graph stats: nodes=40, edges=36, per init=7
+INFO:summa.keywords:08:47:18: C88-2166_abstr.xml.txt graph stats: nodes=31, edges=24
+INFO:summa.keywords:	08:47:18: C88-2166_abstr.xml.txt graph stats: nodes=31, edges=24, per init=7
+INFO:summa.keywords:08:47:19: H89-2019_abstr.xml.txt graph stats: nodes=32, edges=25
+INFO:summa.keywords:	08:47:19: H89-2019_abstr.xml.txt graph stats: nodes=32, edges=25, per init=6
+INFO:summa.keywords:08:47:19: H89-2028_abstr.xml.txt graph stats: nodes=35, edges=30
+INFO:summa.keywords:	08:47:19: H89-2028_abstr.xml.txt graph stats: nodes=35, edges=30, per init=8
+INFO:summa.keywords:08:47:19: P03-1030_abstr.xml.txt graph stats: nodes=30, edges=26
+INFO:summa.keywords:	08:47:19: P03-1030_abstr.xml.txt graph stats: nodes=30, edges=26, per init=8
+INFO:summa.keywords:08:47:19: T78-1031_abstr.xml.txt graph stats: nodes=22, edges=20
+INFO:summa.keywords:	08:47:19: T78-1031_abstr.xml.txt graph stats: nodes=22, edges=20, per init=3
+INFO:summa.keywords:08:47:19: C80-1073_abstr.xml.txt graph stats: nodes=25, edges=20
+INFO:summa.keywords:	08:47:19: C80-1073_abstr.xml.txt graph stats: nodes=25, edges=20, per init=4
+INFO:summa.keywords:08:47:19: H92-1095_abstr.xml.txt graph stats: nodes=22, edges=20
+INFO:summa.keywords:	08:47:19: H92-1095_abstr.xml.txt graph stats: nodes=22, edges=20, per init=5
+INFO:summa.keywords:08:47:19: E99-1023_abstr.xml.txt graph stats: nodes=38, edges=31
+INFO:summa.keywords:	08:47:19: E99-1023_abstr.xml.txt graph stats: nodes=38, edges=31, per init=10
+INFO:summa.keywords:08:47:19: I05-4010_abstr.xml.txt graph stats: nodes=37, edges=27
+INFO:summa.keywords:	08:47:19: I05-4010_abstr.xml.txt graph stats: nodes=37, edges=27, per init=7
+INFO:summa.keywords:08:47:19: P05-1053_abstr.xml.txt graph stats: nodes=44, edges=41
+INFO:summa.keywords:	08:47:19: P05-1053_abstr.xml.txt graph stats: nodes=44, edges=41, per init=11
+INFO:summa.keywords:08:47:19: C92-1052_abstr.xml.txt graph stats: nodes=14, edges=10
+INFO:summa.keywords:	08:47:19: C92-1052_abstr.xml.txt graph stats: nodes=14, edges=10, per init=3
+INFO:summa.keywords:08:47:19: C90-3046_abstr.xml.txt graph stats: nodes=13, edges=8
+INFO:summa.keywords:	08:47:20: C90-3046_abstr.xml.txt graph stats: nodes=13, edges=8, per init=3
+INFO:summa.keywords:08:47:20: J88-3002_abstr.xml.txt graph stats: nodes=26, edges=20
+INFO:summa.keywords:	08:47:20: J88-3002_abstr.xml.txt graph stats: nodes=26, edges=20, per init=7
+INFO:summa.keywords:08:47:20: E83-1021_abstr.xml.txt graph stats: nodes=32, edges=26
+INFO:summa.keywords:	08:47:20: E83-1021_abstr.xml.txt graph stats: nodes=32, edges=26, per init=6
+INFO:summa.keywords:08:47:20: P05-3030_abstr.xml.txt graph stats: nodes=23, edges=18
+INFO:summa.keywords:	08:47:20: P05-3030_abstr.xml.txt graph stats: nodes=23, edges=18, per init=5
+INFO:summa.keywords:08:47:20: T78-1028_abstr.xml.txt graph stats: nodes=36, edges=26
+INFO:summa.keywords:	08:47:20: T78-1028_abstr.xml.txt graph stats: nodes=36, edges=26, per init=2
+INFO:summa.keywords:08:47:20: C94-1026_abstr.xml.txt graph stats: nodes=32, edges=24
+INFO:summa.keywords:	08:47:20: C94-1026_abstr.xml.txt graph stats: nodes=32, edges=24, per init=9
+INFO:summa.keywords:08:47:20: P84-1064_abstr.xml.txt graph stats: nodes=45, edges=32
+INFO:summa.keywords:	08:47:20: P84-1064_abstr.xml.txt graph stats: nodes=45, edges=32, per init=7
+INFO:summa.keywords:08:47:20: I05-6010_abstr.xml.txt graph stats: nodes=30, edges=20
+INFO:summa.keywords:	08:47:21: I05-6010_abstr.xml.txt graph stats: nodes=30, edges=20, per init=6
+INFO:summa.keywords:08:47:21: N03-1001_abstr.xml.txt graph stats: nodes=36, edges=31
+INFO:summa.keywords:	08:47:21: N03-1001_abstr.xml.txt graph stats: nodes=36, edges=31, per init=8
+INFO:summa.keywords:08:47:21: P03-1031_abstr.xml.txt graph stats: nodes=39, edges=37
+INFO:summa.keywords:	08:47:21: P03-1031_abstr.xml.txt graph stats: nodes=39, edges=37, per init=14
+INFO:summa.keywords:08:47:21: P80-1026_abstr.xml.txt graph stats: nodes=33, edges=21
+INFO:summa.keywords:	08:47:21: P80-1026_abstr.xml.txt graph stats: nodes=33, edges=21, per init=8
+INFO:summa.keywords:08:47:21: P03-1002_abstr.xml.txt graph stats: nodes=26, edges=18
+INFO:summa.keywords:	08:47:21: P03-1002_abstr.xml.txt graph stats: nodes=26, edges=18, per init=6
+INFO:summa.keywords:08:47:21: P85-1015_abstr.xml.txt graph stats: nodes=12, edges=8
+INFO:summa.keywords:	08:47:21: P85-1015_abstr.xml.txt graph stats: nodes=12, edges=8, per init=2
+INFO:summa.keywords:08:47:21: P95-1053_abstr.xml.txt graph stats: nodes=25, edges=16
+INFO:summa.keywords:	08:47:21: P95-1053_abstr.xml.txt graph stats: nodes=25, edges=16, per init=7
+INFO:summa.keywords:08:47:21: E89-1016_abstr.xml.txt graph stats: nodes=41, edges=29
+INFO:summa.keywords:	08:47:21: E89-1016_abstr.xml.txt graph stats: nodes=41, edges=29, per init=10
+INFO:summa.keywords:08:47:22: P06-2059_abstr.xml.txt graph stats: nodes=24, edges=16
+INFO:summa.keywords:	08:47:22: P06-2059_abstr.xml.txt graph stats: nodes=24, edges=16, per init=4
+INFO:summa.keywords:08:47:22: E99-1029_abstr.xml.txt graph stats: nodes=22, edges=15
+INFO:summa.keywords:	08:47:22: E99-1029_abstr.xml.txt graph stats: nodes=22, edges=15, per init=5
+INFO:summa.keywords:08:47:22: P06-1013_abstr.xml.txt graph stats: nodes=31, edges=23
+INFO:summa.keywords:	08:47:22: P06-1013_abstr.xml.txt graph stats: nodes=31, edges=23, per init=8
+INFO:summa.keywords:08:47:22: N04-1022_abstr.xml.txt graph stats: nodes=38, edges=31
+INFO:summa.keywords:	08:47:22: N04-1022_abstr.xml.txt graph stats: nodes=38, edges=31, per init=13
+INFO:summa.keywords:08:47:22: E99-1014_abstr.xml.txt graph stats: nodes=32, edges=24
+INFO:summa.keywords:	08:47:22: E99-1014_abstr.xml.txt graph stats: nodes=32, edges=24, per init=6
+INFO:summa.keywords:08:47:22: P97-1015_abstr.xml.txt graph stats: nodes=22, edges=17
+INFO:summa.keywords:	08:47:22: P97-1015_abstr.xml.txt graph stats: nodes=22, edges=17, per init=8
+INFO:summa.keywords:08:47:22: H94-1084_abstr.xml.txt graph stats: nodes=20, edges=16
+INFO:summa.keywords:	08:47:22: H94-1084_abstr.xml.txt graph stats: nodes=20, edges=16, per init=3
+INFO:summa.keywords:08:47:22: H92-1074_abstr.xml.txt graph stats: nodes=39, edges=38
+INFO:summa.keywords:	08:47:22: H92-1074_abstr.xml.txt graph stats: nodes=39, edges=38, per init=7
+INFO:summa.keywords:08:47:22: H94-1034_abstr.xml.txt graph stats: nodes=21, edges=15
+INFO:summa.keywords:	08:47:22: H94-1034_abstr.xml.txt graph stats: nodes=21, edges=15, per init=3
+INFO:summa.keywords:08:47:22: H91-1010_abstr.xml.txt graph stats: nodes=40, edges=35
+INFO:summa.keywords:	08:47:23: H91-1010_abstr.xml.txt graph stats: nodes=40, edges=35, per init=11
+INFO:summa.keywords:08:47:23: H92-1016_abstr.xml.txt graph stats: nodes=41, edges=30
+INFO:summa.keywords:	08:47:23: H92-1016_abstr.xml.txt graph stats: nodes=41, edges=30, per init=11
+INFO:summa.keywords:08:47:23: P06-4014_abstr.xml.txt graph stats: nodes=27, edges=20
+INFO:summa.keywords:	08:47:23: P06-4014_abstr.xml.txt graph stats: nodes=27, edges=20, per init=3
+INFO:summa.keywords:08:47:23: P97-1071_abstr.xml.txt graph stats: nodes=14, edges=8
+INFO:summa.keywords:	08:47:23: P97-1071_abstr.xml.txt graph stats: nodes=14, edges=8, per init=4
+INFO:summa.keywords:08:47:23: N03-1033_abstr.xml.txt graph stats: nodes=43, edges=40
+INFO:summa.keywords:	08:47:23: N03-1033_abstr.xml.txt graph stats: nodes=43, edges=40, per init=7
+INFO:summa.keywords:08:47:23: P05-1032_abstr.xml.txt graph stats: nodes=25, edges=21
+INFO:summa.keywords:	08:47:23: P05-1032_abstr.xml.txt graph stats: nodes=25, edges=21, per init=4
+INFO:summa.keywords:08:47:23: P03-1050_abstr.xml.txt graph stats: nodes=52, edges=46
+INFO:summa.keywords:	08:47:23: P03-1050_abstr.xml.txt graph stats: nodes=52, edges=46, per init=17
+INFO:summa.keywords:08:47:23: P05-1028_abstr.xml.txt graph stats: nodes=34, edges=20
+INFO:summa.keywords:	08:47:24: P05-1028_abstr.xml.txt graph stats: nodes=34, edges=20, per init=7
+INFO:summa.keywords:08:47:24: A97-1050_abstr.xml.txt graph stats: nodes=15, edges=12
+INFO:summa.keywords:	08:47:24: A97-1050_abstr.xml.txt graph stats: nodes=15, edges=12, per init=3
+INFO:summa.keywords:08:47:24: P99-1068_abstr.xml.txt graph stats: nodes=36, edges=30
+INFO:summa.keywords:	08:47:24: P99-1068_abstr.xml.txt graph stats: nodes=36, edges=30, per init=10
+INFO:summa.keywords:08:47:24: P84-1047_abstr.xml.txt graph stats: nodes=37, edges=29
+INFO:summa.keywords:	08:47:24: P84-1047_abstr.xml.txt graph stats: nodes=37, edges=29, per init=9
+INFO:summa.keywords:08:47:24: N03-1012_abstr.xml.txt graph stats: nodes=24, edges=18
+INFO:summa.keywords:	08:47:24: N03-1012_abstr.xml.txt graph stats: nodes=24, edges=18, per init=6
+INFO:summa.keywords:08:47:24: P95-1027_abstr.xml.txt graph stats: nodes=45, edges=35
+INFO:summa.keywords:	08:47:24: P95-1027_abstr.xml.txt graph stats: nodes=45, edges=35, per init=10
+INFO:summa.keywords:08:47:24: P05-1056_abstr.xml.txt graph stats: nodes=53, edges=42
+INFO:summa.keywords:	08:47:24: P05-1056_abstr.xml.txt graph stats: nodes=53, edges=42, per init=5
+INFO:summa.keywords:08:47:24: P05-1076_abstr.xml.txt graph stats: nodes=47, edges=33
+INFO:summa.keywords:	08:47:24: P05-1076_abstr.xml.txt graph stats: nodes=47, edges=33, per init=9
+INFO:summa.keywords:08:47:25: C04-1128_abstr.xml.txt graph stats: nodes=23, edges=15
+INFO:summa.keywords:	08:47:25: C04-1128_abstr.xml.txt graph stats: nodes=23, edges=15, per init=4
+INFO:summa.keywords:08:47:25: P86-1038_abstr.xml.txt graph stats: nodes=53, edges=40
+INFO:summa.keywords:	08:47:25: P86-1038_abstr.xml.txt graph stats: nodes=53, edges=40, per init=9
+INFO:summa.keywords:08:47:25: P99-1062_abstr.xml.txt graph stats: nodes=27, edges=17
+INFO:summa.keywords:	08:47:25: P99-1062_abstr.xml.txt graph stats: nodes=27, edges=17, per init=7
+INFO:summa.keywords:08:47:25: P91-1016_abstr.xml.txt graph stats: nodes=22, edges=15
+INFO:summa.keywords:	08:47:25: P91-1016_abstr.xml.txt graph stats: nodes=22, edges=15, per init=6
+INFO:summa.keywords:08:47:25: P03-1005_abstr.xml.txt graph stats: nodes=32, edges=25
+INFO:summa.keywords:	08:47:25: P03-1005_abstr.xml.txt graph stats: nodes=32, edges=25, per init=8
+INFO:summa.keywords:08:47:25: E99-1038_abstr.xml.txt graph stats: nodes=34, edges=23
+INFO:summa.keywords:	08:47:25: E99-1038_abstr.xml.txt graph stats: nodes=34, edges=23, per init=7
+INFO:summa.keywords:08:47:25: P05-3025_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:25: P05-3025_abstr.xml.txt graph stats: nodes=23, edges=17, per init=10
+INFO:summa.keywords:08:47:25: C82-1054_abstr.xml.txt graph stats: nodes=16, edges=11
+INFO:summa.keywords:	08:47:25: C82-1054_abstr.xml.txt graph stats: nodes=16, edges=11, per init=7
+INFO:summa.keywords:08:47:25: P83-1004_abstr.xml.txt graph stats: nodes=28, edges=23
+INFO:summa.keywords:	08:47:25: P83-1004_abstr.xml.txt graph stats: nodes=28, edges=23, per init=5
+INFO:summa.keywords:08:47:25: A94-1017_abstr.xml.txt graph stats: nodes=46, edges=40
+INFO:summa.keywords:	08:47:26: A94-1017_abstr.xml.txt graph stats: nodes=46, edges=40, per init=11
+INFO:summa.keywords:08:47:26: N03-2025_abstr.xml.txt graph stats: nodes=33, edges=28
+INFO:summa.keywords:	08:47:26: N03-2025_abstr.xml.txt graph stats: nodes=33, edges=28, per init=6
+INFO:summa.keywords:08:47:26: C04-1106_abstr.xml.txt graph stats: nodes=20, edges=13
+INFO:summa.keywords:	08:47:26: C04-1106_abstr.xml.txt graph stats: nodes=20, edges=13, per init=3
+INFO:summa.keywords:08:47:26: P97-1058_abstr.xml.txt graph stats: nodes=31, edges=22
+INFO:summa.keywords:	08:47:26: P97-1058_abstr.xml.txt graph stats: nodes=31, edges=22, per init=8
+INFO:summa.keywords:08:47:26: E89-1006_abstr.xml.txt graph stats: nodes=38, edges=25
+INFO:summa.keywords:	08:47:26: E89-1006_abstr.xml.txt graph stats: nodes=38, edges=25, per init=6
+INFO:summa.keywords:08:47:26: I05-2013_abstr.xml.txt graph stats: nodes=28, edges=18
+INFO:summa.keywords:	08:47:26: I05-2013_abstr.xml.txt graph stats: nodes=28, edges=18, per init=4
+INFO:summa.keywords:08:47:26: J87-1003_abstr.xml.txt graph stats: nodes=42, edges=32
+INFO:summa.keywords:	08:47:26: J87-1003_abstr.xml.txt graph stats: nodes=42, edges=32, per init=3
+INFO:summa.keywords:08:47:26: H01-1070_abstr.xml.txt graph stats: nodes=26, edges=22
+INFO:summa.keywords:	08:47:26: H01-1070_abstr.xml.txt graph stats: nodes=26, edges=22, per init=7
+INFO:summa.keywords:08:47:26: C04-1116_abstr.xml.txt graph stats: nodes=28, edges=22
+INFO:summa.keywords:	08:47:26: C04-1116_abstr.xml.txt graph stats: nodes=28, edges=22, per init=6
+INFO:summa.keywords:08:47:27: I05-2044_abstr.xml.txt graph stats: nodes=33, edges=28
+INFO:summa.keywords:	08:47:27: I05-2044_abstr.xml.txt graph stats: nodes=33, edges=28, per init=8
+INFO:summa.keywords:08:47:27: C04-1036_abstr.xml.txt graph stats: nodes=39, edges=36
+INFO:summa.keywords:	08:47:27: C04-1036_abstr.xml.txt graph stats: nodes=39, edges=36, per init=8
+INFO:summa.keywords:08:47:27: N03-2006_abstr.xml.txt graph stats: nodes=20, edges=15
+INFO:summa.keywords:	08:47:27: N03-2006_abstr.xml.txt graph stats: nodes=20, edges=15, per init=7
+INFO:summa.keywords:08:47:27: C88-2132_abstr.xml.txt graph stats: nodes=28, edges=20
+INFO:summa.keywords:	08:47:27: C88-2132_abstr.xml.txt graph stats: nodes=28, edges=20, per init=3
+INFO:summa.keywords:08:47:27: C92-3165_abstr.xml.txt graph stats: nodes=37, edges=27
+INFO:summa.keywords:	08:47:27: C92-3165_abstr.xml.txt graph stats: nodes=37, edges=27, per init=8
+INFO:summa.keywords:08:47:27: C94-1052_abstr.xml.txt graph stats: nodes=26, edges=19
+INFO:summa.keywords:	08:47:27: C94-1052_abstr.xml.txt graph stats: nodes=26, edges=19, per init=7
+INFO:summa.keywords:08:47:27: A88-1003_abstr.xml.txt graph stats: nodes=17, edges=12
+INFO:summa.keywords:	08:47:27: A88-1003_abstr.xml.txt graph stats: nodes=17, edges=12, per init=1
+INFO:summa.keywords:08:47:27: H01-1068_abstr.xml.txt graph stats: nodes=18, edges=15
+INFO:summa.keywords:	08:47:27: H01-1068_abstr.xml.txt graph stats: nodes=18, edges=15, per init=5
+INFO:summa.keywords:08:47:27: C88-2162_abstr.xml.txt graph stats: nodes=39, edges=33
+INFO:summa.keywords:	08:47:27: C88-2162_abstr.xml.txt graph stats: nodes=39, edges=33, per init=10
+INFO:summa.keywords:08:47:27: P01-1070_abstr.xml.txt graph stats: nodes=25, edges=17
+INFO:summa.keywords:	08:47:27: P01-1070_abstr.xml.txt graph stats: nodes=25, edges=17, per init=9
+INFO:summa.keywords:08:47:28: E06-1004_abstr.xml.txt graph stats: nodes=38, edges=27
+INFO:summa.keywords:	08:47:28: E06-1004_abstr.xml.txt graph stats: nodes=38, edges=27, per init=8
+INFO:summa.keywords:08:47:28: C90-2032_abstr.xml.txt graph stats: nodes=26, edges=25
+INFO:summa.keywords:	08:47:28: C90-2032_abstr.xml.txt graph stats: nodes=26, edges=25, per init=6
+INFO:summa.keywords:08:47:28: A97-1015_abstr.xml.txt graph stats: nodes=28, edges=23
+INFO:summa.keywords:	08:47:28: A97-1015_abstr.xml.txt graph stats: nodes=28, edges=23, per init=10
+INFO:summa.keywords:08:47:28: H05-1115_abstr.xml.txt graph stats: nodes=48, edges=35
+INFO:summa.keywords:	08:47:28: H05-1115_abstr.xml.txt graph stats: nodes=48, edges=35, per init=5
+INFO:summa.keywords:08:47:28: C92-2068_abstr.xml.txt graph stats: nodes=30, edges=27
+INFO:summa.keywords:	08:47:28: C92-2068_abstr.xml.txt graph stats: nodes=30, edges=27, per init=4
+INFO:summa.keywords:08:47:28: N03-4010_abstr.xml.txt graph stats: nodes=24, edges=21
+INFO:summa.keywords:	08:47:28: N03-4010_abstr.xml.txt graph stats: nodes=24, edges=21, per init=5
+INFO:summa.keywords:08:47:28: A97-1052_abstr.xml.txt graph stats: nodes=33, edges=24
+INFO:summa.keywords:	08:47:28: A97-1052_abstr.xml.txt graph stats: nodes=33, edges=24, per init=5
+INFO:summa.keywords:08:47:28: H01-1040_abstr.xml.txt graph stats: nodes=41, edges=32
+INFO:summa.keywords:	08:47:28: H01-1040_abstr.xml.txt graph stats: nodes=41, edges=32, per init=6
+INFO:summa.keywords:08:47:28: P97-1026_abstr.xml.txt graph stats: nodes=29, edges=21
+INFO:summa.keywords:	08:47:28: P97-1026_abstr.xml.txt graph stats: nodes=29, edges=21, per init=5
+INFO:summa.keywords:08:47:29: A94-1011_abstr.xml.txt graph stats: nodes=90, edges=79
+INFO:summa.keywords:	08:47:29: A94-1011_abstr.xml.txt graph stats: nodes=90, edges=79, per init=13
+INFO:summa.keywords:08:47:29: M92-1025_abstr.xml.txt graph stats: nodes=3, edges=2
+INFO:summa.keywords:	08:47:29: M92-1025_abstr.xml.txt graph stats: nodes=3, edges=2, per init=0
+INFO:summa.keywords:08:47:29: H92-1045_abstr.xml.txt graph stats: nodes=36, edges=28
+INFO:summa.keywords:	08:47:29: H92-1045_abstr.xml.txt graph stats: nodes=36, edges=28, per init=10
+INFO:summa.keywords:08:47:29: A97-1021_abstr.xml.txt graph stats: nodes=43, edges=33
+INFO:summa.keywords:	08:47:29: A97-1021_abstr.xml.txt graph stats: nodes=43, edges=33, per init=7
+INFO:summa.keywords:08:47:29: H01-1017_abstr.xml.txt graph stats: nodes=24, edges=20
+INFO:summa.keywords:	08:47:29: H01-1017_abstr.xml.txt graph stats: nodes=24, edges=20, per init=4
+INFO:summa.keywords:08:47:29: C92-1055_abstr.xml.txt graph stats: nodes=50, edges=39
+INFO:summa.keywords:	08:47:29: C92-1055_abstr.xml.txt graph stats: nodes=50, edges=39, per init=12
+INFO:summa.keywords:08:47:29: H05-1117_abstr.xml.txt graph stats: nodes=41, edges=30
+INFO:summa.keywords:	08:47:29: H05-1117_abstr.xml.txt graph stats: nodes=41, edges=30, per init=8
+INFO:summa.keywords:08:47:29: P05-1058_abstr.xml.txt graph stats: nodes=28, edges=25
+INFO:summa.keywords:	08:47:29: P05-1058_abstr.xml.txt graph stats: nodes=28, edges=25, per init=8
+INFO:summa.keywords:08:47:30: P04-2005_abstr.xml.txt graph stats: nodes=40, edges=30
+INFO:summa.keywords:	08:47:30: P04-2005_abstr.xml.txt graph stats: nodes=40, edges=30, per init=13
+INFO:summa.keywords:08:47:30: A92-1027_abstr.xml.txt graph stats: nodes=54, edges=41
+INFO:summa.keywords:	08:47:30: A92-1027_abstr.xml.txt graph stats: nodes=54, edges=41, per init=13
+INFO:summa.keywords:08:47:30: I05-2014_abstr.xml.txt graph stats: nodes=35, edges=31
+INFO:summa.keywords:	08:47:30: I05-2014_abstr.xml.txt graph stats: nodes=35, edges=31, per init=11
+INFO:summa.keywords:08:47:30: I05-2043_abstr.xml.txt graph stats: nodes=15, edges=11
+INFO:summa.keywords:	08:47:30: I05-2043_abstr.xml.txt graph stats: nodes=15, edges=11, per init=4
+INFO:summa.keywords:08:47:30: H93-1076_abstr.xml.txt graph stats: nodes=45, edges=38
+INFO:summa.keywords:	08:47:30: H93-1076_abstr.xml.txt graph stats: nodes=45, edges=38, per init=6
+INFO:summa.keywords:08:47:30: C88-1007_abstr.xml.txt graph stats: nodes=41, edges=31
+INFO:summa.keywords:	08:47:30: C88-1007_abstr.xml.txt graph stats: nodes=41, edges=31, per init=9
+INFO:summa.keywords:08:47:30: C94-1080_abstr.xml.txt graph stats: nodes=36, edges=31
+INFO:summa.keywords:	08:47:30: C94-1080_abstr.xml.txt graph stats: nodes=36, edges=31, per init=4
+INFO:summa.keywords:08:47:30: P06-3007_abstr.xml.txt graph stats: nodes=23, edges=22
+INFO:summa.keywords:	08:47:30: P06-3007_abstr.xml.txt graph stats: nodes=23, edges=22, per init=4
+INFO:summa.keywords:08:47:31: C04-1112_abstr.xml.txt graph stats: nodes=37, edges=30
+INFO:summa.keywords:	08:47:31: C04-1112_abstr.xml.txt graph stats: nodes=37, edges=30, per init=10
+INFO:summa.keywords:08:47:31: H92-1036_abstr.xml.txt graph stats: nodes=45, edges=39
+INFO:summa.keywords:	08:47:31: H92-1036_abstr.xml.txt graph stats: nodes=45, edges=39, per init=10
+INFO:summa.keywords:08:47:31: A94-1007_abstr.xml.txt graph stats: nodes=50, edges=44
+INFO:summa.keywords:	08:47:31: A94-1007_abstr.xml.txt graph stats: nodes=50, edges=44, per init=16
+INFO:summa.keywords:08:47:31: P01-1004_abstr.xml.txt graph stats: nodes=39, edges=35
+INFO:summa.keywords:	08:47:31: P01-1004_abstr.xml.txt graph stats: nodes=39, edges=35, per init=5
+INFO:summa.keywords:08:47:31: C94-1030_abstr.xml.txt graph stats: nodes=35, edges=34
+INFO:summa.keywords:	08:47:31: C94-1030_abstr.xml.txt graph stats: nodes=35, edges=34, per init=9
+INFO:summa.keywords:08:47:31: P97-1002_abstr.xml.txt graph stats: nodes=37, edges=37
+INFO:summa.keywords:	08:47:31: P97-1002_abstr.xml.txt graph stats: nodes=37, edges=37, per init=7
+INFO:summa.keywords:08:47:31: H05-1005_abstr.xml.txt graph stats: nodes=31, edges=29
+INFO:summa.keywords:	08:47:31: H05-1005_abstr.xml.txt graph stats: nodes=31, edges=29, per init=5
+INFO:summa.keywords:08:47:31: J87-3001_abstr.xml.txt graph stats: nodes=54, edges=49
+INFO:summa.keywords:	08:47:32: J87-3001_abstr.xml.txt graph stats: nodes=54, edges=49, per init=16
+INFO:summa.keywords:08:47:32: C88-1066_abstr.xml.txt graph stats: nodes=31, edges=24
+INFO:summa.keywords:	08:47:32: C88-1066_abstr.xml.txt graph stats: nodes=31, edges=24, per init=5
+INFO:summa.keywords:08:47:32: E06-1018_abstr.xml.txt graph stats: nodes=46, edges=40
+INFO:summa.keywords:	08:47:32: E06-1018_abstr.xml.txt graph stats: nodes=46, edges=40, per init=9
+INFO:summa.keywords:08:47:32: C92-4199_abstr.xml.txt graph stats: nodes=38, edges=33
+INFO:summa.keywords:	08:47:32: C92-4199_abstr.xml.txt graph stats: nodes=38, edges=33, per init=8
+INFO:summa.keywords:08:47:32: I05-5003_abstr.xml.txt graph stats: nodes=43, edges=35
+INFO:summa.keywords:	08:47:32: I05-5003_abstr.xml.txt graph stats: nodes=43, edges=35, per init=13
+INFO:summa.keywords:08:47:32: P05-1067_abstr.xml.txt graph stats: nodes=37, edges=33
+INFO:summa.keywords:	08:47:32: P05-1067_abstr.xml.txt graph stats: nodes=37, edges=33, per init=11
+INFO:summa.keywords:08:47:32: P05-1073_abstr.xml.txt graph stats: nodes=44, edges=35
+INFO:summa.keywords:	08:47:32: P05-1073_abstr.xml.txt graph stats: nodes=44, edges=35, per init=6
+INFO:summa.keywords:08:47:32: C04-1035_abstr.xml.txt graph stats: nodes=41, edges=28
+INFO:summa.keywords:	08:47:32: C04-1035_abstr.xml.txt graph stats: nodes=41, edges=28, per init=9
+INFO:summa.keywords:08:47:32: P80-1004_abstr.xml.txt graph stats: nodes=36, edges=28
+INFO:summa.keywords:	08:47:33: P80-1004_abstr.xml.txt graph stats: nodes=36, edges=28, per init=9
+INFO:summa.keywords:08:47:33: P03-1022_abstr.xml.txt graph stats: nodes=19, edges=13
+INFO:summa.keywords:	08:47:33: P03-1022_abstr.xml.txt graph stats: nodes=19, edges=13, per init=4
+INFO:summa.keywords:08:47:33: T78-1001_abstr.xml.txt graph stats: nodes=22, edges=14
+INFO:summa.keywords:	08:47:33: T78-1001_abstr.xml.txt graph stats: nodes=22, edges=14, per init=3
+INFO:summa.keywords:08:47:33: C86-1081_abstr.xml.txt graph stats: nodes=17, edges=10
+INFO:summa.keywords:	08:47:33: C86-1081_abstr.xml.txt graph stats: nodes=17, edges=10, per init=1
+INFO:summa.keywords:08:47:33: J86-1002_abstr.xml.txt graph stats: nodes=34, edges=24
+INFO:summa.keywords:	08:47:33: J86-1002_abstr.xml.txt graph stats: nodes=34, edges=24, per init=6
+INFO:summa.keywords:08:47:33: A97-1034_abstr.xml.txt graph stats: nodes=26, edges=20
+INFO:summa.keywords:	08:47:33: A97-1034_abstr.xml.txt graph stats: nodes=26, edges=20, per init=4
+INFO:summa.keywords:08:47:33: C88-2130_abstr.xml.txt graph stats: nodes=19, edges=13
+INFO:summa.keywords:	08:47:33: C88-2130_abstr.xml.txt graph stats: nodes=19, edges=13, per init=3
+INFO:summa.keywords:08:47:33: P05-1057_abstr.xml.txt graph stats: nodes=34, edges=31
+INFO:summa.keywords:	08:47:33: P05-1057_abstr.xml.txt graph stats: nodes=34, edges=31, per init=9
+INFO:summa.keywords:08:47:33: H01-1058_abstr.xml.txt graph stats: nodes=44, edges=39
+INFO:summa.keywords:	08:47:33: H01-1058_abstr.xml.txt graph stats: nodes=44, edges=39, per init=8
+INFO:summa.keywords:08:47:33: C88-2086_abstr.xml.txt graph stats: nodes=20, edges=17
+INFO:summa.keywords:	08:47:33: C88-2086_abstr.xml.txt graph stats: nodes=20, edges=17, per init=3
+INFO:summa.keywords:08:47:33: P84-1078_abstr.xml.txt graph stats: nodes=23, edges=17
+INFO:summa.keywords:	08:47:34: P84-1078_abstr.xml.txt graph stats: nodes=23, edges=17, per init=1
+INFO:summa.keywords:08:47:34: C04-1192_abstr.xml.txt graph stats: nodes=34, edges=27
+INFO:summa.keywords:	08:47:34: C04-1192_abstr.xml.txt graph stats: nodes=34, edges=27, per init=6
+INFO:summa.keywords:08:47:34: E85-1041_abstr.xml.txt graph stats: nodes=37, edges=24
+INFO:summa.keywords:	08:47:34: E85-1041_abstr.xml.txt graph stats: nodes=37, edges=24, per init=2
+INFO:summa.keywords:08:47:34: P97-1072_abstr.xml.txt graph stats: nodes=19, edges=15
+INFO:summa.keywords:	08:47:34: P97-1072_abstr.xml.txt graph stats: nodes=19, edges=15, per init=3
+INFO:summa.keywords:08:47:34: C88-1044_abstr.xml.txt graph stats: nodes=24, edges=15
+INFO:summa.keywords:	08:47:34: C88-1044_abstr.xml.txt graph stats: nodes=24, edges=15, per init=6
+INFO:summa.keywords:08:47:34: P05-1034_abstr.xml.txt graph stats: nodes=44, edges=42
+INFO:summa.keywords:	08:47:34: P05-1034_abstr.xml.txt graph stats: nodes=44, edges=42, per init=13
+INFO:summa.keywords:08:47:34: P05-2013_abstr.xml.txt graph stats: nodes=29, edges=22
+INFO:summa.keywords:	08:47:34: P05-2013_abstr.xml.txt graph stats: nodes=29, edges=22, per init=4
+INFO:summa.keywords:08:47:34: J05-1003_abstr.xml.txt graph stats: nodes=77, edges=65
+INFO:summa.keywords:	08:47:34: J05-1003_abstr.xml.txt graph stats: nodes=77, edges=65, per init=18
+INFO:summa.keywords:08:47:34: E87-1037_abstr.xml.txt graph stats: nodes=36, edges=27
+INFO:summa.keywords:	08:47:35: E87-1037_abstr.xml.txt graph stats: nodes=36, edges=27, per init=4
+INFO:summa.keywords:08:47:35: P84-1034_abstr.xml.txt graph stats: nodes=33, edges=28
+INFO:summa.keywords:	08:47:35: P84-1034_abstr.xml.txt graph stats: nodes=33, edges=28, per init=9
+INFO:summa.keywords:08:47:35: C94-1077_abstr.xml.txt graph stats: nodes=30, edges=27
+INFO:summa.keywords:	08:47:35: C94-1077_abstr.xml.txt graph stats: nodes=30, edges=27, per init=5
+INFO:summa.keywords:08:47:35: J86-4002_abstr.xml.txt graph stats: nodes=40, edges=28
+INFO:summa.keywords:	08:47:35: J86-4002_abstr.xml.txt graph stats: nodes=40, edges=28, per init=7
+INFO:summa.keywords:08:47:35: P03-1070_abstr.xml.txt graph stats: nodes=34, edges=25
+INFO:summa.keywords:	08:47:35: P03-1070_abstr.xml.txt graph stats: nodes=34, edges=25, per init=2
+INFO:summa.keywords:08:47:35: H05-2007_abstr.xml.txt graph stats: nodes=16, edges=12
+INFO:summa.keywords:	08:47:35: H05-2007_abstr.xml.txt graph stats: nodes=16, edges=12, per init=4
+INFO:summa.keywords:08:47:35: H89-1036_abstr.xml.txt graph stats: nodes=46, edges=38
+INFO:summa.keywords:	08:47:35: H89-1036_abstr.xml.txt graph stats: nodes=46, edges=38, per init=7
+INFO:summa.keywords:08:47:35: C92-2115_abstr.xml.txt graph stats: nodes=26, edges=19
+INFO:summa.keywords:	08:47:36: C92-2115_abstr.xml.txt graph stats: nodes=26, edges=19, per init=6
+INFO:summa.keywords:08:47:36: N03-1018_abstr.xml.txt graph stats: nodes=42, edges=35
+INFO:summa.keywords:	08:47:36: N03-1018_abstr.xml.txt graph stats: nodes=42, edges=35, per init=10
+INFO:summa.keywords:08:47:36: P81-1032_abstr.xml.txt graph stats: nodes=53, edges=52
+INFO:summa.keywords:	08:47:36: P81-1032_abstr.xml.txt graph stats: nodes=53, edges=52, per init=12
+INFO:summa.keywords:08:47:36: P97-1050_abstr.xml.txt graph stats: nodes=39, edges=29
+INFO:summa.keywords:	08:47:36: P97-1050_abstr.xml.txt graph stats: nodes=39, edges=29, per init=6
+INFO:summa.keywords:08:47:36: H01-1055_abstr.xml.txt graph stats: nodes=31, edges=25
+INFO:summa.keywords:	08:47:36: H01-1055_abstr.xml.txt graph stats: nodes=31, edges=25, per init=10
+INFO:summa.keywords:08:47:36: P06-4007_abstr.xml.txt graph stats: nodes=23, edges=19
+INFO:summa.keywords:	08:47:36: P06-4007_abstr.xml.txt graph stats: nodes=23, edges=19, per init=4
+INFO:summa.keywords:08:47:36: P99-1022_abstr.xml.txt graph stats: nodes=38, edges=34
+INFO:summa.keywords:	08:47:36: P99-1022_abstr.xml.txt graph stats: nodes=38, edges=34, per init=9
+INFO:summa.keywords:08:47:36: H91-1067_abstr.xml.txt graph stats: nodes=32, edges=22
+INFO:summa.keywords:	08:47:36: H91-1067_abstr.xml.txt graph stats: nodes=32, edges=22, per init=4
+INFO:summa.keywords:08:47:36: P05-1069_abstr.xml.txt graph stats: nodes=35, edges=34
+INFO:summa.keywords:	08:47:36: P05-1069_abstr.xml.txt graph stats: nodes=35, edges=34, per init=12
+INFO:summa.keywords:08:47:37: P87-1022_abstr.xml.txt graph stats: nodes=27, edges=19
+INFO:summa.keywords:	08:47:37: P87-1022_abstr.xml.txt graph stats: nodes=27, edges=19, per init=7
+INFO:summa.keywords:08:47:37: E99-1005_abstr.xml.txt graph stats: nodes=33, edges=23
+INFO:summa.keywords:	08:47:37: E99-1005_abstr.xml.txt graph stats: nodes=33, edges=23, per init=4
+INFO:summa.keywords:08:47:37: H05-1095_abstr.xml.txt graph stats: nodes=29, edges=26
+INFO:summa.keywords:	08:47:37: H05-1095_abstr.xml.txt graph stats: nodes=29, edges=26, per init=10
