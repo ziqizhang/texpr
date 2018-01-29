@@ -53,13 +53,14 @@ import numpy as np
 from difflib import SequenceMatcher
 from collections import OrderedDict
 
-if len(sys.argv) != 9:
-    print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w, randomseed simname",file=sys.stderr)
+if len(sys.argv) != 10:
+    print("ERROR: need the following arguments: finalSim-file, classinfo-file, section, N_c, N_k, N_w, randomseed, simname",file=sys.stderr)
     sys.exit(1)
 
-debug=False
+debug=True
 verbose=True
 mixedCase=True
+writeKw=False
 
 finalSimFile = sys.argv[1]
 classinfoFile = sys.argv[2]
@@ -68,10 +69,11 @@ N_c = int(sys.argv[4])
 N_k = int(sys.argv[5])
 N_w = int(sys.argv[6])
 SEED = int(sys.argv[7])
-simname = sys.argv[8]
+simname1 = sys.argv[8]
+simname2 = sys.argv[9]
 
 MAXRANK = 100
-SIMNAMES = [simname,simname+"-textrank"]
+SIMNAMES = [simname1,simname2]
 S = 1.0
 
 written = 0  # number of rows written, total
@@ -99,7 +101,8 @@ if debug:
     with open(finalSimFile) as infile:
             for line in infile:
                 line = line.strip()
-                (simname,cword,kword,rank,score) = line.split("\t")
+                fields = line.split("\t")
+                (simname,cword,kword,rank,score) = fields[0:5]
                 known_kw_set.add(kword)
     print("DEBUG: found keywords:",len(known_kw_set),file=sys.stderr)
 
@@ -108,7 +111,8 @@ with open(classinfoFile) as infile:
     for line in infile:
         n_classinfo += 1
         line = line.strip()
-        (keyword,uri,sec) = line.split("\t")
+        fields = line.split("\t")
+        (keyword,uri,sec) = fields[0:3]
         if sec != ontoSection:
             n_classinfo_skipped += 1
             continue
@@ -211,7 +215,8 @@ with open(finalSimFile) as infile:
         for line in infile:
             n_input += 1
             line = line.strip()
-            (simname,cword,kword,rank,score) = line.split("\t")
+            fields = line.split("\t")
+            (simname,cword,kword,rank,score) = fields[0:5]
             kword = re.sub(r"[—-]", " ", kword)
             if kword != cur_kw:
                 cur_kw = kword
@@ -278,8 +283,9 @@ for (uri,kw) in sampled_uri_kw:
     # we now should have at most N_w sampled corpus words for the keyword
     # we can now output the whole bunch, but first the pair with the original
     # keyword
-    print(outrow,uri,kw,"","",0,0.0,"original-kw",sep="\t")
-    outrow += 1
+    if writeKw:
+        print(outrow,uri,kw,"","",0,0.0,"original-kw",sep="\t")
+        outrow += 1
     for (cw,score,rank,simname) in cw_list:
         print(outrow,uri,cw,kw,simname,rank,score,"corpusword",sep="\t")
         outrow += 1

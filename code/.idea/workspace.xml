@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f92a1fc-9d4d-4bd9-a814-761043f64e28" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/embeddings/evalAnns.py" afterPath="$PROJECT_DIR$/embeddings/evalAnns.py" />
+      <change beforePath="$PROJECT_DIR$/embeddings/embeddingsutils.py" afterPath="$PROJECT_DIR$/embeddings/embeddingsutils.py" />
+      <change beforePath="$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py" afterPath="$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,36 +22,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="evalAnns.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/embeddings/evalAnns.py">
+      <file leaf-file-name="preprocessKeywords.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/preprocessKeywords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="134" column="42" lean-forward="false" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+            <state relative-caret-position="508">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
-                <element signature="e#338#375#0" expanded="true" />
+                <element signature="e#1033#1043#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="embeddingsutils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="embeddingsutils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/embeddingsutils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="327" column="41" lean-forward="true" selection-start-line="327" selection-start-column="41" selection-end-line="327" selection-end-column="41" />
+            <state relative-caret-position="87">
+              <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
               <folding>
                 <element signature="e#53#63#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample4Annotators.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/sample4Annotators.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -58,55 +49,9 @@
       <file leaf-file-name="findMostSimilar.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/findMostSimilar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcSim.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/embeddings/calcSim.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="documentfreq2idf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/embeddings/documentfreq2idf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="e#599#636#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="embeddingsutils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/embeddings/embeddingsutils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="56" />
-              <folding>
-                <element signature="e#53#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mostSim4Onto.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/embeddings/mostSim4Onto.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="443">
-              <caret line="99" column="11" lean-forward="false" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-              <folding>
-                <element signature="e#817#854#0" expanded="true" />
-              </folding>
+              <caret line="79" column="11" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,6 +70,7 @@
       <find>simonl</find>
       <find>number of rows</find>
       <find>N_c</find>
+      <find>-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,18 +86,19 @@
         <option value="$PROJECT_DIR$/textrank/texpr/utils.py" />
         <option value="$PROJECT_DIR$/textrank/texpr/textpr_term_scorer.py" />
         <option value="$PROJECT_DIR$/textrank/texpr/textpr_main.py" />
-        <option value="$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py" />
         <option value="$PROJECT_DIR$/embeddings/ann2ranks.py" />
         <option value="$PROJECT_DIR$/embeddings/documentfreq2idf.py" />
         <option value="$PROJECT_DIR$/embeddings/mostSim4Onto.py" />
         <option value="$PROJECT_DIR$/embeddings/evalAnns.py" />
+        <option value="$PROJECT_DIR$/../../knowmak-semsim/python/sample4Annotators.py" />
+        <option value="$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py" />
+        <option value="$PROJECT_DIR$/../../knowmak-semsim/python/preprocessKeywords.py" />
         <option value="$PROJECT_DIR$/../../knowmak-semsim/python/findMostSimilar.py" />
         <option value="$PROJECT_DIR$/../../knowmak-semsim/python/embeddingsutils.py" />
-        <option value="$PROJECT_DIR$/../../knowmak-semsim/python/sample4Annotators.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="95" />
     <option name="y" value="33" />
     <option name="width" value="1301" />
@@ -440,7 +387,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="95" y="33" width="1301" height="744" extended-state="1" />
+    <frame x="95" y="33" width="1301" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2178599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -566,13 +513,6 @@
     <entry file="file://$PROJECT_DIR$/textrank/summa/keywords.py" />
     <entry file="file://$PROJECT_DIR$/textrank/texpr/textpr_main.py" />
     <entry file="file://$PROJECT_DIR$/embeddings/sample4Annotators.py" />
-    <entry file="file://$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="238" column="62" lean-forward="false" selection-start-line="238" selection-start-column="62" selection-end-line="238" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/embeddings/ann2ranks.py" />
     <entry file="file://$PROJECT_DIR$/embeddings/embeddingsutils.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -622,29 +562,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/sample4Annotators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/embeddings/sample4Annotators-2sims.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="287" column="8" lean-forward="false" selection-start-line="287" selection-start-column="8" selection-end-line="287" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/preprocessKeywords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <element signature="e#1033#1043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/findMostSimilar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="443">
+          <caret line="79" column="11" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/embeddingsutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="327" column="41" lean-forward="true" selection-start-line="327" selection-start-column="41" selection-end-line="327" selection-end-column="41" />
+        <state relative-caret-position="87">
+          <caret line="154" column="26" lean-forward="true" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="26" />
           <folding>
             <element signature="e#53#63#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../knowmak-semsim/python/sample4Annotators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
