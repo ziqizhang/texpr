@@ -1,6 +1,6 @@
 #!/bin/bash
 #export PYTHONPATH=/home/ziqizhang/chase/python/src
-export PYTHONPATH=/home/zqz/Work/texpr/code
+export PYTHONPATH=/home/zz/Work/texpr/code
 # filter_by_sim=False
 # window=5
 # topn=100

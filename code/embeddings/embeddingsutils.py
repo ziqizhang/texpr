@@ -10,6 +10,7 @@ import re
 import math
 import itertools
 from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
 import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',\
             level=logging.INFO)
@@ -27,6 +28,8 @@ class EmbeddingsUtils:
         self.nEmpty = 0
         self.embFile = ""
         self.default_weight = 0.0
+        self.lemmatise = False                   # lemmatize text before calculating sims or finding matches
+        self.filterByLemmata = False             # filter any variants with same lemma
         self.use_weights = False
         self.ignorepattern=re.compile("[—!\"#$%&\\\\'()*+,-/:;<=>?@[\]^_`{|}~£¦]+|[0-9]+")
 
@@ -140,8 +143,33 @@ class EmbeddingsUtils:
         self.fallBackToLower = flag
 
     # if stopwords should get filtered, on by default
-    def setFilterStopwords(self,flag):
+    def setFilterStopwords(self, flag):
         self.filterStopWords = flag
+
+    def setStopWordsList(self, fileName):
+        self.filterStopWords = True
+        tmpstopwords = set()
+        if self.verbose:
+            print("Loading stop words from", fileName, file=sys.stderr)
+        with open(fileName) as infile:
+            for line in infile:
+                line = line.strip()
+                fields = line.split("\t")
+                tmpstopwords.add(fields[0].lower())
+        for sw in nltk.corpus.stopwords.words("english"):
+            tmpstopwords.add(sw)
+        self.stopWords = tmpstopwords
+
+    def isStopWord(self, word):
+        return word in self.stopWords
+
+    def setLemmatise(self,flag):
+        """Lemmatize text before using for similarity or most similar"""
+        self.lemmatise = flag
+
+    def setFilterByLemmata(self,flag):
+        """Remove results if lemma is identical to input or what we already have"""
+        self.filterByLemmata = flag
 
     def setDebug(self,flag):
         self.debug = flag
@@ -201,18 +229,19 @@ class EmbeddingsUtils:
     def tokens4text(self,text):
         # the NLTK tokeniser leaves slashes and hyphens within words intact,
         # so we first replace those with spaces
-        text = re.sub(r"[/—-]"," ",text)
+        text = re.sub(r"[/]", " ", text)
+        text = re.sub(r"[—]", "-", text)
         tmpwords = nltk.word_tokenize(text)
         tmpwords = [word for word in tmpwords if len(word) > 1]
         ## remove any trailing dot or other common punctuation
         ## NOTE: this may be a problem if we have an acronym like A.D.
         ## but for now we ignore that
-        tmpwords = [re.sub(r"[.,;:!?]+$","",word) for word in tmpwords]
+        tmpwords = [re.sub(r"[.,;:!?]+$", "", word) for word in tmpwords]
         tmpwords = [word for word in tmpwords if word and not "." in word]
         return tmpwords
 
     # return a list of filtered/cleaned/transformed words ready to be used for similarity calculation
-    def words4text(self,text):
+    def words4text(self, text):
         """Tokenises the text and returns a list of words, optionally lower cased, stop words filtered"""
         tmpwords = self.tokens4text(text)
         if not self.isCaseSensitive:
@@ -221,9 +250,11 @@ class EmbeddingsUtils:
         tmpwords = [word for word in tmpwords if not self.ignorepattern.match(word)]
         if self.filterStopWords:
             tmpwords = [word for word in tmpwords if word.lower() not in self.stopWords]
+        if self.lemmatise:
+            l = nltk.stem.WordNetLemmatizer()
+            tmpwords = [l.lemmatize(word) for word in tmpwords]
         words = []
         for word in tmpwords:
-            havewv = hasattr(self.model,"wv")
             if self.isInVocabStrict(word):
                 words.append(word)
             else:
@@ -245,11 +276,11 @@ class EmbeddingsUtils:
         words2 = self.words4text(text2)
         if self.debug: print("Words1:",words1,"from input",text1,file=sys.stderr)
         if self.debug: print("Words2:",words2,"from input",text2,file=sys.stderr)
-        (sim,used1,used2) = self.sim4words(words1,words2)
+        (sim, used1, used2) = self.sim4words(words1,words2)
         return (sim,used1,used2)
 
     # return triple of similarity, list1 used, list2 used
-    def sim4words(self,words1,words2):
+    def sim4words(self, words1, words2):
         """Calculate the similarity between the words in the two lists. This
            expects the words in the lists to be known to be in the vocabulary and
            also to already be in the correct case.
@@ -282,26 +313,47 @@ class EmbeddingsUtils:
 
     # calculate n most similar words in the embeddings and return
     # a tuple with two elements: first is the list of tuples (word,sim) and
-    # second is the text actually used for the comparison
+    # second is the list of tokens actually used for the comparison
     # This uses mostSimilar4Words internally
-    def mostSimilar4Text(self,text,n):
+    def mostSimilar4Text(self, text, n):
         words = self.words4text(text)
-        (matches,words_used) = self.mostSimilar4Words(words,n)
-        return (matches," ".join(words_used))
+        (matches,words_used) = self.mostSimilar4Words(words, n)
+        return (matches,words_used)
 
     # find the n most similar entries from the embeddings model for the
     # list of words given.
     # returns a tuple where the first element is the list of matches, each
     # match being a tuple of word and similarity, and the second element is
     # the words actually used
-    def mostSimilar4Words(self,words,n):
+    def mostSimilar4Words(self, words, n):
         (found,notfound) = self.knownWords(words)
         ## note/todo: decide how to handle the case that no word is found
         if(len(found)==0):
             return ([],[])
         else:
-            mostsim = self.model.most_similar(positive=found,topn=n)
-            return (mostsim,found)
+            mostsim = self.model.most_similar(positive=found, topn=2 * n)
+            if self.filterByLemmata:
+                # the words in found should already be lemmatized, if lemmatization was on
+                # but just to be sure we do it again here
+                l = nltk.stem.WordNetLemmatizer()
+                lemmata = [l.lemmatize(w.lower()) for w in found]
+                final = []
+                for res, sim in mostsim:
+                    lem = l.lemmatize(res.lower())
+                    if lem not in lemmata:
+                        final.append((res,sim))
+                        lemmata.append(lem)
+                mostsim = final
+            # in any case, if stopwords are loaded, filter by those too
+            if self.filterStopWords:
+                final = []
+                for res, sim in mostsim:
+                    if res not in self.stopWords:
+                        final.append((res,sim))
+                mostsim = final
+            if len(mostsim) > n:
+                mostsim = mostsim[0:n]
+            return (mostsim, found)
 
     def getInfo(self):
         ret = {}

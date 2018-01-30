@@ -271,8 +271,8 @@ def csv_to_tsv(in_file, out_file):
                 csvwriter.writerow(row)
 
 
-csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.csv",
-            "/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.tsv")
+# csv_to_tsv("/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.csv",
+#             "/home/zqz/Work/data/texpr/texpr_output/knowmak/small-RANKED_window=100,top100,sim=0.4,ate=PU.tsv")
 # csv_to_tsv("/home/zqz/Work/data/texpr/word_weights/knowmak/100.txt",
 #            "/home/zqz/Work/data/texpr/word_weights/knowmak/100.tsv")
 
