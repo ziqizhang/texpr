@@ -26,11 +26,14 @@ from embeddingsutils import EmbeddingsUtils
 from tqdm import tqdm
 import heapq
 import numpy as np
-from difflib import SequenceMatcher
+# from difflib import SequenceMatcher
+from nltk.stem import WordNetLemmatizer
+lem = WordNetLemmatizer()
+
 from collections import OrderedDict
 
-if len(sys.argv) != 5:
-    print("ERROR: need the following arguments: keywords lst file, corpus words tsv file, embeddings path, 0/1 (0=lowercase/1=mixed case embeddings)", file=sys.stderr)
+if len(sys.argv) != 6:
+    print("ERROR: need the following arguments: keywords lst file, corpus words tsv file, embeddings path, 0/1 (0=lowercase/1=mixed case embeddings), stopWordsFile", file=sys.stderr)
     sys.exit(1)
 
 debug = False
@@ -42,6 +45,7 @@ keywordsFile = sys.argv[1]
 corpusWordsFile = sys.argv[2]
 embFile = sys.argv[3]
 mixedCase = (sys.argv[4] == "1")
+stopFile = sys.argv[5]
 print("INFO: using mixed case settings for the embeddings!", file=sys.stderr)
 
 eu = EmbeddingsUtils()
@@ -50,6 +54,9 @@ eu.setFallBackToLower(mixedCase)
 eu.setFilterStopwords(True)
 eu.setDebug(False)
 eu.setVerbose(verbose)
+eu.setStopWordsList(stopFile)
+eu.setLemmatise(True)
+eu.setFilterByLemmata(True)
 eu.loadEmbeddings(embFile)
 # we use the corpus words file to get idf scores for putting into the output file
 # not used otherwise since the ranking would not change if we multiply by
@@ -66,7 +73,9 @@ if verbose:
     print("Reading ontology keywords ...", file=sys.stderr)
 with open(keywordsFile) as inp:
     for line in inp:
-        keyword = line.strip()
+        # keyword = line.strip()
+        fields = line.strip().split("\t")
+        keyword = fields[0]
         # (keyword,cname,topicfield,flagfield,provfield,propfield) = line.split("\t")
         # cname = cname[4:]
         keywords[keyword] = 1
@@ -102,7 +111,7 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
     for keyword in keywords:
         h_sim = []
         h_simidf = []
-        h_simidfstr = []
+        #h_simidfstr = []
         known = eu.words4text(keyword)
         # if known is empty, no word is known to the embeddings and we can
         # skip this keyword
@@ -129,12 +138,23 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
             if embsim < MIN_EMB_SIM:
                 # if debug: print("DEBUG: skipping low sim: ",corpusword,"/",keyword,"=",embsim,file=sys.stderr)
                 continue
-            # 3) one of the (used) corpuswords is in the keyword words
+            # 3) the corpusword or its lemma is contained in the keyword or the keyword is contained
+            # in the corpusword. This is done with the originals and the lemmata.
+            # However, if the both used word lists have more than one word in them, then we
+            # do not check for being contained
             isContained = False
-            for w in usedcorpuswords:
-                if w in usedkeywords:
+            if len(usedcorpuswords) == 1:
+                if eu.isStopWord(usedcorpuswords[0].lower()) or eu.isStopWord(lem.lemmatize(usedcorpuswords[0].lower())):
                     isContained = True
-                    break
+                for w in usedkeywords:
+                    if w == usedcorpuswords[0] or lem.lemmatize(w) == lem.lemmatize(usedcorpuswords[0]):
+                        isContained = True
+                        break
+            if len(usedkeywords) == 1:
+                for w in usedcorpuswords:
+                    if w == usedkeywords[0] or lem.lemmatize(w) == lem.lemmatize(usedkeywords[0]):
+                        isContained = True
+                        break
             if isContained:
                 if debug:
                     print("DEBUG: skipping, isContained", corpusword, "/", keyword, "usedcorp=", "|".join(usedcorpuswords), "usedkey=", "|".join(usedkeywords), file=sys.stderr)
@@ -150,9 +170,9 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
             heapq.heappush(h_sim, (embsim, corpusword, usedcorpuswords, usedkeywords, idf, keywordidf))
             simidf = embsim * idf
             heapq.heappush(h_simidf, (simidf, corpusword, usedcorpuswords, usedkeywords, idf, keywordidf))
-            stringsim = SequenceMatcher(None, corpusword, keyword).ratio()
-            simidfstr = simidf * (1.0/(stringsim+1))
-            heapq.heappush(h_simidfstr, (simidfstr, corpusword, usedcorpuswords, usedkeywords, idf, keywordidf))
+            #stringsim = SequenceMatcher(None, corpusword, keyword).ratio()
+            #simidfstr = simidf * (1.0/(stringsim+1))
+            #heapq.heappush(h_simidfstr, (simidfstr, corpusword, usedcorpuswords, usedkeywords, idf, keywordidf))
         # after going through all the corpuswords, output the best k
         if len(h_sim) == 0:
             if debug:
@@ -172,11 +192,11 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
                 print("simidfonly", w, keyword, rank, s, " ".join(cws), " ".join(kws), ci, ki, sep="\t")
                 written = written + 1
                 rank = rank + 1
-            l1 = heapq.nlargest(k, h_simidfstr)
-            rank = 0
-            for s, w, cws, kws, ci, ki in l1:
-                print("simidfstr", w, keyword, rank, s, " ".join(cws), " ".join(kws), ci, ki, sep="\t")
-                written = written + 1
-                rank = rank + 1
+            #l1 = heapq.nlargest(k, h_simidfstr)
+            #rank = 0
+            #for s, w, cws, kws, ci, ki in l1:
+            #    print("simidfstr", w, keyword, rank, s, " ".join(cws), " ".join(kws), ci, ki, sep="\t")
+            #    written = written + 1
+            #    rank = rank + 1
 
 print("Finished, total comparisons:", totalpairs, "written:", written, file=sys.stderr)

@@ -160,6 +160,9 @@ class EmbeddingsUtils:
             tmpstopwords.add(sw)
         self.stopWords = tmpstopwords
 
+    def isStopWord(self, word):
+        return word in self.stopWords
+
     def setLemmatise(self,flag):
         """Lemmatize text before using for similarity or most similar"""
         self.lemmatise = flag

@@ -5,11 +5,12 @@ kwfile="$1"
 cwfile="$2"
 embfile="$3"
 caseflag="$4"
-outfile="$5"
+stopwords="$5"
+outfile="$6"
 
 if [ "x$outfile" == "x" ]
 then
-  echo "usage: mostSim4OntoParallel.sh keywords corpuswords embs caseflag outputfile"
+  echo "usage: mostSim4OntoParallel.sh keywords corpuswords embs caseflag stopwordsfile outputfile"
   exit 1
 fi
 
@@ -26,8 +27,8 @@ wc -l tmp-keywords*
 # terminal
 for kw in tmp-keywords*
 do
-  echo 'starting xterm -e python3 mostSim4Onto.py $kw termraider-words.tsv ../../embeddings/glove.840B.300d.gensim 0 > tmp-output-$kw'
-  xterm -e "echo running for $kw; python3 mostSim4Onto.py $kw termraider-words.tsv ../../embeddings/glove.840B.300d.gensim 0 > tmp-output-$kw" &
+  echo 'starting xterm -e python3 mostSim4Onto.py $kw termraider-words.tsv ../../embeddings/glove.840B.300d.gensim $caseflag $stopwords > tmp-output-$kw'
+  xterm -e "echo running for $kw; python3 mostSim4Onto.py $kw termraider-words.tsv ../../embeddings/glove.840B.300d.gensim $caseflag $stopwords > tmp-output-$kw" &
 done
 echo waiting for all to complete
 wait

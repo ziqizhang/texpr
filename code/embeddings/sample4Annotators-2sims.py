@@ -73,7 +73,7 @@ simname1 = sys.argv[8]
 simname2 = sys.argv[9]
 
 MAXRANK = 100
-SIMNAMES = [simname1,simname2]
+SIMNAMES = [simname1, simname2]
 S = 1.0
 
 written = 0  # number of rows written, total
@@ -120,7 +120,7 @@ with open(classinfoFile) as infile:
             n_classinfo_skipped += 1
             continue
         n_classinfo_taken += 1
-        keyword = re.sub(r"[—-]"," ",keyword)
+        #keyword = re.sub(r"[—-]"," ",keyword)
         uris.add(uri)
         kws.add(keyword)
         kw_uris.add((keyword,uri))
@@ -216,8 +216,8 @@ with open(finalSimFile) as infile:
             n_input += 1
             line = line.strip()
             fields = line.split("\t")
-            (simname,cword,kword,rank,score) = fields[0:5]
-            kword = re.sub(r"[—-]", " ", kword)
+            (simname, cword, kword, rank, score) = fields[0:5]
+            #kword = re.sub(r"[—-]", " ", kword)
             if kword != cur_kw:
                 cur_kw = kword
                 rank2subtract = 0
@@ -236,7 +236,7 @@ with open(finalSimFile) as infile:
                 # So whenever this happens, we do NOT store the row, and we add one to rank2subtract
                 # for that keyword, to adjust the ranks of subsequent entries for the keyword.
                 # print("STORING ",(kword,simname,rank),file=sys.stderr)
-                cw4kw[(kword,simname,int(rank)-rank2subtract)]=(cword,float(score))
+                cw4kw[(kword, simname, int(rank)-rank2subtract)]=(cword, float(score))
                 n_found += 1
             else:
                 n_not_found += 1
@@ -248,11 +248,11 @@ print("Total number of lines where kw NOT found:",n_not_found,file=sys.stderr)
 print("Number of kwords found:",len(found_kw_set),"expected:",len(kw_set),file=sys.stderr)
 
 if len(found_kw_set) < len(kw_set):
-    raise Error("Not all keywords found!")
+    raise Exception("Not all keywords found!")
 
 outrow = 0
 ## now perform the actual sampling
-for (uri,kw) in sampled_uri_kw:
+for (uri, kw) in sampled_uri_kw:
     # collect the corpus word tuples for this kw in this list
     cw_set = set() # to check if we already have that word
     cw_list = []   # the list of cw tuples we sampled, with at most N_w elements
@@ -265,15 +265,15 @@ for (uri,kw) in sampled_uri_kw:
             else:
                 simname = SIMNAMES[1]
             # get the info we have stored for this keyword
-            info = cw4kw.get((kw,simname,rank))
+            info = cw4kw.get((kw, simname, rank))
             if not info:
-                print("ERROR: no kw info found for ",(kw,simname,rank),file=sys.stderr)
+                print("ERROR: no kw info found for ", (kw, simname, rank), file=sys.stderr)
                 raise Exception("ABORT")
             else:
-                (cw,score) = info
+                (cw, score) = info
             if cw not in cw_set:
                 cw_set.add(cw)
-                cw_list.append((cw,score,rank,simname))
+                cw_list.append((cw, score, rank, simname))
             if len(cw_list) == N_w:
                 break
         if len(cw_list) == N_w:
