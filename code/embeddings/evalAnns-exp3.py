@@ -35,9 +35,9 @@ with open(origFile) as infile:
         line = line.strip()
         # (rownr,classname,cwordOrKw,kword,measurename,rank,sim,whatitis) = line.split("\t")
         fields = line.split("\t")
-        (rownr, classname, cwordOrKw, measurename, rank, sim, whatitis, unused1) = fields
-        # print("DEBUG: orig fields, rownr=%s,classname=%s,cwordOrKw=%s,measname=%s,rank=%s,sim=%s,whatisit=%s" %
-        #      (rownr, classname, cwordOrKw,  measurename, rank, sim, whatitis))
+        (rownr, classname, cwordOrKw, kword, measurename, rank, sim, whatitis) = fields
+        # print("DEBUG: orig fields, rownr=%s,classname=%s,cwordOrKw=%s,kw=%s,measname=%s,rank=%s,sim=%s,whatisit=%s" %
+        #      (rownr, classname, cwordOrKw,  kword, measurename, rank, sim, whatitis))
         rownr = int(rownr)
         if rownr != (lastRownr+1):
             print("ERROR: in orig file, expected row nr", lastRownr+1, "but got", rownr, file=sys.stderr)
@@ -74,9 +74,10 @@ elif n_rows_orig < n_rows_ann:
     print("ERROR: orig file has rows", n_rows_orig, "ann file has rows", n_rows_ann, file=sys.stderr)
     sys.exit(1)
 
-embData = []
+simData = []
+simidfData = []
 for i in range(len(annData)):
-    (rownr1, classname1, cwordOrKw1, measurename, rank, sim, whatitis, dummy) = origData[i]
+    (rownr1, classname1, cwordOrKw1, kword, measurename, rank, sim, whatitis) = origData[i]
     if len(annData[i]) != 4:
         print("ERROR: odd, not 4 columns of annData in row", i, "but", len(annData[i]), "data is", annData[i])
     (rownr2, classname2, cwordOrKw2, annotation) = annData[i]
@@ -85,21 +86,22 @@ for i in range(len(annData)):
     if rownr1 != rownr2:
         raise Exception("ERROR")
     if classname1 != classname2:
-        raise Exception("Error")
+        print("Error class names differ: %s/%s" % (classname1, classname2), file=sys.stderr)
     if cwordOrKw1 != cwordOrKw2:
-        raise Exception("ERROR")
-    if measurename == "embavgonly":
-        embData.append((rank,annotation))
+        print("ERROR: keywords from orig/ann differ: %s/%s" % (cwordOrKw1, cwordOrKw2), file=sys.stderr)
+    if measurename == "simonly":
+        simData.append((rank,annotation))
     else:
-        raise Exception("ERROR")
+        simidfData.append((rank,annotation))
 
-print("Got sim data entries:", len(embData))
+print("Got sim data entries:", len(simData))
+print("Got simidf data entries:", len(simidfData))
 
 
 # calculate stats for the sim scores:
-print("Original corpusword scores - N:", len(embData))
-simDataRanks = [x for x, y in embData]
-simDataScores = [y for x, y in embData]
+print("Original corpusword scores - N:", len(simData))
+simDataRanks = [x for x, y in simData]
+simDataScores = [y for x, y in simData]
 print("Original corpusword scores - mean:", statistics.mean(simDataScores))
 print("Original corpusword scores - median:", statistics.median(simDataScores))
 print("Original corpusword scores - mode:", statistics.mode(simDataScores))
@@ -109,3 +111,14 @@ print("Original corpusword scores - Kendall tau:", scipy.stats.kendalltau(simDat
 print("Original corpusword scores - values:", sorted(simDataScores))
 
 
+# calculate stats for the simidf scores:
+print("Textrank corpusword scores - N:", len(simidfData))
+simidfDataRanks = [x for x, y in simidfData]
+simidfDataScores = [y for x, y in simidfData]
+print("Textrank corpusword scores - mean:", statistics.mean(simidfDataScores))
+print("Textrank corpusword scores - median:", statistics.median(simidfDataScores))
+print("Textrank corpusword scores - mode:", statistics.mode(simidfDataScores))
+print("Textrank corpusword scores - counts 0/1/2:", simidfDataScores.count(0), "/", simidfDataScores.count(1), "/", simidfDataScores.count(2))
+print("Textrank corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(simidfDataRanks, simidfDataScores))
+print("Textrank corpusword scores - Kendall tau:", scipy.stats.kendalltau(simidfDataRanks, simidfDataScores))
+print("Textrank corpusword scores - values:", sorted(simidfDataScores))
