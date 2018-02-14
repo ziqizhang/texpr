@@ -102,10 +102,13 @@ print("Got simidf data entries:", len(simidfData))
 print("Original corpusword scores - N:", len(simData))
 simDataRanks = [x for x, y in simData]
 simDataScores = [y for x, y in simData]
+n = len(simData)*1.0
 print("Original corpusword scores - mean:", statistics.mean(simDataScores))
 print("Original corpusword scores - median:", statistics.median(simDataScores))
 print("Original corpusword scores - mode:", statistics.mode(simDataScores))
 print("Original corpusword scores - counts 0/1/2:", simDataScores.count(0), "/", simDataScores.count(1), "/", simDataScores.count(2))
+print("Original corpusword scores - relative 0/1/2:", simDataScores.count(0)/n, "/", simDataScores.count(1)/n, "/", simDataScores.count(2)/n)
+print("Original corpusword scores - relative 0/1+2:", simDataScores.count(0)/n, "/", (simDataScores.count(1)+simDataScores.count(2))/n)
 print("Original corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(simDataRanks, simDataScores))
 print("Original corpusword scores - Kendall tau:", scipy.stats.kendalltau(simDataRanks, simDataScores))
 print("Original corpusword scores - values:", sorted(simDataScores))
@@ -113,12 +116,15 @@ print("Original corpusword scores - values:", sorted(simDataScores))
 
 # calculate stats for the simidf scores:
 print("Textrank corpusword scores - N:", len(simidfData))
+n=len(simidfData)*1.0
 simidfDataRanks = [x for x, y in simidfData]
 simidfDataScores = [y for x, y in simidfData]
-print("Textrank corpusword scores - mean:", statistics.mean(simidfDataScores))
-print("Textrank corpusword scores - median:", statistics.median(simidfDataScores))
-print("Textrank corpusword scores - mode:", statistics.mode(simidfDataScores))
-print("Textrank corpusword scores - counts 0/1/2:", simidfDataScores.count(0), "/", simidfDataScores.count(1), "/", simidfDataScores.count(2))
-print("Textrank corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(simidfDataRanks, simidfDataScores))
-print("Textrank corpusword scores - Kendall tau:", scipy.stats.kendalltau(simidfDataRanks, simidfDataScores))
-print("Textrank corpusword scores - values:", sorted(simidfDataScores))
+print("IDF corpusword scores - mean:", statistics.mean(simidfDataScores))
+print("IDF corpusword scores - median:", statistics.median(simidfDataScores))
+print("IDF corpusword scores - mode:", statistics.mode(simidfDataScores))
+print("IDF corpusword scores - counts 0/1/2:", simidfDataScores.count(0), "/", simidfDataScores.count(1), "/", simidfDataScores.count(2))
+print("Original corpusword scores - relative 0/1/2:", simidfDataScores.count(0)/n, "/", simidfDataScores.count(1)/n, "/", simidfDataScores.count(2)/n)
+print("Original corpusword scores - relative 0/1+2:", simidfDataScores.count(0)/n, "/", (simidfDataScores.count(1)+simidfDataScores.count(2))/n)
+print("IDF corpusword scores - Spearman rank correlation:", scipy.stats.spearmanr(simidfDataRanks, simidfDataScores))
+print("IDF corpusword scores - Kendall tau:", scipy.stats.kendalltau(simidfDataRanks, simidfDataScores))
+print("IDF corpusword scores - values:", sorted(simidfDataScores))
