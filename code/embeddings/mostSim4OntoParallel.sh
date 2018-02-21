@@ -20,6 +20,8 @@ lines=`wc -l < $kwfile`
 echo keywords file has $lines lines
 perfile=$((lines / ncores))
 echo expected keywords per thread about $perfile
+rm tmp-keywords*
+rm tmp-output-*
 split -d -e -n $ncores "$kwfile" tmp-keywords
 wc -l tmp-keywords*
 

@@ -138,7 +138,17 @@ with tqdm(total=(len(corpuswords)*len(keywords))) as pbar:
             if embsim < MIN_EMB_SIM:
                 # if debug: print("DEBUG: skipping low sim: ",corpusword,"/",keyword,"=",embsim,file=sys.stderr)
                 continue
-            # 3) the corpusword or its lemma is contained in the keyword or the keyword is contained
+
+            # 3.1) if the keyword and the corpus word are identical, skip
+            #  also if the used key words and the used corpus words are identical, skip
+            #  Since the latter implies the first, we only check for that and also for 
+            #  all lemmata of words.
+            if usedcorpuswords == usedkeywords:
+              continue
+            # TODO: same for the lemmata of all the used key and corpus words!!
+
+  
+            # 3.2) the corpusword or its lemma is contained in the keyword or the keyword is contained
             # in the corpusword. This is done with the originals and the lemmata.
             # However, if the both used word lists have more than one word in them, then we
             # do not check for being contained
